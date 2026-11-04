@@ -12,11 +12,11 @@
     // Run the redirect check on pages only. CSS, JS, fonts and images (/_astro/*) are served directly.
     "run_worker_first": ["/*", "!/_astro/*"]
   },
-  // Live domains. These routes catch all traffic to the domain through the existing
-  // proxied (orange-cloud) DNS records in the seotrendnow.online zone.
+  // Live domains. Cloudflare creates the DNS records and HTTPS certificates for these.
+  // Needs the seotrendnow.online zone to be active in the same Cloudflare account.
   "routes": [
-    { "pattern": "seotrendnow.online/*", "zone_name": "seotrendnow.online" },
-    { "pattern": "www.seotrendnow.online/*", "zone_name": "seotrendnow.online" }
+    { "pattern": "seotrendnow.online", "custom_domain": true },
+    { "pattern": "www.seotrendnow.online", "custom_domain": true }
   ],
   // Keep the backup seotrendnow.<account>.workers.dev address working
   "workers_dev": true
