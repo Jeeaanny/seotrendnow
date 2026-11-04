@@ -1,0 +1,126 @@
+---
+// One page per blog post, built from src/content/posts/<slug>.md
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCover from '../../components/PostCover.astro';
+import { render } from 'astro:content';
+import { getPosts, fmtDate, readMinutes } from '../../lib/content';
+import { CALENDLY, SITE } from '../../consts';
+import { authorRef, publisherRef } from '../../lib/schema';
+import { postCss } from '../../styles/page-css';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post, all: posts } }));
+}
+const { post, all } = Astro.props;
+const { Content, headings } = await render(post);
+const d = post.data;
+const toc = headings.filter((h) => h.depth === 2);
+const minutes = readMinutes(post.body ?? '');
+const related = [...all.filter((p) => p.id !== post.id && p.data.category === d.category), ...all.filter((p) => p.id !== post.id && p.data.category !== d.category)].slice(0, 3);
+const url = new URL(`/blog/${post.id}/`, SITE.domain).href;
+const ogImage = d.image ? d.image.src : '/og-image.png';
+
+const schema: object[] = [{
+  '@context': 'https://schema.org', '@type': 'BlogPosting',
+  headline: d.title, description: d.description, url, mainEntityOfPage: url,
+  datePublished: d.date.toISOString(), dateModified: (d.updated ?? d.date).toISOString(),
+  author: authorRef, publisher: publisherRef,
+  image: new URL(ogImage, SITE.domain).href, articleSection: d.category, wordCount: (post.body ?? '').split(/\s+/).length,
+}];
+if (d.faqs.length) {
+  schema.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
+}
+const extraCss = `.toc a{color:#4A4A68;text-decoration:none;font-size:15px}.toc a:hover{color:#3354FF}
+.post-aside{position:sticky;top:104px}@media(max-width:1060px){.post-aside{position:static}}`;
+---
+<BaseLayout title={`${d.title} | SEOTrendNow`} description={d.description} ogType="article" ogImage={ogImage}
+  schema={schema} breadcrumb={[{ name: 'Blog', url: '/blog/' }, { name: d.title, url: `/blog/${post.id}/` }]}
+  publishedTime={d.date.toISOString()} modifiedTime={(d.updated ?? d.date).toISOString()}>
+<Fragment slot="head"><style is:inline set:html={postCss + extraCss}></style></Fragment>
+
+<section style="background: #F9FAFF">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 20px; padding-top: 40px; padding-bottom: 48px; max-width: 960px">
+<nav aria-label="Breadcrumb" style="font-size: 14px"><a href="/" style="color: #4A4A68; text-decoration: none">Home</a> <span aria-hidden="true">›</span> <a href="/blog/" style="color: #4A4A68; text-decoration: none">Blog</a> <span aria-hidden="true">›</span> <span style="color: #001C44; font-weight: 600">{d.category}</span></nav>
+<span class="cat">{d.category}</span>
+<h1 class="h1" style="color: #001C44">{d.title}</h1>
+{d.subtitle && <p style="margin: 0; font-size: 20px">{d.subtitle}</p>}
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding-top: 6px">
+<span aria-hidden="true" style="width: 48px; height: 48px; border-radius: 50%; background: #DDE1FF; display: inline-flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#334969" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-7 8-7s8 3 8 7"></path></svg></span>
+<span style="font-size: 15px; line-height: 1.4"><a href="/about/" style="color: #001C44; display: block; font-weight: 700; text-decoration: none">Jean Jumamoy</a>SEO Strategist · <time datetime={d.date.toISOString()}>{fmtDate(d.date)}</time> · {minutes} min read{d.updated && <Fragment> · Updated <time datetime={d.updated.toISOString()}>{fmtDate(d.updated)}</time></Fragment>}</span>
+</div>
+</div>
+</section>
+
+<div class="wrap" style="padding-top: 40px">
+<PostCover category={d.category} image={d.image} alt={d.imageAlt} height={420} iconSize={96} eager />
+</div>
+
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start; padding-top: 56px; padding-bottom: 80px">
+<article style="flex: 1 1 640px; min-width: 0; max-width: 760px; display: flex; flex-direction: column; gap: 24px">
+{d.takeaways.length > 0 && (
+<div style="background: #F0F2FF; border-radius: 20px; padding: 28px 32px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 20px; color: #001C44">Key takeaways</p>
+<ul style="margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 6px; font-size: 17px">
+{d.takeaways.map((t) => <li>{t}</li>)}
+</ul>
+</div>
+)}
+<div class="prose"><Content /></div>
+
+{d.faqs.length > 0 && (
+<Fragment>
+<h2 id="faq" class="h2" style="color: #001C44; padding-top: 12px; scroll-margin-top: 100px">Frequently Asked Questions</h2>
+{d.faqs.map((f, i) => (
+<details open={i === 0} style="border: 1px solid #DDE1FF; border-radius: 16px; padding: 18px 22px"><summary style="font-weight: 700; color: #001C44; cursor: pointer">{f.q}</summary><p style="margin: 0; padding-top: 10px; font-size: 17px">{f.a}</p></details>
+))}
+</Fragment>
+)}
+
+<div style="margin-top: 16px; border-top: 1px solid #DDE1FF; padding-top: 32px; display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+<span aria-hidden="true" style="flex: none; width: 80px; height: 80px; border-radius: 50%; background: #DDE1FF; display: inline-flex; align-items: center; justify-content: center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#334969" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-7 8-7s8 3 8 7"></path></svg></span>
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em">Written by</p>
+<p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 22px; color: #001C44">Jean Jumamoy</p>
+<p style="margin: 0; font-size: 16px">SEO strategist for clinics, law firms and local service businesses in the US, Australia and Singapore.</p>
+<p style="margin: 0; font-size: 15px"><a href="/about/" style="font-weight: 700; text-decoration: none">More about Jean →</a></p>
+</div>
+</div>
+</article>
+
+<aside class="post-aside" style="flex: 0 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+{toc.length > 0 && (
+<nav class="toc" aria-label="On this page" style="border: 1px solid #DDE1FF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-weight: 700; color: #001C44; font-size: 15px">On this page</p>
+{toc.map((h) => <a href={`#${h.slug}`}>{h.text}</a>)}
+{d.faqs.length > 0 && <a href="#faq">FAQs</a>}
+</nav>
+)}
+<div style="background: #001C44; color: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<p class="eyebrow" style="color: #FFCA00">Need a hand?</p>
+<p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25">Get a free SEO check for your business.</p>
+<a class="pill" href={CALENDLY} target="_blank" rel="noopener" style="background: #3354FF; color: #FFFFFF; font-size: 15px">Book a Strategy Call</a>
+</div>
+</aside>
+</div>
+
+{related.length > 0 && (
+<section style="background: #F9FAFF">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 28px; padding-top: 72px; padding-bottom: 72px">
+<h2 class="h2" style="color: #001C44">Keep Reading</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 28px">
+{related.map((p) => (
+<a href={`/blog/${p.id}/`} style="text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 12px"><PostCover category={p.data.category} image={p.data.image} alt={p.data.imageAlt} height={180} iconSize={40} /><span class="cat">{p.data.category}</span><span class="h3" style="color: #001C44">{p.data.title}</span></a>
+))}
+</div>
+</div>
+</section>
+)}
+
+<section style="background: #3354FF; color: #FFFFFF">
+<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; padding-top: 64px; padding-bottom: 64px">
+<h2 class="h2" style="color: #FFFFFF; font-size: 34px; max-width: 680px">Want This Done for Your Business Instead?</h2>
+<a class="pill" href={CALENDLY} target="_blank" rel="noopener" style="background: #FFCA00; color: #001C44">Book a Free Strategy Call</a>
+</div>
+</section>
+</BaseLayout>

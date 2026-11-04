@@ -1,0 +1,133 @@
+---
+// Blog listing: /blog/, /blog/page/2/, ... Newest post is featured on page 1.
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCover from '../../components/PostCover.astro';
+import { getPosts, fmtDate, readMinutes } from '../../lib/content';
+import { BLOG_CATEGORIES, POSTS_PER_PAGE, FORMSPREE, CALENDLY, SITE } from '../../consts';
+import { blogCss } from '../../styles/page-css';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getPosts();
+  return paginate(posts, { pageSize: POSTS_PER_PAGE, params: {} }).map((p) => ({
+    ...p,
+    params: { page: p.params.page === '1' || !p.params.page ? undefined : `page/${p.params.page}` },
+  }));
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const isFirst = page.currentPage === 1;
+const featured = isFirst ? page.data[0] : undefined;
+const grid = isFirst ? page.data.slice(1) : page.data;
+const pageUrl = (n: number) => (n === 1 ? '/blog/' : `/blog/page/${n}/`);
+const title = isFirst
+  ? 'SEO Blog: Local SEO, Technical SEO & AI Search | SEOTrendNow'
+  : `SEO Blog, Page ${page.currentPage} | SEOTrendNow`;
+const description = 'Straight answers on local SEO, Google Business Profile, technical SEO, content strategy and AI search for clinics, law firms and local businesses.';
+const schema = [{
+  '@context': 'https://schema.org', '@type': 'Blog', name: 'The SEOTrendNow Blog',
+  url: new URL('/blog/', SITE.domain).href,
+  blogPost: page.data.map((p) => ({ '@type': 'BlogPosting', headline: p.data.title, url: new URL(`/blog/${p.id}/`, SITE.domain).href, datePublished: p.data.date.toISOString() })),
+}];
+---
+<BaseLayout title={title} description={description} schema={schema} breadcrumb={[{ name: 'Blog', url: '/blog/' }]}>
+<Fragment slot="head">
+  <style is:inline set:html={blogCss}></style>
+  {page.currentPage > 1 && <link rel="prev" href={new URL(pageUrl(page.currentPage - 1), SITE.domain).href} />}
+  {page.currentPage < page.lastPage && <link rel="next" href={new URL(pageUrl(page.currentPage + 1), SITE.domain).href} />}
+</Fragment>
+
+<section style="background: #F9FAFF; border-bottom: 1px solid #EEF0FF">
+<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 40px; padding-top: 80px; padding-bottom: 64px">
+<div style="flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<h1 class="h1" style="color: #001C44">{isFirst ? 'Practical SEO for Clinics, Firms and Local Businesses.' : `All Articles, Page ${page.currentPage}`}</h1>
+<p style="margin: 0; font-size: 19px; max-width: 560px">Straight answers on local SEO, technical fixes, content and AI search. New posts three times a month.</p>
+</div>
+<form data-ajax data-theme="dark" data-success-title="You're subscribed." data-success-text="New posts will land in your inbox three times a month." action={FORMSPREE} method="POST" style="flex: 0 1 420px; background: #001C44; border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 12px; color: #FFFFFF">
+<input type="hidden" name="_subject" value="New blog subscriber (seotrendnow.online)">
+<input type="hidden" name="form" value="Blog newsletter">
+<label for="blog-email" style="font-weight: 700; font-size: 16px">Get new posts by email</label>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<input id="blog-email" name="email" type="email" required autocomplete="email" placeholder="you@business.com" style="flex: 1 1 200px; min-width: 0; min-height: 50px; border-radius: 100px; border: 0; padding: 0 20px; font-size: 15px; font-family: Inter, system-ui, sans-serif">
+<button type="submit" class="pill" style="background: #FFCA00; color: #001C44; min-height: 50px; padding: 0 22px; font-size: 15px">Subscribe</button>
+</div>
+<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none">
+<p style="margin: 0; font-size: 13px; color: #CBD1D9">3 posts a month. No spam, unsubscribe anytime.</p>
+</form>
+</div>
+</section>
+
+{featured && (
+<section style="background: #FFFFFF">
+<div class="wrap" style="padding-top: 64px">
+<a href={`/blog/${featured.id}/`} style="text-decoration: none; color: inherit; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; background: #F0F2FF; border-radius: 28px; padding: 20px">
+<div style="flex: 1 1 480px; min-width: 0"><PostCover category={featured.data.category} image={featured.data.image} alt={featured.data.imageAlt} height={340} iconSize={72} eager /></div>
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 12px 20px 12px 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px"><span style="padding: 4px 12px; border-radius: 100px; background: #FFCA00; color: #001C44; font-weight: 700; font-size: 13px">Latest</span><span class="cat">{featured.data.category}</span></div>
+<h2 class="h2" style="color: #001C44">{featured.data.title}</h2>
+<p style="margin: 0">{featured.data.description}</p>
+<p class="meta" style="margin: 0">Jean Jumamoy · <time datetime={featured.data.date.toISOString()}>{fmtDate(featured.data.date)}</time> · {readMinutes(featured.body ?? '')} min read</p>
+</div>
+</a>
+</div>
+</section>
+)}
+
+<section class="sec" style="background: #FFFFFF; padding-top: 56px">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
+<h2 class="h3" style="color: #001C44; font-size: 26px">{isFirst ? 'Latest articles' : 'More articles'}</h2>
+<div role="group" aria-label="Filter by topic" style="display: flex; flex-wrap: wrap; gap: 10px" id="post-filter">
+<button type="button" class="chip on" aria-pressed="true" data-filter="all">All</button>
+{BLOG_CATEGORIES.map((c) => <button type="button" class="chip" aria-pressed="false" data-filter={c}>{c}</button>)}
+</div>
+</div>
+
+{grid.length === 0 && !featured && <p style="margin: 0">The first posts are on their way. Subscribe above to get them as soon as they're live.</p>}
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 32px 28px" id="post-grid">
+{grid.map((p) => (
+<a href={`/blog/${p.id}/`} data-cat={p.data.category} style="text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 14px">
+<PostCover category={p.data.category} image={p.data.image} alt={p.data.imageAlt} height={210} />
+<span class="cat">{p.data.category}</span>
+<h3 class="h3" style="color: #001C44">{p.data.title}</h3>
+<p class="meta" style="margin: 0"><time datetime={p.data.date.toISOString()}>{fmtDate(p.data.date)}</time> · {readMinutes(p.body ?? '')} min read</p>
+</a>
+))}
+</div>
+<p id="filter-empty" hidden style="margin: 0">No articles in this topic on this page yet.</p>
+
+{page.lastPage > 1 && (
+<nav aria-label="Pagination" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding-top: 12px">
+{page.url.prev && <a class="page" href={pageUrl(page.currentPage - 1)}>← Prev</a>}
+{Array.from({ length: page.lastPage }, (_, i) => i + 1).map((n) => (
+<a class:list={['page', { on: n === page.currentPage }]} href={pageUrl(n)} aria-current={n === page.currentPage ? 'page' : undefined}>{n}</a>
+))}
+{page.url.next && <a class="page" href={pageUrl(page.currentPage + 1)}>Next →</a>}
+</nav>
+)}
+</div>
+</section>
+
+<section style="background: #3354FF; color: #FFFFFF">
+<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; padding-top: 64px; padding-bottom: 64px">
+<div style="display: flex; flex-direction: column; gap: 8px; max-width: 680px">
+<h2 class="h2" style="color: #FFFFFF">Skip the Reading. Get a Plan for Your Site.</h2>
+</div>
+<a class="pill" href={CALENDLY} target="_blank" rel="noopener" style="background: #FFCA00; color: #001C44">Book a Free Strategy Call</a>
+</div>
+</section>
+
+<script>
+  import '../../scripts/contact-form.ts';
+  const chips = document.querySelectorAll<HTMLButtonElement>('#post-filter .chip');
+  const cards = document.querySelectorAll<HTMLElement>('#post-grid [data-cat]');
+  const empty = document.getElementById('filter-empty');
+  chips.forEach((chip) => chip.addEventListener('click', () => {
+    const f = chip.dataset.filter;
+    chips.forEach((c) => { const on = c === chip; c.classList.toggle('on', on); c.setAttribute('aria-pressed', String(on)); });
+    let shown = 0;
+    cards.forEach((card) => { const show = f === 'all' || card.dataset.cat === f; card.hidden = !show; if (show) shown++; });
+    if (empty) empty.hidden = shown > 0 || cards.length === 0;
+  }));
+</script>
+</BaseLayout>

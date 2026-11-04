@@ -1,0 +1,105 @@
+---
+// Results page. Cards come from src/content/case-studies/*.md
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import { getCaseStudies } from '../../lib/content';
+import { CALENDLY } from '../../consts';
+import { resultsCss } from '../../styles/page-css';
+
+const all = await getCaseStudies();
+const featured = all.find((c) => c.data.featured);
+const cards = all.filter((c) => !c.data.featured);
+const filters = [...new Set(cards.flatMap((c) => c.data.tags))].filter((t) => !t.startsWith('['));
+const industries = new Set(cards.map((c) => c.data.industry).filter((t) => !t.startsWith('[')));
+---
+<BaseLayout title="SEO Results & Case Studies | SEOTrendNow"
+  description="Real SEO case studies with the numbers: organic enquiries, map-pack rankings, AI citations and technical recoveries for clinics, law firms and local businesses."
+  breadcrumb={[{ name: 'Results', url: '/results/' }]}>
+<Fragment slot="head"><style is:inline set:html={resultsCss}></style></Fragment>
+
+<section style="background: #001C44; color: #FFFFFF">
+<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 40px; padding-top: 88px; padding-bottom: 72px">
+<div style="flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<h1 class="h1" style="color: #FFFFFF">Proof, <span style="background: linear-gradient(transparent 62%, rgba(255, 202, 0, 0.45) 62%)">Not Promises.</span></h1>
+<p style="margin: 0; font-size: 19px; color: #CBD1D9; max-width: 560px">Every case study shows the starting point, what I changed and the numbers from Search Console, GA4 or Google Business Profile.</p>
+</div>
+<div style="flex: 0 1 460px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+<div style="border: 1px solid #334969; border-radius: 18px; padding: 18px"><p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 30px; color: #FFCA00">[XX]</p><p style="margin: 0; font-size: 13px; color: #CBD1D9">campaigns run</p></div>
+<div style="border: 1px solid #334969; border-radius: 18px; padding: 18px"><p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 30px; color: #FFCA00">3</p><p style="margin: 0; font-size: 13px; color: #CBD1D9">markets: US, AU, SG</p></div>
+<div style="border: 1px solid #334969; border-radius: 18px; padding: 18px"><p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 30px; color: #FFCA00">{industries.size || '[X]'}</p><p style="margin: 0; font-size: 13px; color: #CBD1D9">industries</p></div>
+</div>
+</div>
+</section>
+
+<section class="sec" style="background: #F9FAFF">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 36px">
+{filters.length > 1 && (
+<div role="group" aria-label="Filter case studies" style="display: flex; flex-wrap: wrap; gap: 10px" id="cs-filter">
+<button type="button" class="chip on" aria-pressed="true" data-filter="all">All</button>
+{filters.map((f) => <button type="button" class="chip" aria-pressed="false" data-filter={f}>{f}</button>)}
+</div>
+)}
+{cards.length === 0 && <p style="margin: 0">Case studies are being written up. In the meantime, book a call and I'll walk you through results from businesses like yours.</p>}
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(440px, 100%), 1fr)); gap: 28px" id="cs-grid">
+{cards.map((c) => (
+<a href={`/results/${c.id}/`} data-tags={c.data.tags.join('|')} style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #DDE1FF; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column">
+{c.data.cardImage
+  ? <Image src={c.data.cardImage} alt={c.data.cardImageLabel} width={880} height={440} style="width: 100%; height: 220px; object-fit: cover; display: block" />
+  : <div style="height: 220px; background: #DDE1FF; display: flex; align-items: center; justify-content: center; color: #334969; font-weight: 600; font-size: 15px">[{c.data.cardImageLabel}]</div>}
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px">{c.data.tags.map((t) => <span class="tag">{t}</span>)}</div>
+<p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 44px; line-height: 1; color: #3354FF">{c.data.metric}</p>
+<h2 class="h3" style="color: #001C44">{c.data.cardTitle}</h2>
+<p style="margin: 0; font-size: 15px">{c.data.cardMeta}</p>
+<span style="font-weight: 700; color: #3354FF; font-size: 15px">Read case study →</span>
+</div>
+</a>
+))}
+</div>
+</div>
+</section>
+
+{featured && (
+<section class="sec" style="background: #FFFFFF">
+<div class="wrap">
+<div style="background: #F0F2FF; border-radius: 28px; padding: 48px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
+<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<p class="eyebrow" style="color: #3354FF">Behind the strategy</p>
+<h2 class="h2" style="color: #001C44; font-size: 34px">{featured.data.cardTitle}</h2>
+<p style="margin: 0">{featured.data.cardMeta}</p>
+<a href={`/results/${featured.id}/`} style="font-weight: 700; text-decoration: none">Read the story →</a>
+</div>
+{featured.data.cardImage
+  ? <Image src={featured.data.cardImage} alt={featured.data.cardImageLabel} width={800} height={440} style="flex: 1 1 320px; min-width: 0; width: 100%; height: auto; border-radius: 18px" />
+  : <div style="flex: 1 1 320px; min-width: 0; min-height: 220px; border-radius: 18px; background: #FFFFFF; border: 2px dashed #8094FF; display: flex; align-items: center; justify-content: center; color: #334969; font-weight: 600; font-size: 15px">[{featured.data.cardImageLabel}]</div>}
+</div>
+</div>
+</section>
+)}
+
+<section style="background: #001C44; color: #FFFFFF">
+<div class="wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; padding-top: 80px; padding-bottom: 80px">
+<svg aria-hidden="true" width="40" height="32" viewBox="0 0 36 28" fill="#FFCA00"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 4C10 5.6 7.6 9 7.4 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 4c-5.5 1.6-7.9 5-8.1 9H35v15z"></path></svg>
+<p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 700; font-size: 28px; line-height: 1.35; max-width: 860px">[Client testimonial about results, in their own words.]</p>
+<p style="margin: 0; color: #CBD1D9; font-size: 15px"><b style="color: #FFFFFF">[Client name]</b>, [Role, Business, Country]</p>
+</div>
+</section>
+
+<section style="background: #3354FF; color: #FFFFFF">
+<div class="wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; padding-top: 88px; padding-bottom: 88px">
+<p class="eyebrow" style="color: #FFCA00">Your turn</p>
+<h2 class="h2" style="color: #FFFFFF; max-width: 760px">Want results like these for your business?</h2>
+<a class="pill" href={CALENDLY} target="_blank" rel="noopener" style="background: #FFCA00; color: #001C44; margin-top: 6px">Book a Free Strategy Call</a>
+</div>
+</section>
+
+<script>
+  const chips = document.querySelectorAll<HTMLButtonElement>('#cs-filter .chip');
+  const cards = document.querySelectorAll<HTMLElement>('#cs-grid [data-tags]');
+  chips.forEach((chip) => chip.addEventListener('click', () => {
+    const f = chip.dataset.filter ?? 'all';
+    chips.forEach((c) => { const on = c === chip; c.classList.toggle('on', on); c.setAttribute('aria-pressed', String(on)); });
+    cards.forEach((card) => { card.hidden = f !== 'all' && !(card.dataset.tags ?? '').split('|').includes(f); });
+  }));
+</script>
+</BaseLayout>

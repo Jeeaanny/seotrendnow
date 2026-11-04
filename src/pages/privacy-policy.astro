@@ -1,0 +1,37 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+import { CONTACT } from '../consts';
+---
+<LegalPage title="Privacy Policy | SEOTrendNow" heading="Privacy Policy" name="Privacy Policy" path="/privacy-policy/" updated="November 4, 2026"
+  description="How SEOTrendNow collects, uses and protects the information you share through this website.">
+<p>SEOTrendNow is run by Jean Jumamoy, an SEO strategist based in the Philippines. This policy explains what information this website collects and what happens to it.</p>
+
+<h2>What I collect</h2>
+<ul>
+  <li><strong>Contact form:</strong> your name, email, website, country, industry, the services you're interested in and your message.</li>
+  <li><strong>Blog subscription:</strong> your email address.</li>
+  <li><strong>Call bookings:</strong> when you book through Calendly, Calendly collects the details you enter on its booking page.</li>
+  <li><strong>WhatsApp and email:</strong> whatever you choose to send when you contact me directly.</li>
+</ul>
+<p>This site does not use advertising cookies or sell your information.</p>
+
+<h2>How I use it</h2>
+<p>Only to reply to your enquiry, prepare for and hold our calls, send blog posts you subscribed to, and deliver any work we agree on.</p>
+
+<h2>Services that process your information</h2>
+<ul>
+  <li><strong>Formspree</strong> receives contact and subscription forms and forwards them to my inbox.</li>
+  <li><strong>Calendly</strong> handles call bookings.</li>
+  <li><strong>Cloudflare</strong> hosts this website and may log basic technical data, such as IP addresses, for security.</li>
+</ul>
+<p>Each of these providers has its own privacy policy.</p>
+
+<h2>How long I keep it</h2>
+<p>I keep enquiries and client correspondence for as long as needed to work with you and meet record-keeping obligations, then delete them. You can unsubscribe from blog emails at any time.</p>
+
+<h2>Your rights</h2>
+<p>You can ask to see, correct or delete the information I hold about you. Email <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a> and I'll respond within 30 days.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will be posted on this page with a new date.</p>
+</LegalPage>

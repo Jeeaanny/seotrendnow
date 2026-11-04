@@ -1,0 +1,46 @@
+---
+import { NAV, SERVICES, CONTACT, CALENDLY, SITE } from '../consts';
+import { getPosts } from '../lib/content';
+import Logo from './Logo.astro';
+const latest = (await getPosts()).slice(0, 3);
+const year = new Date().getFullYear();
+---
+<footer class="ft">
+  <div class="wrap" style="display: flex; flex-direction: column; gap: 48px; padding-top: 72px; padding-bottom: 32px">
+    <div class="cols">
+      <div class="col brand-col">
+        <a href="/" class="brand" aria-label={`${SITE.name} home`}>
+          <Logo />
+          <span class="brand-name">SEOTrend<span>Now</span></span>
+        </a>
+        <p style="margin: 0; max-width: 340px">{SITE.tagline}</p>
+        <a class="ft-cta" href={CALENDLY} target="_blank" rel="noopener">Book a Strategy Call</a>
+      </div>
+      <nav class="col pages" aria-label="Pages">
+        <h2>Pages</h2>
+        {NAV.map((n) => <a href={n.href}>{n.label}</a>)}
+      </nav>
+      <nav class="col" aria-label="Services">
+        <h2>Services</h2>
+        {SERVICES.map((s) => <a href={`/services/#${s.id}`}>{s.label}</a>)}
+      </nav>
+      {latest.length > 0 && (
+        <nav class="col posts" aria-label="Latest posts">
+          <h2>Latest from the blog</h2>
+          {latest.map((p) => <a href={`/blog/${p.id}/`}>{p.data.title}</a>)}
+        </nav>
+      )}
+      <div class="col contact">
+        <h2>Contact</h2>
+        <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+        <a href={CONTACT.whatsappUrl} target="_blank" rel="noopener">WhatsApp: {CONTACT.whatsappDisplay}</a>
+        {CONTACT.linkedin && <a href={CONTACT.linkedin} target="_blank" rel="noopener">LinkedIn</a>}
+        <p style="margin: 0">{SITE.hours}</p>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© {year} SEOTrendNow. All rights reserved.</span>
+      <span style="display: flex; gap: 24px"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a></span>
+    </div>
+  </div>
+</footer>

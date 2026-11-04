@@ -1,0 +1,26 @@
+---
+import LegalPage from '../components/LegalPage.astro';
+import { CONTACT } from '../consts';
+---
+<LegalPage title="Terms of Use | SEOTrendNow" heading="Terms of Use" name="Terms" path="/terms/" updated="November 4, 2026"
+  description="The terms that apply when you use the SEOTrendNow website.">
+<p>These terms apply to your use of seotrendnow.online. By using the site, you agree to them.</p>
+
+<h2>Information on this site</h2>
+<p>Blog posts, case studies and other content are general information about SEO. They are not a guarantee of results for your business. Search engines and AI tools change often, and outcomes depend on your market, competition and website.</p>
+
+<h2>Results and case studies</h2>
+<p>Case study figures come from the client's own analytics, Search Console or Google Business Profile data for the period stated. Past results don't guarantee future results.</p>
+
+<h2>Working together</h2>
+<p>Paid SEO work is covered by a separate proposal or agreement that sets out the scope, fees and timelines. If that agreement and these terms ever conflict, the agreement wins.</p>
+
+<h2>Intellectual property</h2>
+<p>The content, design and branding on this site belong to SEOTrendNow. You're welcome to share links and short quotes with credit, but please don't copy whole pages or posts.</p>
+
+<h2>Links to other sites</h2>
+<p>This site links to tools and services run by others, such as Calendly and WhatsApp. I'm not responsible for their content or practices.</p>
+
+<h2>Contact</h2>
+<p>Questions about these terms? Email <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>.</p>
+</LegalPage>

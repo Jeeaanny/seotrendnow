@@ -1,0 +1,79 @@
+---
+import '@fontsource/archivo/700.css';
+import '@fontsource/archivo/800.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/kalam/700.css';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE, PRELAUNCH } from '../consts';
+
+interface Props {
+  title: string;              // full <title>
+  description: string;        // meta description
+  ogType?: 'website' | 'article';
+  ogImage?: string;
+  schema?: object[];          // extra JSON-LD objects for this page
+  breadcrumb?: { name: string; url: string }[]; // inner pages: [{name:'About', url:'/about/'}]
+  noindex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+}
+const { title, description, ogType = 'website', ogImage = '/og-image.png', schema = [], breadcrumb, noindex = false, publishedTime, modifiedTime } = Astro.props;
+const canonical = new URL(Astro.url.pathname, SITE.domain).href;
+const image = new URL(ogImage, SITE.domain).href;
+const robots = PRELAUNCH || noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large';
+
+const graph: object[] = [...schema];
+if (breadcrumb?.length) {
+  graph.push({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [{ name: 'Home', url: '/' }, ...breadcrumb].map((b, i) => ({
+      '@type': 'ListItem', position: i + 1, name: b.name, item: new URL(b.url, SITE.domain).href,
+    })),
+  });
+}
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content={robots} />
+  <link rel="canonical" href={canonical} />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#001C44" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:site_name" content={SITE.name} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={image} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+  {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={image} />
+  {graph.map((g) => <script type="application/ld+json" set:html={JSON.stringify(g)} />)}
+  <slot name="head" />
+</head>
+<body>
+  <Header />
+  <main id="main">
+    <slot />
+  </main>
+  <Footer />
+</body>
+</html>

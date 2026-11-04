@@ -1,0 +1,28 @@
+---
+// Cover tile for a post: the post's own image if it has one, otherwise a branded
+// colour block with the category icon (as in the approved design).
+import { Image } from 'astro:assets';
+interface Props { category: string; image?: any; alt?: string; height: number; iconSize?: number; eager?: boolean }
+const { category, image, alt = '', height, iconSize = 48, eager = false } = Astro.props;
+const looks: Record<string, { bg: string; stroke: string; icon: string }> = {
+  'Local SEO': { bg: '#F0F2FF', stroke: '#3354FF', icon: 'pin' },
+  'Technical SEO': { bg: '#001C44', stroke: '#FFCA00', icon: 'code' },
+  'Content Strategy': { bg: '#3354FF', stroke: '#FFFFFF', icon: 'grid' },
+  'AI Search': { bg: '#001C44', stroke: '#FFCA00', icon: 'spark' },
+  'Case Notes': { bg: '#3354FF', stroke: '#FFFFFF', icon: 'trend' },
+};
+const look = looks[category] ?? looks['Content Strategy'];
+---
+{image ? (
+  <Image src={image} alt={alt} width={1200} height={630} loading={eager ? 'eager' : 'lazy'} style={`width: 100%; height: ${height}px; object-fit: cover; border-radius: 20px; display: block`} />
+) : (
+  <div style={`height: ${height}px; border-radius: 20px; background: ${look.bg}; display: flex; align-items: center; justify-content: center`}>
+    <svg aria-hidden="true" width={iconSize} height={iconSize} viewBox="0 0 24 24" fill="none" stroke={look.stroke} stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      {look.icon === 'pin' && <Fragment><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></Fragment>}
+      {look.icon === 'code' && <Fragment><polyline points="8 7 3 12 8 17"></polyline><polyline points="16 7 21 12 16 17"></polyline><line x1="14" y1="4" x2="10" y2="20"></line></Fragment>}
+      {look.icon === 'grid' && <Fragment><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></Fragment>}
+      {look.icon === 'spark' && <Fragment><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"></path><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"></path></Fragment>}
+      {look.icon === 'trend' && <Fragment><polyline points="3 17 9 11 13 15 21 7"></polyline><polyline points="15 7 21 7 21 13"></polyline></Fragment>}
+    </svg>
+  </div>
+)}

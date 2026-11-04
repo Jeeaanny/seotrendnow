@@ -1,0 +1,128 @@
+---
+// Built from the approved design (FAQ). Edit the copy directly below.
+import BaseLayout from '../layouts/BaseLayout.astro';
+const faqs = [
+ {
+  "q": "What happens on the free strategy call?",
+  "a": "We spend 30 minutes on your goals, your market and what you've tried so far. I'll take a quick look at your site and Google Business Profile beforehand and share the biggest opportunities I see."
+ },
+ {
+  "q": "Which industries do you work with?",
+  "a": "Mostly healthcare and clinics, dental, legal, wellness, home services and home builders: businesses that depend on local and high-intent searches."
+ },
+ {
+  "q": "Do you work with businesses outside the Philippines?",
+  "a": "Yes. Most of my clients are in the US, Australia and Singapore."
+ },
+ {
+  "q": "What do you need from me to start?",
+  "a": "Access to Google Search Console, GA4, your Google Business Profile and your website, plus someone who can approve changes."
+ },
+ {
+  "q": "How long until I see results?",
+  "a": "Technical and local fixes often show movement within the first few months. Content-led growth takes longer. You'll get a realistic timeline for your market on our first call."
+ },
+ {
+  "q": "Do you guarantee page-one rankings?",
+  "a": "No. Nobody controls Google, and anyone who guarantees rankings is guessing. I commit to the work, to clear priorities and to honest reporting on what's moving."
+ },
+ {
+  "q": "How do you report progress?",
+  "a": "A plain-English monthly report built from Search Console, GA4 and your Google Business Profile, focused on calls, forms and bookings, plus a call to plan the next month."
+ },
+ {
+  "q": "Can you get my business mentioned in ChatGPT and AI Overviews?",
+  "a": "I can't control what AI tools say, but I can build the signals they rely on: a consistent business entity, clean listings, structured data and clear answers on your site."
+ },
+ {
+  "q": "What is GEO?",
+  "a": "Generative Engine Optimisation: making your business easy for AI tools like ChatGPT, Perplexity and Gemini to understand, trust and recommend."
+ },
+ {
+  "q": "Who will I actually work with?",
+  "a": "Me. I'm the strategist on your call and the one doing the work."
+ },
+ {
+  "q": "What time zone do you work in?",
+  "a": "I'm based in the Philippines and my hours overlap with the US, Australia and Singapore, so you'll get same-day replies."
+ },
+ {
+  "q": "Can you work with my web developer or writers?",
+  "a": "Yes. I can hand over developer-ready tickets and writer briefs, or make the changes myself."
+ }
+];
+const pageCss = ".h1{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:56px;line-height:1.05;letter-spacing:-0.02em;margin:0}\n.h2{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:28px;line-height:1.2;margin:0}\n.eyebrow{font-family:Kalam,cursive;font-weight:700;font-size:24px;line-height:1.2;margin:0}\n.q{background:#FFFFFF;border:1px solid #DDE1FF;border-radius:16px;padding:20px 24px}\n.q summary{font-weight:700;color:#001C44;font-size:18px;cursor:pointer;line-height:1.4}\n.q p{margin:12px 0 0}\n.side a{display:block;padding:10px 16px;border-radius:12px;color:#001C44;text-decoration:none;font-weight:600;font-size:15px}\n.side a:hover{background:#F0F2FF}\n.side a.on{background:#F0F2FF;color:#3354FF}\n@media (max-width:820px){.h1{font-size:38px}.wrap{padding:0 16px}}";
+---
+<BaseLayout title={"SEO FAQ: Pricing, Timelines & How I Work | SEOTrendNow"} description={"Answers to the questions clients ask before booking: how the strategy call works, timelines, reporting, AI search and working with a solo SEO strategist."} schema={[{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }]} breadcrumb={[{ name: 'FAQ', url: '/faq/' }]}>
+<Fragment slot="head"><style is:inline set:html={pageCss}></style></Fragment>
+<section style="background: #001C44; color: #FFFFFF">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 18px; padding-top: 80px; padding-bottom: 72px; max-width: 900px; align-items: center; text-align: center">
+
+<h1 class="h1" style="color: #FFFFFF">Answers to FAQs Before You Book a Call.</h1>
+<p style="margin: 0; font-size: 19px; color: #CBD1D9; max-width: 600px">How I work, what it costs, how long it takes and what you can expect. Can't find your question? Ask me directly.</p>
+</div>
+</section>
+
+<section style="background: #F9FAFF">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start; padding-top: 72px; padding-bottom: 88px">
+<nav class="side" aria-label="FAQ topics" style="flex: 0 1 260px; min-width: 0; background: #FFFFFF; border: 1px solid #DDE1FF; border-radius: 20px; padding: 12px; display: flex; flex-direction: column; gap: 2px">
+<a class="on" href="#start">Getting started</a>
+<a href="#pricing">Pricing &amp; contracts</a>
+<a href="#results">Results &amp; reporting</a>
+<a href="#ai">AI search</a>
+<a href="#together">Working together</a>
+</nav>
+
+<div style="flex: 1 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 56px">
+
+<div id="start" style="display: flex; flex-direction: column; gap: 14px">
+<h2 class="h2" style="color: #001C44">Getting started</h2>
+<details class="q" open=""><summary>What happens on the free strategy call?</summary><p>We spend 30 minutes on your goals, your market and what you've tried so far. I'll take a quick look at your site and Google Business Profile beforehand and share the biggest opportunities I see.</p></details>
+<details class="q"><summary>Which industries do you work with?</summary><p>Mostly healthcare and clinics, dental, legal, wellness, home services and home builders: businesses that depend on local and high-intent searches.</p></details>
+<details class="q"><summary>Do you work with businesses outside the Philippines?</summary><p>Yes. Most of my clients are in the US, Australia and Singapore.</p></details>
+<details class="q"><summary>What do you need from me to start?</summary><p>Access to Google Search Console, GA4, your Google Business Profile and your website, plus someone who can approve changes.</p></details>
+</div>
+
+<div id="pricing" style="display: flex; flex-direction: column; gap: 14px">
+<h2 class="h2" style="color: #001C44">Pricing &amp; contracts</h2>
+<details class="q"><summary>How much does SEO cost?</summary><p>[Your pricing approach, e.g. audits from $X, monthly plans from $X/month depending on scope and competition.]</p></details>
+<details class="q"><summary>Is there a long-term contract?</summary><p>[Your terms.]</p></details>
+<details class="q"><summary>How do I pay?</summary><p>[Payment methods and currency, e.g. invoices in USD via Wise or PayPal.]</p></details>
+</div>
+
+<div id="results" style="display: flex; flex-direction: column; gap: 14px">
+<h2 class="h2" style="color: #001C44">Results &amp; reporting</h2>
+<details class="q"><summary>How long until I see results?</summary><p>Technical and local fixes often show movement within the first few months. Content-led growth takes longer. You'll get a realistic timeline for your market on our first call.</p></details>
+<details class="q"><summary>Do you guarantee page-one rankings?</summary><p>No. Nobody controls Google, and anyone who guarantees rankings is guessing. I commit to the work, to clear priorities and to honest reporting on what's moving.</p></details>
+<details class="q"><summary>How do you report progress?</summary><p>A plain-English monthly report built from Search Console, GA4 and your Google Business Profile, focused on calls, forms and bookings, plus a call to plan the next month.</p></details>
+</div>
+
+<div id="ai" style="display: flex; flex-direction: column; gap: 14px">
+<h2 class="h2" style="color: #001C44">AI search</h2>
+<details class="q"><summary>Can you get my business mentioned in ChatGPT and AI Overviews?</summary><p>I can't control what AI tools say, but I can build the signals they rely on: a consistent business entity, clean listings, structured data and clear answers on your site.</p></details>
+<details class="q"><summary>What is GEO?</summary><p>Generative Engine Optimisation: making your business easy for AI tools like ChatGPT, Perplexity and Gemini to understand, trust and recommend.</p></details>
+</div>
+
+<div id="together" style="display: flex; flex-direction: column; gap: 14px">
+<h2 class="h2" style="color: #001C44">Working together</h2>
+<details class="q"><summary>Who will I actually work with?</summary><p>Me. I'm the strategist on your call and the one doing the work.</p></details>
+<details class="q"><summary>What time zone do you work in?</summary><p>I'm based in the Philippines and my hours overlap with the US, Australia and Singapore, so you'll get same-day replies.</p></details>
+<details class="q"><summary>Can you work with my web developer or writers?</summary><p>Yes. I can hand over developer-ready tickets and writer briefs, or make the changes myself.</p></details>
+</div>
+
+<div style="background: #001C44; color: #FFFFFF; border-radius: 24px; padding: 36px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 6px; max-width: 460px">
+<p class="eyebrow" style="color: #FFCA00">Still wondering?</p>
+<p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 26px; line-height: 1.25">Ask me anything on a free 30-minute call.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="pill" href="https://calendly.com/seotrendnow/30min" target="_blank" rel="noopener" style="background: #3354FF; color: #FFFFFF">Book a Call</a>
+<a class="pill" href="https://wa.me/639919311502" style="background: transparent; color: #FFFFFF; border: 2px solid rgba(255,255,255,0.4)">WhatsApp Me</a>
+<a class="pill" href="mailto:seotrendnow@gmail.com" style="background: transparent; color: #FFFFFF; border: 2px solid rgba(255,255,255,0.4)">Email Me</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+</BaseLayout>
