@@ -1,7 +1,7 @@
 ---
 // Built from the approved design (Services). Edit the copy directly below.
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageCss = ".sec{padding:96px 0}\n.h1{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:58px;line-height:1.05;letter-spacing:-0.02em;margin:0}\n.h2{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:40px;line-height:1.1;letter-spacing:-0.015em;margin:0}\n.h3{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:21px;line-height:1.25;margin:0}\n.eyebrow{font-family:Kalam,cursive;font-weight:700;font-size:24px;line-height:1.2;margin:0}\n.check{margin:0;display:flex;gap:10px;font-size:16px}\n@media (max-width:820px){.h1{font-size:40px}.h2{font-size:30px}.sec{padding:64px 0}.wrap{padding:0 16px}}";
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { servicesCss as pageCss } from '../../styles/page-css';
 ---
 <BaseLayout title={"SEO Services: Local, Technical, Content & AI | SEOTrendNow"} description={"Local SEO and Google Business Profile, technical SEO and schema, keyword and content strategy, and AI search visibility, built around booked appointments."} schema={[]} breadcrumb={[{ name: 'Services', url: '/services/' }]}>
 <Fragment slot="head"><style is:inline set:html={pageCss}></style></Fragment>
@@ -41,7 +41,7 @@ const pageCss = ".sec{padding:96px 0}\n.h1{font-family:Archivo,system-ui,sans-se
 <p style="margin: 0; color: #001C44; font-weight: 600">Before-and-after map-pack grid reports</p>
 <p style="margin: 0; color: #001C44; font-weight: 600">Citation tracker you keep forever</p>
 <p style="margin: 0; color: #001C44; font-weight: 600">Monthly calls, directions and clicks report</p>
-<a href="/contact/" style="font-weight: 700; padding-top: 6px; text-decoration: none">Ask about Local SEO →</a>
+<a href="/services/local-seo/" style="font-weight: 700; padding-top: 6px; text-decoration: none">See the full Local SEO service →</a>
 </div>
 </div>
 </section>
@@ -68,7 +68,7 @@ const pageCss = ".sec{padding:96px 0}\n.h1{font-family:Archivo,system-ui,sans-se
 <p style="margin: 0; color: #001C44; font-weight: 600">Ready-to-paste JSON-LD schema</p>
 <p style="margin: 0; color: #001C44; font-weight: 600">Developer-ready tickets, or I make the fixes myself</p>
 <p style="margin: 0; color: #001C44; font-weight: 600">Re-crawl to confirm everything is resolved</p>
-<a href="/contact/" style="font-weight: 700; padding-top: 6px; text-decoration: none">Ask about Technical SEO →</a>
+<a href="/services/technical-seo/" style="font-weight: 700; padding-top: 6px; text-decoration: none">See the full Technical SEO service →</a>
 </div>
 </div>
 </section>
@@ -95,7 +95,7 @@ const pageCss = ".sec{padding:96px 0}\n.h1{font-family:Archivo,system-ui,sans-se
 <p style="margin: 0; color: #001C44; font-weight: 600">Cannibalisation report with merge and redirect calls</p>
 <p style="margin: 0; color: #001C44; font-weight: 600">90-day content calendar</p>
 <p style="margin: 0; color: #001C44; font-weight: 600">Briefs your writers can follow, or finished articles</p>
-<a href="/contact/" style="font-weight: 700; padding-top: 6px; text-decoration: none">Ask about Content Strategy →</a>
+<a href="/services/content-strategy/" style="font-weight: 700; padding-top: 6px; text-decoration: none">See the full Content Strategy service →</a>
 </div>
 </div>
 </section>
@@ -124,7 +124,7 @@ const pageCss = ".sec{padding:96px 0}\n.h1{font-family:Archivo,system-ui,sans-se
 <p style="margin: 0; color: #808DA1">2. [Competitor]</p>
 <p style="margin: 0; color: #808DA1">3. [Competitor]</p>
 </div>
-<a href="/contact/" style="font-weight: 700; padding-top: 6px; text-decoration: none; color: #FFCA00">Get an AI visibility check →</a>
+<a href="/services/ai-search-visibility/" style="font-weight: 700; padding-top: 6px; text-decoration: none; color: #FFCA00">See the full AI Search service →</a>
 </div>
 </div>
 </section>

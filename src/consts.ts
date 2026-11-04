@@ -38,11 +38,12 @@ export const NAV = [
   { href: '/contact/', label: 'Contact' },
 ];
 
+// Service pages live at /services/<slug>/ (copy in src/data/services.ts)
 export const SERVICES = [
-  { id: 'local', label: 'Local SEO & GBP' },
-  { id: 'technical', label: 'Technical SEO & Schema' },
-  { id: 'content', label: 'Keyword & Content Strategy' },
-  { id: 'geo', label: 'AI Search Visibility' },
+  { slug: 'local-seo', label: 'Local SEO & GBP' },
+  { slug: 'technical-seo', label: 'Technical SEO & Schema' },
+  { slug: 'content-strategy', label: 'Keyword & Content Strategy' },
+  { slug: 'ai-search-visibility', label: 'AI Search Visibility' },
 ];
 
 export const BLOG_CATEGORIES = ['Local SEO', 'Technical SEO', 'Content Strategy', 'AI Search', 'Case Notes'];
