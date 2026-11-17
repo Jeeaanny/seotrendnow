@@ -25,7 +25,7 @@ Samples disappear automatically and every page becomes indexable. Then submit
 
 ## House style
 
-- **One heading per section.** No small label (eyebrow) above a heading that repeats or introduces it. The heading says it on its own.
+- **One heading per section in blog posts and case studies.** No small label (eyebrow) above their headings. Site pages (home, services, results, CTA bands) keep their yellow handwritten labels above headings.
 - **Images:** descriptive kebab-case file names (never `cover.png` or `IMG_1234.jpg`), alt text on every image, PNG or JPG source files. The build serves them as responsive WebP automatically, and social share images as 1200x630 JPG.
 
 ## Adding a blog post (3 a month)

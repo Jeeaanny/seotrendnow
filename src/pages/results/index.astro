@@ -64,6 +64,7 @@ const industries = new Set(cards.map((c) => c.data.industry).filter((t) => !t.st
 <div class="wrap">
 <div style="background: #F0F2FF; border-radius: 28px; padding: 48px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center">
 <div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<p class="eyebrow" style="color: #3354FF">Behind the strategy</p>
 <h2 class="h2" style="color: #001C44; font-size: 34px">{featured.data.cardTitle}</h2>
 <p style="margin: 0">{featured.data.cardMeta}</p>
 <a href={`/results/${featured.id}/`} style="font-weight: 700; text-decoration: none">Read the story →</a>
@@ -88,6 +89,7 @@ const industries = new Set(cards.map((c) => c.data.industry).filter((t) => !t.st
 
 <section style="background: #3354FF; color: #FFFFFF">
 <div class="wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; padding-top: 88px; padding-bottom: 88px">
+<p class="eyebrow" style="color: #FFCA00">Your turn</p>
 <h2 class="h2" style="color: #FFFFFF; max-width: 760px">Want results like these for your business?</h2>
 <a class="pill" href={CALENDLY} target="_blank" rel="noopener" style="background: #FFCA00; color: #001C44; margin-top: 6px">Book a Free Strategy Call</a>
 </div>
