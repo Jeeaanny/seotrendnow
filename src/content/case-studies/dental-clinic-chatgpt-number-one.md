@@ -20,7 +20,7 @@ stats:
   - { value: "#1", label: "clinic named by ChatGPT for its core service search" }
   - { value: "4.3K", label: "est. monthly organic visits in June, up from 2.2K in May (Semrush)" }
   - { value: "6", label: "topic clusters in the content framework" }
-  - { value: "3", label: "people confirmed the AI result separately" }
+  - { value: "2", label: "team members saw the same result on their own" }
 challenge:
   - "The clinic sits in a busy Singapore neighbourhood with several dental clinics close by, all competing for the same routine searches: scaling and polishing, check-ups and teeth cleaning."
   - "Singapore's healthcare advertising rules limit how clinics can promote themselves, including testimonials and comparative claims. That ruled out shortcuts like on-site review widgets, so visibility had to come from clear, factual, helpful content."
@@ -44,7 +44,7 @@ takeaways:
 
 ## The AI result
 
-On 26 October 2026, a member of the clinic's team asked ChatGPT, without logging in, for a scaling and polishing dentist in the clinic's neighbourhood. ChatGPT listed the clinic first.
+On 26 October 2026, a team member asked ChatGPT, without logging in, for a scaling and polishing dentist in the clinic's neighbourhood. ChatGPT listed the clinic first.
 
 ![ChatGPT answer recommending the clinic first for scaling and polishing, with the clinic's name, address, phone, price and neighbourhood hidden](./images/dental-clinic-chatgpt/chatgpt-number-one.png)
 
@@ -55,7 +55,9 @@ The answer didn't just name the clinic. It pulled the details a patient needs to
 - The clinic's **rating**
 - A direct link to the clinic's **prices and booking** page
 
-Two other people on the team ran the same search separately and saw the same result. Clinic details are hidden in the screenshot to keep the client anonymous.
+A second person checked on their own that afternoon and saw the same answer. Clinic details are hidden in the screenshot to keep the client anonymous.
+
+![Team Slack thread from 26 October 2026 where a team member shares the ChatGPT result and a second person confirms it, with names, photos and clinic details hidden](./images/dental-clinic-chatgpt/team-slack-thread.png)
 
 ## Why it matters
 
