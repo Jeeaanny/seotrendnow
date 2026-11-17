@@ -7,7 +7,8 @@ const posts = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/posts' }),
   schema: ({ image }) =>
     z.object({
-      title: z.string(),
+      title: z.string(),                     // H1 on the page
+      seoTitle: z.string().optional(),       // <title> tag (50–60 characters). Falls back to "title | SEOTrendNow"
       description: z.string(),               // meta description, 140–160 characters
       date: z.coerce.date(),
       updated: z.coerce.date().optional(),

@@ -34,7 +34,7 @@ if (d.faqs.length) {
 const extraCss = `.toc a{color:#4A4A68;text-decoration:none;font-size:15px}.toc a:hover{color:#3354FF}
 .post-aside{position:sticky;top:104px}@media(max-width:1060px){.post-aside{position:static}}`;
 ---
-<BaseLayout title={`${d.title} | SEOTrendNow`} description={d.description} ogType="article" ogImage={ogImage}
+<BaseLayout title={d.seoTitle ?? `${d.title} | SEOTrendNow`} description={d.description} ogType="article" ogImage={ogImage}
   schema={schema} breadcrumb={[{ name: 'Blog', url: '/blog/' }, { name: d.title, url: `/blog/${post.id}/` }]}
   publishedTime={d.date.toISOString()} modifiedTime={(d.updated ?? d.date).toISOString()}>
 <Fragment slot="head"><style is:inline set:html={postCss + extraCss}></style></Fragment>
