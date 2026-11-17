@@ -14,7 +14,7 @@ const looks: Record<string, { bg: string; stroke: string; icon: string }> = {
 const look = looks[category] ?? looks['Content Strategy'];
 ---
 {image ? (
-  <Image src={image} alt={alt} width={1200} height={630} loading={eager ? 'eager' : 'lazy'} style={`width: 100%; height: ${height}px; object-fit: cover; border-radius: 20px; display: block`} />
+  <Image src={image} alt={alt} width={1200} height={630} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : 'auto'} style={`width: 100%; height: ${height}px; object-fit: cover; border-radius: 20px; display: block`} />
 ) : (
   <div style={`height: ${height}px; border-radius: 20px; background: ${look.bg}; display: flex; align-items: center; justify-content: center`}>
     <svg aria-hidden="true" width={iconSize} height={iconSize} viewBox="0 0 24 24" fill="none" stroke={look.stroke} stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">

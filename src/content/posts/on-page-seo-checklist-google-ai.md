@@ -5,7 +5,7 @@ description: "Your site is live but nobody finds it? This 9-step on-page SEO che
 subtitle: "Nine fixes you can make on your own website this week, in the order that matters."
 date: 2026-11-17
 category: "Technical SEO"
-image: ./images/on-page-seo-checklist-google-ai/cover.png
+image: ./images/on-page-seo-checklist-google-ai/on-page-seo-checklist-google-ai.png
 imageAlt: "On-page SEO checklist with nine steps to go from invisible to visible on Google and AI"
 takeaways:
   - "Google can't rank a page it hasn't found. Set up Search Console and submit your sitemap first."

@@ -5,7 +5,7 @@ description: "Pages stuck on 'Crawled, currently not indexed' in Search Console?
 subtitle: "Why Google skips some of your pages, how to get them indexed, and how to fix the other errors in the Page indexing report."
 date: 2026-11-17
 category: "Technical SEO"
-image: ./images/how-to-fix-crawled-currently-not-indexed/cover.png
+image: ./images/how-to-fix-crawled-currently-not-indexed/how-to-fix-crawled-currently-not-indexed.png
 imageAlt: "Search Console Page indexing report with Crawled, currently not indexed highlighted"
 takeaways:
   - "'Crawled, currently not indexed' means Google read the page and decided not to store it. It's usually about quality or duplication, not a technical bug."

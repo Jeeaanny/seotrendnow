@@ -1,7 +1,7 @@
 ---
 // One page per case study, built from src/content/case-studies/<slug>.md
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import { render } from 'astro:content';
 import { getCaseStudies } from '../../lib/content';
 import { CALENDLY, SITE } from '../../consts';
@@ -16,6 +16,7 @@ const { cs, next } = Astro.props;
 const d = cs.data;
 const { Content } = await render(cs);
 const hasBody = (cs.body ?? '').trim().length > 0;
+const ogImage = d.cardImage ? (await getImage({ src: d.cardImage, width: 1200, height: 630, format: 'jpg', quality: 82 })).src : undefined;
 const schema = [{
   '@context': 'https://schema.org', '@type': 'Article', headline: d.title, description: d.description,
   url: new URL(`/results/${cs.id}/`, SITE.domain).href, author: authorRef, publisher: publisherRef,
@@ -24,7 +25,7 @@ const schema = [{
 const tagCss = `.tag{font-size:13px;font-weight:600;padding:4px 12px;border-radius:100px;background:rgba(255,255,255,0.1);color:#FFFFFF;border:1px solid #334969}`;
 const shot = 'height: 300px; border-radius: 20px; background: #F0F2FF; border: 2px dashed #8094FF; display: flex; align-items: center; justify-content: center; color: #334969; font-weight: 600; font-size: 15px';
 ---
-<BaseLayout title={d.seoTitle ?? `${d.title} | SEOTrendNow`} description={d.description} ogType="article" schema={schema}
+<BaseLayout title={d.seoTitle ?? `${d.title} | SEOTrendNow`} description={d.description} ogType="article" ogImage={ogImage} schema={schema}
   breadcrumb={[{ name: 'Results', url: '/results/' }, { name: d.title, url: `/results/${cs.id}/` }]}>
 <Fragment slot="head"><style is:inline set:html={caseStudyCss + tagCss}></style></Fragment>
 
@@ -58,7 +59,7 @@ const shot = 'height: 300px; border-radius: 20px; background: #F0F2FF; border: 2
 {d.challenge.length > 0 && (
 <section class="sec" style="background: #FFFFFF">
 <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 56px">
-<div style="flex: 1 1 300px; min-width: 0"><p class="eyebrow" style="color: #3354FF">The challenge</p><h2 class="h2" style="color: #001C44; padding-top: 8px">Where they started</h2></div>
+<div style="flex: 1 1 300px; min-width: 0"><h2 class="h2" style="color: #001C44">The challenge</h2></div>
 <div style="flex: 2 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 16px">{d.challenge.map((p) => <p style="margin: 0">{p}</p>)}</div>
 </div>
 </section>
@@ -67,7 +68,7 @@ const shot = 'height: 300px; border-radius: 20px; background: #F0F2FF; border: 2
 {d.steps.length > 0 && (
 <section class="sec" style="background: #F9FAFF">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
-<div><p class="eyebrow" style="color: #3354FF">What I did</p><h2 class="h2" style="color: #001C44; padding-top: 8px">The plan, step by step</h2></div>
+<div><h2 class="h2" style="color: #001C44">What I did, step by step</h2></div>
 <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 20px">
 {d.steps.map((s, i) => (
 <li style="background: #FFFFFF; border: 1px solid #DDE1FF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 10px"><span style="font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 32px; color: #DDE1FF; line-height: 1">{String(i + 1).padStart(2, '0')}</span><h3 class="h3" style="color: #001C44">{s.title}</h3><p style="margin: 0; font-size: 15px">{s.text}</p></li>
@@ -79,7 +80,7 @@ const shot = 'height: 300px; border-radius: 20px; background: #F0F2FF; border: 2
 
 <section class="sec" style="background: #FFFFFF">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 36px">
-<div><p class="eyebrow" style="color: #3354FF">The results</p><h2 class="h2" style="color: #001C44; padding-top: 8px">Before and after</h2></div>
+<div><h2 class="h2" style="color: #001C44">The results: before and after</h2></div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 24px">
 <figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
 {d.beforeImage ? <Image src={d.beforeImage} alt={d.beforeCaption || 'Before'} style="width: 100%; height: auto; border-radius: 20px" /> : <div style={shot}>[Screenshot: before]</div>}

@@ -5,7 +5,7 @@ description: "Only a small share of local businesses get named by ChatGPT. Learn
 subtitle: "What ChatGPT, Gemini and Perplexity check before they name a local business, and how to make sure yours makes the list."
 date: 2026-11-17
 category: "AI Search"
-image: ./images/how-to-get-your-business-recommended-by-chatgpt/cover.png
+image: ./images/how-to-get-your-business-recommended-by-chatgpt/how-to-get-your-business-recommended-by-chatgpt.png
 imageAlt: "ChatGPT conversation recommending three local dentists, with one business highlighted"
 takeaways:
   - "AI assistants recommend businesses they can confirm across many sources: your website, listings, reviews and third-party articles."

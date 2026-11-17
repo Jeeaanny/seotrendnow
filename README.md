@@ -23,6 +23,11 @@ Samples disappear automatically and every page becomes indexable. Then submit
 
 ---
 
+## House style
+
+- **One heading per section.** No small label (eyebrow) above a heading that repeats or introduces it. The heading says it on its own.
+- **Images:** descriptive kebab-case file names (never `cover.png` or `IMG_1234.jpg`), alt text on every image, PNG or JPG source files. The build serves them as responsive WebP automatically, and social share images as 1200x630 JPG.
+
 ## Adding a blog post (3 a month)
 
 Create one Markdown file in `src/content/posts/`. The file name becomes the URL:
@@ -35,7 +40,7 @@ description: "Meta description, 140 to 160 characters."
 subtitle: "Optional one-line promise under the headline."
 date: 2026-11-20
 category: "Local SEO"   # Local SEO | Technical SEO | Content Strategy | AI Search | Case Notes
-image: ./images/gbp-categories.jpg   # optional, 1200 × 630; without it a branded tile is used
+image: ./images/gbp-categories-guide/gbp-categories-guide.png   # optional, 1200 × 630, named after the post
 imageAlt: "Describe the image"
 takeaways:
   - "Direct, quotable answer one"

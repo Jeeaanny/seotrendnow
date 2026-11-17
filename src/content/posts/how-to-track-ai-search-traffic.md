@@ -5,7 +5,7 @@ description: "See how much traffic ChatGPT, Perplexity and Google's AI Overviews
 subtitle: "Where AI visits show up in your reports, where they hide, and a simple monthly routine to measure them."
 date: 2026-11-17
 category: "AI Search"
-image: ./images/how-to-track-ai-search-traffic/cover.png
+image: ./images/how-to-track-ai-search-traffic/how-to-track-ai-search-traffic.png
 imageAlt: "GA4 traffic acquisition report with the new AI Assistant channel highlighted"
 takeaways:
   - "GA4 now groups visits from recognised AI chatbots like ChatGPT, Gemini and Claude into an AI Assistant channel, with no setup."

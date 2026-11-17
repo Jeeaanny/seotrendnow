@@ -3,6 +3,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCover from '../../components/PostCover.astro';
 import { render } from 'astro:content';
+import { getImage } from 'astro:assets';
 import { getPosts, fmtDate, readMinutes } from '../../lib/content';
 import { CALENDLY, SITE } from '../../consts';
 import { authorRef, publisherRef } from '../../lib/schema';
@@ -19,7 +20,8 @@ const toc = headings.filter((h) => h.depth === 2);
 const minutes = readMinutes(post.body ?? '');
 const related = [...all.filter((p) => p.id !== post.id && p.data.category === d.category), ...all.filter((p) => p.id !== post.id && p.data.category !== d.category)].slice(0, 3);
 const url = new URL(`/blog/${post.id}/`, SITE.domain).href;
-const ogImage = d.image ? d.image.src : '/og-image.png';
+// Social share image: 1200x630 JPG, which every platform displays
+const ogImage = d.image ? (await getImage({ src: d.image, width: 1200, height: 630, format: 'jpg', quality: 82 })).src : '/og-image.png';
 
 const schema: object[] = [{
   '@context': 'https://schema.org', '@type': 'BlogPosting',

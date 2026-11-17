@@ -5,7 +5,7 @@ description: "Opening or moving a location? Your address shapes where you can ra
 subtitle: "Your address is the one ranking factor you can't fix later. Here's how to check it before you commit."
 date: 2026-11-17
 category: "Local SEO"
-image: ./images/check-local-seo-before-new-business-location/cover.png
+image: ./images/check-local-seo-before-new-business-location/check-local-seo-before-new-business-location.png
 imageAlt: "Geo-grid map of local rankings around a possible new business location"
 takeaways:
   - "Proximity is one of the strongest factors in Google's local rankings, and you can't change it after you sign the lease."

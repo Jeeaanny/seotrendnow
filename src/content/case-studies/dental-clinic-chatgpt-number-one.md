@@ -9,7 +9,7 @@ metric: "#1"
 cardTitle: "clinic named by ChatGPT for a high-intent local dental search"
 cardMeta: "Singapore · Topic clusters, technical audit, content calendar"
 cardImageLabel: "ChatGPT answer naming the clinic first, with clinic details hidden"
-cardImage: ./images/dental-clinic-chatgpt/chatgpt-card.png
+cardImage: ./images/dental-clinic-chatgpt/chatgpt-dental-clinic-recommendation.png
 tags: ["Singapore", "Dental", "AI Search"]
 client: "A dental clinic in Singapore"
 industry: "Dental"

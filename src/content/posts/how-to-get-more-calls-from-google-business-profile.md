@@ -5,7 +5,7 @@ description: "Want more calls from your Google Business Profile? Find the questi
 subtitle: "Find the question customers ask right before they pick up the phone, then build the page that answers it."
 date: 2026-11-17
 category: "Local SEO"
-image: ./images/how-to-get-more-calls-from-google-business-profile/cover.png
+image: ./images/how-to-get-more-calls-from-google-business-profile/how-to-get-more-calls-from-google-business-profile.png
 imageAlt: "Chart of calls from a Google Business Profile rising over time"
 takeaways:
   - "Most local customers research before they call. The business that answers their question first usually gets the call."

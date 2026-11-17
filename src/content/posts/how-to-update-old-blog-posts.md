@@ -5,7 +5,7 @@ description: "Traffic to your old blog posts dropping? Find decaying pages in Se
 subtitle: "Find the posts that are slipping, decide what to do with each one, and refresh them so they rank, and get cited, again."
 date: 2026-11-17
 category: "Content Strategy"
-image: ./images/how-to-update-old-blog-posts/cover.png
+image: ./images/how-to-update-old-blog-posts/how-to-update-old-blog-posts.png
 imageAlt: "Chart of clicks to a blog post declining, then recovering after a content refresh"
 takeaways:
   - "Most blog posts lose traffic over time as facts age, competitors improve and search results change. This is called content decay."

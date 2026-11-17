@@ -5,7 +5,7 @@ description: "Learn how to write SEO title tags that rank on Google and get the 
 subtitle: "Four rules, real examples for local businesses, and a prompt that writes the first draft for you."
 date: 2026-11-17
 category: "Technical SEO"
-image: ./images/how-to-write-title-tags-that-rank/cover.png
+image: ./images/how-to-write-title-tags-that-rank/how-to-write-title-tags-that-rank.png
 imageAlt: "Google search result for teeth whitening in Austin with the title tag highlighted"
 takeaways:
   - "Your title tag is the blue link in Google. It tells Google what the page is about and convinces people to click."

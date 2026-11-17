@@ -5,7 +5,7 @@ description: "A step-by-step technical SEO audit checklist for 2027. Check crawl
 subtitle: "What to check, in what order, so Google can rank your pages and AI tools can cite them."
 date: 2026-11-17
 category: "Technical SEO"
-image: ./images/technical-seo-audit-checklist/cover.png
+image: ./images/technical-seo-audit-checklist/technical-seo-audit-checklist.png
 imageAlt: "Technical SEO audit checklist covering crawlability, indexing, Core Web Vitals, structured data and AI search"
 takeaways:
   - "Every page must be discovered, crawled, rendered and indexed before it can rank or be cited by AI. Audit in that order."

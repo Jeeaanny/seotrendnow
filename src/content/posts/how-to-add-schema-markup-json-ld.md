@@ -5,7 +5,7 @@ description: "Add schema markup with JSON-LD, step by step. Copy-ready examples 
 subtitle: "Copy-ready JSON-LD examples, where to paste them on your platform, and what schema still does in Google in 2026."
 date: 2026-11-17
 category: "Technical SEO"
-image: ./images/how-to-add-schema-markup-json-ld/cover.png
+image: ./images/how-to-add-schema-markup-json-ld/how-to-add-schema-markup-json-ld.png
 imageAlt: "JSON-LD schema markup example for a dentist with the type, name and phone number"
 takeaways:
   - "JSON-LD is the format Google recommends for schema markup. It's a small script block that doesn't change how your page looks."

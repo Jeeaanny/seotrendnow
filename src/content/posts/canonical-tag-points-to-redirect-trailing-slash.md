@@ -5,7 +5,7 @@ description: "Yoast adding a trailing slash to your canonical that redirects bac
 subtitle: "A real WordPress audit: how one extra slash broke the canonical on most of a site, and the small filter that fixed it."
 date: 2026-11-17
 category: "Case Notes"
-image: ./images/canonical-tag-points-to-redirect-trailing-slash/cover.png
+image: ./images/canonical-tag-points-to-redirect-trailing-slash/canonical-tag-points-to-redirect-trailing-slash.png
 imageAlt: "Live page URL without a trailing slash next to a canonical tag that adds one"
 takeaways:
   - "If your canonical tag adds a trailing slash the real URL doesn't have, the canonical points to a redirect, and Google ignores it."

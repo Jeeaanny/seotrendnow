@@ -17,6 +17,8 @@ export default defineConfig({
   site: 'https://seotrendnow.online',
   trailingSlash: 'always',
   build: { format: 'directory' },
+  // Responsive images: every <Image> and Markdown image gets srcset/sizes, so phones load smaller files
+  image: { layout: 'constrained' },
   // External links in blog posts and case studies open in a new tab
   markdown: {
     rehypePlugins: [[rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }]],

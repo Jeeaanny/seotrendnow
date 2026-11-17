@@ -5,7 +5,7 @@ description: "Google's 2026 guide says AI Overviews and AI Mode run on core Sear
 subtitle: "Google published official guidance in May 2026. Here's what it means for your website, in plain English."
 date: 2026-11-17
 category: "AI Search"
-image: ./images/how-to-show-up-in-google-ai-overviews/cover.png
+image: ./images/how-to-show-up-in-google-ai-overviews/how-to-show-up-in-google-ai-overviews.png
 imageAlt: "Google AI Overview answer with a local plumbing company cited as a source"
 takeaways:
   - "AI Overviews and AI Mode use Google's regular Search index and ranking systems. If you can't rank, you can't be cited."

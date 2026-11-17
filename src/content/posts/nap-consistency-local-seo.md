@@ -5,7 +5,7 @@ description: "Mismatched business details quietly hurt your local rankings. Use 
 subtitle: "A four-step playbook to make your business details match everywhere, so Google and AI stop second-guessing you."
 date: 2026-11-17
 category: "Local SEO"
-image: ./images/nap-consistency-local-seo/cover.png
+image: ./images/nap-consistency-local-seo/nap-consistency-local-seo.png
 imageAlt: "Business name, address and phone number card for local SEO"
 takeaways:
   - "NAP stands for name, address and phone number. Google and AI tools compare it across the web to confirm your business is real and where it is."
