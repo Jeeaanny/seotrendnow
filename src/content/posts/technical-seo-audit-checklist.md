@@ -98,6 +98,8 @@ Not every reason is a problem. "Alternate page with proper canonical tag" usuall
 - **Excluded by 'noindex' tag.** Check every one. The most common mistake I see is a `noindex` left on from a staging or pre-launch setup.
 - **Duplicate, Google chose different canonical than user.** Google disagrees with your canonical tag. Read the next section.
 
+For step-by-step fixes for each of these, plus robots.txt and XML sitemap errors, see [how to fix "crawled, currently not indexed"](/blog/how-to-fix-crawled-currently-not-indexed/).
+
 ### Check your canonical tags
 
 A canonical tag tells Google which URL is the main version of a page. Every indexable page should have one that points to itself, using the exact live URL.
@@ -136,9 +138,11 @@ Check them in two places. The **Core Web Vitals** report in Search Console group
 
 Mobile matters most. Google indexes the mobile version of your site, and most local searches happen on phones. Test on mobile first.
 
+For a full walkthrough, including how to read the LCP breakdown and find the scripts slowing INP, see [how to fix Core Web Vitals](/blog/how-to-fix-core-web-vitals/).
+
 ## 4. Structured data: does Google understand your business?
 
-Structured data, also called schema markup, is code that describes your page in a format machines read directly. It can earn rich results, like breadcrumbs and review stars, and it helps Google and AI tools connect your pages to a real business.
+Structured data, also called schema markup, is code that describes your page in a format machines read directly. It can earn rich results, like breadcrumbs, product details and event listings, and it helps Google connect your pages to a real business.
 
 ![Which schema types to use on which pages: LocalBusiness, Organization, Service, BreadcrumbList, Article, FAQPage and Person](./images/technical-seo-audit-checklist/schema-types-by-page.png)
 
@@ -148,7 +152,9 @@ For most local and service businesses, start with:
 - **Organization** with your logo and `sameAs` links to your social and directory profiles.
 - **BreadcrumbList** on every page below the homepage.
 - **Article** or **BlogPosting** on blog posts, with the author and dates.
-- **FAQPage** only where the questions and answers are visible on the page.
+- **FAQPage** only where the questions and answers are visible on the page. Google stopped showing FAQ rich results on May 7, 2026, so this won't add dropdowns to your listing, but the markup is harmless to keep.
+
+Two things schema won't do: Google doesn't show review stars when a business marks up reviews about itself with LocalBusiness or Organization schema, and Google says there's no special schema needed for AI Overviews or AI Mode.
 
 Three rules keep schema working for you:
 
@@ -157,6 +163,8 @@ Three rules keep schema working for you:
 3. **Test before and after publishing.** Use Google's [Rich Results Test](https://search.google.com/test/rich-results) for eligibility and the [Schema Markup Validator](https://validator.schema.org/) for syntax. Then watch the **Enhancements** reports in Search Console.
 
 If your site runs two SEO plugins, check that only one outputs schema. Two plugins often produce duplicate or conflicting markup, along with duplicate titles and canonicals.
+
+For copy-ready JSON-LD examples and where to paste them on WordPress, Wix, Squarespace and Shopify, see [how to add schema markup](/blog/how-to-add-schema-markup-json-ld/).
 
 ## 5. AI search visibility: can AI tools find and cite you?
 
@@ -174,6 +182,12 @@ AI companies run different bots for different jobs. **Search bots** fetch pages 
 | Google | Googlebot (AI Overviews use Search) | Google-Extended (a token, not a crawler) |
 
 If you want AI tools to recommend you, allow the search bots. Blocking training bots is up to you, and it doesn't remove you from AI search. Also check your CDN or firewall settings. Some security tools block AI crawlers by default, even when robots.txt allows them.
+
+To confirm AI bots can reach you, check your server or CDN logs for their user agents, like OAI-SearchBot and PerplexityBot. Cloudflare shows AI crawler activity in its dashboard. If they never appear, or show blocked requests, something is stopping them.
+
+### Don't block snippets on pages you want cited
+
+Google's AI features quote and summarize pages, so a page with a `nosnippet` tag or `max-snippet:0` can't be used. Check your SEO plugin hasn't added these to important pages.
 
 ### Make content easy to quote
 
@@ -194,7 +208,24 @@ Bing's index feeds several AI products, so it's worth more attention than its se
 
 ### What about llms.txt?
 
-An `llms.txt` file is a proposed standard: a plain text summary of your site for AI tools. It's cheap to add and does no harm, but no major AI search engine has confirmed it uses the file for rankings or citations. Treat it as optional. Fixing crawling, indexing and content will do far more.
+An `llms.txt` file is a proposed standard: a plain text summary of your site for AI tools. Google's May 2026 guide to its AI features lists llms.txt among the things site owners don't need, and no other major AI search engine has confirmed it uses the file for citations. It's harmless to have, but treat it as optional. Fixing crawling, indexing and content will do far more.
+
+To go deeper on AI search, read [how to show up in Google AI Overviews](/blog/how-to-show-up-in-google-ai-overviews/), [how to get your business recommended by ChatGPT](/blog/how-to-get-your-business-recommended-by-chatgpt/) and [how to track AI search traffic](/blog/how-to-track-ai-search-traffic/).
+
+## The 10 most common technical SEO issues
+
+These are the problems I find most often when I audit small business websites. If you're short on time, check these first.
+
+1. **A `noindex` tag left on after launch.** Often from a staging setting or a pre-launch option in the theme or SEO plugin. It can hide the whole site.
+2. **Pages stuck on "Crawled, currently not indexed."** Usually thin, duplicate or poorly linked pages. [Here's how to fix it](/blog/how-to-fix-crawled-currently-not-indexed/).
+3. **Canonical tags that don't match the live URL.** A trailing slash, the wrong host, or a canonical pointing at a redirect. [Example and fix](/blog/canonical-tag-points-to-redirect-trailing-slash/).
+4. **Multiple versions of the site.** HTTP and HTTPS, or www and non-www, both loading without redirects.
+5. **A messy XML sitemap.** Listing redirects, 404s, noindexed pages or tag archives.
+6. **A slow hero image.** The most common cause of failing LCP. [How to fix Core Web Vitals](/blog/how-to-fix-core-web-vitals/).
+7. **Too many third-party scripts.** Chat widgets, tag managers and page-builder add-ons that slow INP.
+8. **Duplicate or missing title tags and H1s.** Every page should have its own. [How to write title tags](/blog/how-to-write-title-tags-that-rank/).
+9. **Broken internal links and orphan pages.** Pages Google can't reach, or links that lead to 404s.
+10. **Missing or conflicting schema.** No LocalBusiness markup, or two plugins outputting different business details. [How to add schema markup](/blog/how-to-add-schema-markup-json-ld/).
 
 ## The complete technical SEO audit checklist
 
@@ -226,7 +257,7 @@ Here's every check on one page. Save it and run through it twice a year, or afte
 
 **Schema**
 - LocalBusiness or Organization schema with matching business details
-- Breadcrumbs, articles and FAQs marked up where they're visible
+- Breadcrumbs and articles marked up, and FAQ markup only for visible questions
 - No errors in the Rich Results Test or Search Console
 
 **AI search**
