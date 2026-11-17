@@ -6,7 +6,11 @@ import jeanPortrait from '../assets/jean-jumamoy-freelance-seo-specialist.jpg';
 import junkGoneLogo from '../assets/junk-gone-hauling-removal-logo.png';
 import headHuntableLogo from '../assets/headhuntable-logo.png';
 import hiroClinicsLogo from '../assets/hiro-clinics-logo.png';
+import aiSeoTrendLogo from '../assets/aiseotrend-local-seo-logo.png';
+import cdoBizLogo from '../assets/cdo-biz-logo.svg';
 const brands = [
+  { name: 'AiSEOTrend', logo: aiSeoTrendLogo },
+  { name: 'CDO Biz', logo: cdoBizLogo },
   { name: 'Junk Gone Hauling and Removal', logo: junkGoneLogo },
   { name: 'HeadHuntable', logo: headHuntableLogo },
   { name: 'Hiro Clinics', logo: hiroClinicsLogo },
@@ -97,11 +101,10 @@ const pageCss = ".sec{padding:96px 0}\n.h1{font-family:Archivo,system-ui,sans-se
 <h2 class="h2" style="color: #001C44">Brands I've Worked With</h2>
 <p style="margin: 0">Agency, in-house and freelance work across the US, Australia and Singapore.</p>
 </div>
-<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 28px 48px">
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 36px">
 {brands.map((b) => (
-<li style="display: flex; flex-direction: column; align-items: center; gap: 12px; width: 150px">
-<Image src={b.logo} alt={`${b.name} logo`} width={96} height={96} widths={[96, 192]} sizes="96px" style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; display: block; background: #FFFFFF; border: 1px solid #DDE1FF; box-shadow: 0 8px 20px rgba(0, 28, 68, 0.08)" />
-<span style="font-size: 14px; font-weight: 600; color: #334969; line-height: 1.3">{b.name}</span>
+<li>
+<Image src={b.logo} alt={`${b.name} logo`} title={b.name} width={96} height={96} widths={[96, 192]} sizes="96px" style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; display: block; background: #FFFFFF; border: 1px solid #DDE1FF; box-shadow: 0 8px 20px rgba(0, 28, 68, 0.08)" />
 </li>
 ))}
 </ul>
