@@ -4,11 +4,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { homeSchema } from '../lib/schema';
 import { SHOW_TESTIMONIALS } from '../consts';
 import { Image } from 'astro:assets';
+import rankGrid from '../assets/google-maps-local-rank-grid.png';
+import clicksTrend from '../assets/search-console-organic-clicks-trend.png';
 import kitchenGsc from '../content/case-studies/images/kitchen-cabinet-organic-clicks/search-console-organic-clicks-growth.png';
 const pageCss = ".sec{padding:104px 0}\n.h1{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:64px;line-height:1.04;letter-spacing:-0.02em;margin:0}\n.h2{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:46px;line-height:1.08;letter-spacing:-0.015em;margin:0}\n.h3{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:22px;line-height:1.2;margin:0}\n.eyebrow{font-family:Kalam,cursive;font-weight:700;font-size:24px;line-height:1.2;margin:0}\n@media (max-width:820px){\n.h1{font-size:42px}.h2{font-size:32px}.sec{padding:72px 0}.wrap{padding:0 16px}\n}";
 ---
 <BaseLayout title={"SEO Strategist for Clinics & Local Businesses | SEOTrendNow"} description={"I help clinics, law firms and local service businesses in the US, Australia and Singapore rank on Google, win the map pack and show up in AI answers."} schema={homeSchema} breadcrumb={undefined}>
-<Fragment slot="head"><style is:inline set:html={pageCss}></style></Fragment>
+<Fragment slot="head"><style is:inline set:html={pageCss}></style><style is:inline>@media (max-width: 600px){.hero-ai{top:64px !important}}</style></Fragment>
 <section id="top" style="background: #001C44; color: #FFFFFF; overflow: hidden">
 <div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 56px; padding-top: 96px; padding-bottom: 104px">
 <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
@@ -27,27 +29,27 @@ const pageCss = ".sec{padding:104px 0}\n.h1{font-family:Archivo,system-ui,sans-s
 </div>
 </div>
 
-<div style="flex: 1 1 420px; min-width: 0; position: relative; min-height: 520px">
-<div style="position: absolute; left: 40px; right: 40px; top: 0; bottom: 40px; border-radius: 28px; background: #334969; border: 2px dashed #808DA1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: #CBD1D9">
-<svg aria-hidden="true" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#CBD1D9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-7 8-7s8 3 8 7"></path></svg>
-<span style="font-size: 15px; font-weight: 600">[Your professional headshot]</span>
-</div>
-<div style="position: absolute; left: 0; bottom: 0; width: 270px; background: #FFFFFF; border-radius: 18px; padding: 20px; box-shadow: 0 24px 48px rgba(0,10,40,0.35); color: #001C44; box-sizing: border-box">
+<div style="flex: 1 1 420px; min-width: 0; position: relative; min-height: 540px">
+<figure style="position: absolute; left: 40px; right: 40px; top: 0; bottom: 40px; margin: 0; border-radius: 28px; overflow: hidden; background: #F7F9F9; box-shadow: 0 24px 60px rgba(0,10,40,0.35)">
+<Image src={rankGrid} alt="Google Maps rank grid for a local client: green dots show 41 of 49 search points ranking in the top 3" widths={[480, 640, 960, 1304]} sizes="(min-width: 1060px) 520px, 100vw" loading="eager" fetchpriority="high" style="width: 100%; height: 100%; object-fit: contain; display: block" />
+<figcaption style="position: absolute; left: 14px; top: 14px; display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; background: rgba(255,255,255,0.94); color: #001C44; border-radius: 100px; padding: 7px 12px; font-size: 12px; font-weight: 600; box-shadow: 0 6px 16px rgba(0,10,40,0.18)"><span style="width: 10px; height: 10px; border-radius: 50%; background: #13B886"></span>41/49 top 3 on Google Maps</figcaption>
+<span style="position: absolute; right: 14px; bottom: 12px; font-size: 10px; color: #4A4A68; background: rgba(255,255,255,0.8); padding: 2px 6px; border-radius: 4px">Map data © Google</span>
+</figure>
+<div style="position: absolute; left: 0; bottom: 0; width: 280px; background: #FFFFFF; border-radius: 18px; padding: 20px; box-shadow: 0 24px 48px rgba(0,10,40,0.35); color: #001C44; box-sizing: border-box">
 <p style="margin: 0; font-size: 13px; font-weight: 600; color: #4A4A68">Organic clicks, Google Search Console</p>
-<p style="margin: 4px 0 10px; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 34px; color: #3354FF; line-height: 1">[+55%]</p>
-<svg role="img" aria-label="Placeholder trend line rising over six months" width="230" height="56" viewBox="0 0 230 56" fill="none"><polyline points="0 50 38 46 76 44 114 34 152 26 190 14 230 6" stroke="#3354FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></polyline><line x1="0" y1="55" x2="230" y2="55" stroke="#DDE1FF" stroke-width="1"></line></svg>
-<p style="margin: 8px 0 0; font-size: 13px; color: #4A4A68">[Client type], in [X] months</p>
+<p style="margin: 4px 0 10px; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 34px; color: #3354FF; line-height: 1">+120%</p>
+<Image src={clicksTrend} alt="Google Search Console chart of organic clicks and impressions rising for a kitchen cabinet supplier" widths={[240, 480]} sizes="240px" style="width: 100%; height: auto; display: block; border-radius: 8px" />
+<p style="margin: 8px 0 0; font-size: 13px; color: #4A4A68">Kitchen cabinet supplier, in 6 months</p>
 </div>
-<div style="position: absolute; right: 0; top: 48px; width: 196px; background: #FFFFFF; border-radius: 18px; padding: 18px; box-shadow: 0 24px 48px rgba(0,10,40,0.35); color: #001C44; box-sizing: border-box">
-<p style="margin: 0 0 10px; font-size: 13px; font-weight: 600; color: #4A4A68">Map pack grid</p>
-<div aria-hidden="true" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px">
-<span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #8094FF"></span><span style="height: 22px; border-radius: 50%; background: #DDE1FF"></span>
-<span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #8094FF"></span>
-<span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #FFCA00"></span><span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #3354FF"></span>
-<span style="height: 22px; border-radius: 50%; background: #8094FF"></span><span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #3354FF"></span>
-<span style="height: 22px; border-radius: 50%; background: #DDE1FF"></span><span style="height: 22px; border-radius: 50%; background: #8094FF"></span><span style="height: 22px; border-radius: 50%; background: #3354FF"></span><span style="height: 22px; border-radius: 50%; background: #8094FF"></span><span style="height: 22px; border-radius: 50%; background: #DDE1FF"></span>
+<div class="hero-ai" style="position: absolute; right: 0; top: 40px; width: 204px; background: #FFFFFF; border-radius: 18px; padding: 18px; box-shadow: 0 24px 48px rgba(0,10,40,0.35); color: #001C44; box-sizing: border-box">
+<p style="margin: 0; font-size: 13px; font-weight: 600; color: #4A4A68">ChatGPT recommendation</p>
+<p style="margin: 4px 0 12px; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 34px; color: #3354FF; line-height: 1">#1</p>
+<div aria-hidden="true" style="display: flex; flex-direction: column; gap: 9px; font-size: 12px; font-weight: 700">
+<span style="display: flex; align-items: center; gap: 8px; color: #001C44">1<span style="flex: none; height: 8px; width: 92px; border-radius: 4px; background: #3354FF"></span><span style="color: #E8A900">★</span>4.9</span>
+<span style="display: flex; align-items: center; gap: 8px; color: #808DA1">2<span style="flex: none; height: 8px; width: 110px; border-radius: 4px; background: #DDE1FF"></span></span>
+<span style="display: flex; align-items: center; gap: 8px; color: #808DA1">3<span style="flex: none; height: 8px; width: 80px; border-radius: 4px; background: #DDE1FF"></span></span>
 </div>
-<p style="margin: 10px 0 0; font-size: 13px; color: #4A4A68"><b style="color: rgb(0, 28, 68)">[21/25]</b> points in the top 3</p>
+<p style="margin: 12px 0 0; font-size: 13px; color: #4A4A68">Dental clinic in Singapore</p>
 </div>
 </div>
 </div>
