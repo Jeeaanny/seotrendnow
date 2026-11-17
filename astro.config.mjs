@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import rehypeExternalLinks from 'rehype-external-links';
 import { readdirSync, readFileSync } from 'node:fs';
 
 // Sample (placeholder) posts and case studies never go in the sitemap.
@@ -16,6 +17,10 @@ export default defineConfig({
   site: 'https://seotrendnow.online',
   trailingSlash: 'always',
   build: { format: 'directory' },
+  // External links in blog posts and case studies open in a new tab
+  markdown: {
+    rehypePlugins: [[rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }]],
+  },
   integrations: [
     sitemap({ filter: (page) => !sampleUrls.some((u) => page.endsWith(u)) }),
   ],
