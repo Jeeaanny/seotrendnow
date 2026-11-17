@@ -5,7 +5,7 @@
 //   - every page carries <meta name="robots" content="noindex"> so Google doesn't index placeholders
 //   - sample case studies and sample blog posts are shown so the layout can be reviewed
 // Set it to false when the real content is in. Samples then disappear and pages become indexable.
-export const PRELAUNCH = true;
+export const PRELAUNCH = false;
 
 export const SITE = {
   name: 'SEOTrendNow',
