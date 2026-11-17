@@ -7,9 +7,9 @@
 // Set it to false when the real content is in. Samples then disappear and pages become indexable.
 export const PRELAUNCH = false;
 
-// Set to true once clients have approved their testimonials (quotes live in src/pages/index.astro
-// and src/pages/results/index.astro). Hidden until then so no placeholder quotes show.
-export const SHOW_TESTIMONIALS = false;
+// Client testimonials (homepage and Results page). Quotes approved by the clients, Nov 2026.
+// Set to false to hide both sections.
+export const SHOW_TESTIMONIALS = true;
 
 export const SITE = {
   name: 'SEOTrendNow',
