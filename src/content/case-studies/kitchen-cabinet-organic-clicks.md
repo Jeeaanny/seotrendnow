@@ -1,26 +1,26 @@
 ---
 order: 2
 featured: false
-title: "How a Kitchen Cabinet Supplier More Than Doubled Its Organic Clicks in 3 Months"
+title: "How a Kitchen Cabinet Supplier More Than Doubled Its Organic Clicks in 6 Months"
 seoTitle: "Kitchen Cabinet SEO Case Study: +120% Organic Clicks"
-description: "A kitchen cabinet supplier and installer went from about 800 to 1,750 monthly organic clicks in 3 months after technical, content and local SEO fixes."
-summary: "A kitchen cabinet supplier and installer was publishing blogs that barely got seen. Three months after fixing the site's technical and content problems, monthly organic clicks had more than doubled."
+description: "A kitchen cabinet supplier and installer went from about 800 to 1,750 monthly organic clicks in 6 months after technical, content and local SEO fixes."
+summary: "A kitchen cabinet supplier and installer was publishing blogs that barely got seen. Within six months of fixing the site's technical and content problems, monthly organic clicks had more than doubled."
 metric: "+120%"
 cardTitle: "organic clicks for a kitchen cabinet supplier and installer"
-cardMeta: "3 months · Technical fixes, content cleanup, location pages"
+cardMeta: "6 months · Technical fixes, content cleanup, location pages"
 cardImageLabel: "Search Console chart showing organic clicks and impressions rising"
 cardImage: ./images/kitchen-cabinet-organic-clicks/search-console-organic-clicks-growth.png
 tags: ["Home Services", "Technical SEO", "Content Strategy"]
 client: "A kitchen cabinet supplier and installer"
 industry: "Kitchen cabinets and installation"
 market: "Withheld for privacy"
-timeframe: "3 months"
+timeframe: "6 months"
 services: "Technical SEO, Content Strategy, Local SEO"
 stats:
   - { value: "+120%", label: "monthly organic clicks, from about 800 to 1,750" }
   - { value: "+135%", label: "monthly impressions in Google Search" }
   - { value: "9", label: "technical, content and local fixes" }
-  - { value: "3 months", label: "to more than double organic clicks" }
+  - { value: "6 months", label: "to more than double organic clicks, with growth from month 4" }
 challenge:
   - "The business kept uploading blog posts, but its pages weren't ranking. Impressions stayed low, and clicks from Google were very low."
   - "At its low point, the site was getting about 800 organic clicks a month, down from around 1,300 earlier in the year. More content wasn't fixing it, because the problems were underneath the content: duplicate signals, posts competing with each other, and pages that didn't match what people searched for."
@@ -36,7 +36,7 @@ steps:
   - { title: "Added location pages", text: "Created pages for the areas the business serves, so it could show up for local cabinet supply and installation searches." }
 afterImage: ./images/kitchen-cabinet-organic-clicks/search-console-organic-clicks-growth.png
 afterCaption: "Google Search Console, 12 months of clicks (blue) and impressions (purple). The climb on the right follows the fixes."
-resultsText: "Monthly organic clicks went from about 800 to 1,750 in three months, more than double. Impressions grew by 135% over the same period, so the site wasn't just getting more clicks from the same searches. It was showing up for far more of them."
+resultsText: "Clicks started climbing in the fourth month and kept rising. By the end of the six months, monthly organic clicks had gone from about 800 to 1,750, more than double. Impressions grew by 135% over the same stretch, so the site wasn't just getting more clicks from the same searches. It was showing up for far more of them."
 takeaways:
   - "Publishing more blogs won't help if the site has duplicate signals, cannibalising posts and pages that miss search intent. Fix the foundation first."
   - "Merging weak, overlapping posts often does more than writing new ones."
