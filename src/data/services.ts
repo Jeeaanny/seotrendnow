@@ -173,10 +173,10 @@ export const SERVICE_PAGES: ServicePage[] = [
     anchor: 'geo',
     menuLabel: 'AI Search Visibility',
     name: 'AI Search Visibility (GEO)',
-    h1: 'AI Search Optimization (GEO) for ChatGPT and AI Overviews',
+    h1: 'AI Search Optimization (GEO) for ChatGPT, Gemini, Claude and AI Overviews',
     title: 'AI Search Optimization (GEO) Services | SEOTrendNow',
-    description: 'Generative engine optimization (GEO) to get your business cited in ChatGPT, Perplexity, Gemini and Google AI Overviews through entity, schema and content work.',
-    intro: 'AI SEO for clinics, law firms and local businesses. Get your business named when people ask ChatGPT, Perplexity, Gemini or Google’s AI Overviews who to call.',
+    description: 'AI search optimization (GEO) to get your business cited in ChatGPT, Gemini, Claude, Perplexity and Google AI Overviews through entity, schema and content work.',
+    intro: 'AI SEO and LLM optimization for local businesses. Get your business named when people ask ChatGPT, Gemini, Claude, Perplexity, Grok, Copilot or Google’s AI Overviews who to call.',
     icon: 'spark',
     caseTags: ['AI Search'],
     bestFor: [
