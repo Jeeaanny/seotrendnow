@@ -1,6 +1,8 @@
 ---
 // Built from the approved design (About). Edit the copy directly below.
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import jeanPortrait from '../assets/jean-jumamoy-freelance-seo-specialist.jpg';
 import { aboutSchema } from '../lib/schema';
 const pageCss = ".sec{padding:96px 0}\n.h1{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:58px;line-height:1.05;letter-spacing:-0.02em;margin:0}\n.h2{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:42px;line-height:1.1;letter-spacing:-0.015em;margin:0}\n.h3{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:21px;line-height:1.25;margin:0}\n.eyebrow{font-family:Kalam,cursive;font-weight:700;font-size:24px;line-height:1.2;margin:0}\n@media (max-width:820px){.h1{font-size:40px}.h2{font-size:30px}.sec{padding:64px 0}.wrap{padding:0 16px}}";
 ---
@@ -17,9 +19,17 @@ const pageCss = ".sec{padding:96px 0}\n.h1{font-family:Archivo,system-ui,sans-se
 <a class="pill" href="/results/" style="background: #FFFFFF; color: #001C44; border: 2px solid #DDE1FF">See My Results</a>
 </div>
 </div>
-<div style="flex: 1 1 380px; min-width: 0; min-height: 460px; border-radius: 28px; background: #DDE1FF; border: 2px dashed #8094FF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: #334969">
-<svg aria-hidden="true" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#334969" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-7 8-7s8 3 8 7"></path></svg>
-<span style="font-weight: 600; font-size: 15px">[Professional portrait]</span>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; justify-content: center; padding: 28px 28px 36px 24px">
+<div style="position: relative; width: 100%; max-width: 400px; aspect-ratio: 4 / 5">
+<div aria-hidden="true" style="position: absolute; right: -28px; top: -28px; width: 150px; height: 150px; background-image: radial-gradient(#3354FF 2.2px, transparent 2.4px); background-size: 18px 18px; opacity: 0.45"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; transform: translate(20px, 20px); border: 3px solid #FFCA00; border-radius: 50% 50% 26px 26px / 38% 38% 26px 26px"></div>
+<Image src={jeanPortrait} alt="Jean Jumamoy, freelance SEO specialist, working on her laptop" widths={[400, 600, 800]} sizes="(max-width: 600px) 90vw, 400px" loading="eager" fetchpriority="high" style="position: relative; width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; border-radius: 50% 50% 26px 26px / 38% 38% 26px 26px; box-shadow: 0 24px 48px rgba(0, 28, 68, 0.18)" />
+<div style="position: absolute; left: -24px; bottom: 34px; background: #001C44; color: #FFFFFF; border-radius: 18px; padding: 14px 18px; box-shadow: 0 14px 30px rgba(0, 28, 68, 0.28); display: flex; flex-direction: column; gap: 2px">
+<span style="font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 18px">Jean Jumamoy</span>
+<span style="font-size: 14px; color: #CBD1D9">Freelance SEO Specialist</span>
+</div>
+<div style="position: absolute; right: -14px; top: 46%; background: #FFCA00; color: #001C44; border-radius: 999px; padding: 8px 14px; font-weight: 700; font-size: 14px; box-shadow: 0 10px 24px rgba(0, 28, 68, 0.18)">3+ years in SEO</div>
+</div>
 </div>
 </div>
 </section>
