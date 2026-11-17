@@ -23,7 +23,6 @@ const schema = [{
   about: d.services,
 }];
 const tagCss = `.tag{font-size:13px;font-weight:600;padding:4px 12px;border-radius:100px;background:rgba(255,255,255,0.1);color:#FFFFFF;border:1px solid #334969}`;
-const shot = 'height: 300px; border-radius: 20px; background: #F0F2FF; border: 2px dashed #8094FF; display: flex; align-items: center; justify-content: center; color: #334969; font-weight: 600; font-size: 15px';
 ---
 <BaseLayout title={d.seoTitle ?? `${d.title} | SEOTrendNow`} description={d.description} ogType="article" ogImage={ogImage} schema={schema}
   breadcrumb={[{ name: 'Results', url: '/results/' }, { name: d.title, url: `/results/${cs.id}/` }]}>
@@ -81,14 +80,12 @@ const shot = 'height: 300px; border-radius: 20px; background: #F0F2FF; border: 2
 <section class="sec" style="background: #FFFFFF">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 36px">
 <div><h2 class="h2" style="color: #001C44">The results: before and after</h2></div>
+{(d.beforeImage || d.afterImage) && (
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 24px">
-<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
-{d.beforeImage ? <Image src={d.beforeImage} alt={d.beforeCaption || 'Before'} style="width: 100%; height: auto; border-radius: 20px" /> : <div style={shot}>[Screenshot: before]</div>}
-<figcaption style="font-size: 14px">{d.beforeCaption}</figcaption></figure>
-<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px">
-{d.afterImage ? <Image src={d.afterImage} alt={d.afterCaption || 'After'} style="width: 100%; height: auto; border-radius: 20px" /> : <div style={shot}>[Screenshot: after]</div>}
-<figcaption style="font-size: 14px">{d.afterCaption}</figcaption></figure>
+{d.beforeImage && <figure style="margin: 0; display: flex; flex-direction: column; gap: 10px"><Image src={d.beforeImage} alt={d.beforeCaption || 'Before'} style="width: 100%; height: auto; border-radius: 20px" /><figcaption style="font-size: 14px">{d.beforeCaption}</figcaption></figure>}
+{d.afterImage && <figure style="margin: 0; display: flex; flex-direction: column; gap: 10px"><Image src={d.afterImage} alt={d.afterCaption || 'After'} style="width: 100%; height: auto; border-radius: 20px" /><figcaption style="font-size: 14px">{d.afterCaption}</figcaption></figure>}
 </div>
+)}
 {d.resultsText && <p style="margin: 0; max-width: 800px">{d.resultsText}</p>}
 {hasBody && <div class="prose" style="max-width: 800px"><Content /></div>}
 </div>

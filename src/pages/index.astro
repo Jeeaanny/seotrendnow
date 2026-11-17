@@ -3,6 +3,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { homeSchema } from '../lib/schema';
 import { SHOW_TESTIMONIALS } from '../consts';
+import { Image } from 'astro:assets';
+import kitchenGsc from '../content/case-studies/images/kitchen-cabinet-organic-clicks/search-console-organic-clicks-growth.png';
 const pageCss = ".sec{padding:104px 0}\n.h1{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:64px;line-height:1.04;letter-spacing:-0.02em;margin:0}\n.h2{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:46px;line-height:1.08;letter-spacing:-0.015em;margin:0}\n.h3{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:22px;line-height:1.2;margin:0}\n.eyebrow{font-family:Kalam,cursive;font-weight:700;font-size:24px;line-height:1.2;margin:0}\n@media (max-width:820px){\n.h1{font-size:42px}.h2{font-size:32px}.sec{padding:72px 0}.wrap{padding:0 16px}\n}";
 ---
 <BaseLayout title={"SEO Strategist for Clinics & Local Businesses | SEOTrendNow"} description={"I help clinics, law firms and local service businesses in the US, Australia and Singapore rank on Google, win the map pack and show up in AI answers."} schema={homeSchema} breadcrumb={undefined}>
@@ -127,16 +129,15 @@ const pageCss = ".sec{padding:104px 0}\n.h1{font-family:Archivo,system-ui,sans-s
 
 <div style="background: #001C44; border-radius: 28px; padding: 48px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; color: #FFFFFF">
 <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<h3 class="h2" style="color: #FFFFFF; font-size: 36px">[From X to Y monthly organic clicks in Z months]</h3>
-<p style="margin: 0; color: #CBD1D9">[Two sentences: the client's problem, what you changed, and the business result, such as booked appointments or calls.]</p>
+<h3 class="h2" style="color: #FFFFFF; font-size: 36px">From about 800 to 1,750 monthly organic clicks in 3 months</h3>
+<p style="margin: 0; color: #CBD1D9">A kitchen cabinet supplier and installer kept publishing blogs, but its pages weren't ranking and clicks stayed low. I fixed canonical and sitemap issues, merged competing posts, matched content to search intent and added location pages, and monthly organic clicks more than doubled.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 32px; padding-top: 8px">
-<div><p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 32px; color: #FFCA00">[+XX%]</p><p style="margin: 0; font-size: 14px; color: #CBD1D9">Organic clicks</p></div>
-<div><p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 32px; color: #FFCA00">[+XX]</p><p style="margin: 0; font-size: 14px; color: #CBD1D9">Page 1 keywords</p></div>
-<div><p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 32px; color: #FFCA00">[+XX%]</p><p style="margin: 0; font-size: 14px; color: #CBD1D9">Calls from GBP</p></div>
+<div><p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 32px; color: #FFCA00">+120%</p><p style="margin: 0; font-size: 14px; color: #CBD1D9">Organic clicks</p></div>
+<div><p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 32px; color: #FFCA00">+135%</p><p style="margin: 0; font-size: 14px; color: #CBD1D9">Impressions</p></div>
 </div>
-<a class="pill" href="#results" style="background: #FFCA00; color: #001C44; align-self: flex-start; margin-top: 8px">Read the Full Breakdown</a>
+<a class="pill" href="/results/kitchen-cabinet-organic-clicks/" style="background: #FFCA00; color: #001C44; align-self: flex-start; margin-top: 8px">Read the Full Breakdown</a>
 </div>
-<div style="flex: 1 1 420px; min-width: 0; min-height: 300px; border-radius: 18px; background: #334969; border: 2px dashed #808DA1; display: flex; align-items: center; justify-content: center; color: #CBD1D9; font-weight: 600; font-size: 15px; text-align: center; padding: 24px; box-sizing: border-box">[Search Console screenshot, before and after]</div>
+<Image src={kitchenGsc} alt="Google Search Console chart for a kitchen cabinet supplier: organic clicks and impressions climbing after the fixes" style="flex: 1 1 420px; min-width: 0; width: 100%; height: auto; border-radius: 18px" />
 </div>
 </div>
 </section>
