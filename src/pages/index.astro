@@ -2,6 +2,7 @@
 // Built from the approved design (Main). Edit the copy directly below.
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { homeSchema } from '../lib/schema';
+import { SHOW_TESTIMONIALS } from '../consts';
 const pageCss = ".sec{padding:104px 0}\n.h1{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:64px;line-height:1.04;letter-spacing:-0.02em;margin:0}\n.h2{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:46px;line-height:1.08;letter-spacing:-0.015em;margin:0}\n.h3{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:22px;line-height:1.2;margin:0}\n.eyebrow{font-family:Kalam,cursive;font-weight:700;font-size:24px;line-height:1.2;margin:0}\n@media (max-width:820px){\n.h1{font-size:42px}.h2{font-size:32px}.sec{padding:72px 0}.wrap{padding:0 16px}\n}";
 ---
 <BaseLayout title={"SEO Strategist for Clinics & Local Businesses | SEOTrendNow"} description={"I help clinics, law firms and local service businesses in the US, Australia and Singapore rank on Google, win the map pack and show up in AI answers."} schema={homeSchema} breadcrumb={undefined}>
@@ -273,6 +274,7 @@ const pageCss = ".sec{padding:104px 0}\n.h1{font-family:Archivo,system-ui,sans-s
 </div>
 </section>
 
+{SHOW_TESTIMONIALS && (
 <section class="sec" style="background: #FFFFFF">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
 <div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px">
@@ -293,6 +295,7 @@ const pageCss = ".sec{padding:104px 0}\n.h1{font-family:Archivo,system-ui,sans-s
 </div>
 </div>
 </section>
+)}
 
 <section id="faq" class="sec" style="background: #F9FAFF">
 <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px">

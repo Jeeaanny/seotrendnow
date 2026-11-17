@@ -3,7 +3,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import { getCaseStudies } from '../../lib/content';
-import { CALENDLY } from '../../consts';
+import { CALENDLY, SHOW_TESTIMONIALS } from '../../consts';
 import { resultsCss } from '../../styles/page-css';
 
 const all = await getCaseStudies();
@@ -76,6 +76,7 @@ const industries = new Set(cards.map((c) => c.data.industry).filter((t) => !t.st
 </section>
 )}
 
+{SHOW_TESTIMONIALS && (
 <section style="background: #001C44; color: #FFFFFF">
 <div class="wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; padding-top: 80px; padding-bottom: 80px">
 <svg aria-hidden="true" width="40" height="32" viewBox="0 0 36 28" fill="#FFCA00"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 4C10 5.6 7.6 9 7.4 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 4c-5.5 1.6-7.9 5-8.1 9H35v15z"></path></svg>
@@ -83,6 +84,7 @@ const industries = new Set(cards.map((c) => c.data.industry).filter((t) => !t.st
 <p style="margin: 0; color: #CBD1D9; font-size: 15px"><b style="color: #FFFFFF">[Client name]</b>, [Role, Business, Country]</p>
 </div>
 </section>
+)}
 
 <section style="background: #3354FF; color: #FFFFFF">
 <div class="wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; padding-top: 88px; padding-bottom: 88px">
