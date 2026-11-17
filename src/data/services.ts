@@ -5,7 +5,8 @@ export interface ServicePage {
   slug: string;
   anchor: string;            // section id on the /services/ overview page
   menuLabel: string;         // label in the menu, footer and cards
-  name: string;              // full service name (H1 and schema)
+  name: string;              // full service name (schema, breadcrumbs)
+  h1: string;                // page H1, written around what buyers search
   title: string;             // <title>
   description: string;       // meta description
   intro: string;
@@ -25,9 +26,10 @@ export const SERVICE_PAGES: ServicePage[] = [
     anchor: 'local',
     menuLabel: 'Local SEO & GBP',
     name: 'Local SEO & Google Business Profile',
-    title: 'Local SEO & Google Business Profile Services | SEOTrendNow',
+    h1: 'Local SEO Services and Google Business Profile Optimization',
+    title: 'Local SEO Services & Google Business Profile Optimization',
     description: 'Local SEO and Google Business Profile optimization for clinics, law firms and service businesses: map-pack rankings, citations, reviews and location pages.',
-    intro: 'Show up in the map pack in every suburb and neighbourhood you serve, and turn profile views into calls, direction requests and bookings.',
+    intro: 'Local SEO services for clinics, law firms and service businesses. Show up in the map pack in every suburb and neighbourhood you serve, and turn profile views into calls, direction requests and bookings.',
     icon: 'pin',
     caseTags: ['Local SEO'],
     bestFor: [
@@ -73,9 +75,10 @@ export const SERVICE_PAGES: ServicePage[] = [
     anchor: 'technical',
     menuLabel: 'Technical SEO & Schema',
     name: 'Technical SEO & Schema Markup',
-    title: 'Technical SEO & Schema Markup Services | SEOTrendNow',
+    h1: 'Technical SEO Services: Audits, Fixes and Schema Markup',
+    title: 'Technical SEO Services: Audits, Fixes & Schema | SEOTrendNow',
     description: 'Technical SEO audits and fixes for crawl, indexing, Core Web Vitals and site migrations, plus LocalBusiness, medical and legal schema markup.',
-    intro: 'Fix the problems that stop Google from crawling, indexing and trusting your site, then add structured data so search engines and AI tools understand who you are.',
+    intro: 'Technical SEO audits and fixes for clinics, law firms and local businesses. Fix the problems that stop Google from crawling, indexing and trusting your site, then add structured data so search engines and AI tools understand who you are.',
     icon: 'code',
     caseTags: ['Technical SEO'],
     bestFor: [
@@ -121,9 +124,10 @@ export const SERVICE_PAGES: ServicePage[] = [
     anchor: 'content',
     menuLabel: 'Keyword & Content Strategy',
     name: 'Keyword & Content Strategy',
-    title: 'Keyword Research & SEO Content Strategy | SEOTrendNow',
+    h1: 'SEO Content Strategy and Keyword Research Services',
+    title: 'SEO Content Strategy & Keyword Research Services',
     description: 'Keyword research, keyword mapping, cannibalization audits, topic clusters and content calendars that turn blog and service pages into booked enquiries.',
-    intro: 'Give every page one clear job, stop your own pages from competing, and publish content that answers what your patients and clients actually search.',
+    intro: 'SEO content strategy and keyword research for clinics, law firms and local businesses. Give every page one clear job, stop your own pages from competing, and publish content that answers what your patients and clients actually search.',
     icon: 'grid',
     caseTags: ['Content'],
     bestFor: [
@@ -169,9 +173,10 @@ export const SERVICE_PAGES: ServicePage[] = [
     anchor: 'geo',
     menuLabel: 'AI Search Visibility',
     name: 'AI Search Visibility (GEO)',
-    title: 'AI Search Visibility (GEO) Services | SEOTrendNow',
+    h1: 'AI Search Optimization (GEO) for ChatGPT and AI Overviews',
+    title: 'AI Search Optimization (GEO) Services | SEOTrendNow',
     description: 'Generative engine optimization (GEO) to get your business cited in ChatGPT, Perplexity, Gemini and Google AI Overviews through entity, schema and content work.',
-    intro: 'Get your business named when people ask ChatGPT, Perplexity, Gemini or Google’s AI Overviews who to call.',
+    intro: 'AI SEO for clinics, law firms and local businesses. Get your business named when people ask ChatGPT, Perplexity, Gemini or Google’s AI Overviews who to call.',
     icon: 'spark',
     caseTags: ['AI Search'],
     bestFor: [
