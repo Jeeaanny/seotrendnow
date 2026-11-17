@@ -24,7 +24,7 @@ const schema = [{
 const tagCss = `.tag{font-size:13px;font-weight:600;padding:4px 12px;border-radius:100px;background:rgba(255,255,255,0.1);color:#FFFFFF;border:1px solid #334969}`;
 const shot = 'height: 300px; border-radius: 20px; background: #F0F2FF; border: 2px dashed #8094FF; display: flex; align-items: center; justify-content: center; color: #334969; font-weight: 600; font-size: 15px';
 ---
-<BaseLayout title={`${d.title} | SEOTrendNow`} description={d.description} ogType="article" schema={schema}
+<BaseLayout title={d.seoTitle ?? `${d.title} | SEOTrendNow`} description={d.description} ogType="article" schema={schema}
   breadcrumb={[{ name: 'Results', url: '/results/' }, { name: d.title, url: `/results/${cs.id}/` }]}>
 <Fragment slot="head"><style is:inline set:html={caseStudyCss + tagCss}></style></Fragment>
 

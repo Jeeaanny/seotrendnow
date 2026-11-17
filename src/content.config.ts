@@ -29,6 +29,7 @@ const caseStudies = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),                     // page headline
+      seoTitle: z.string().optional(),       // <title> tag. Falls back to "title | SEOTrendNow"
       description: z.string(),               // meta description
       summary: z.string(),                   // one sentence under the headline
       order: z.number().default(10),         // position on the Results page
