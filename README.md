@@ -81,4 +81,4 @@ Node 20 or newer.
 ## Hosting
 
 `wrangler.jsonc` serves `dist/` on Cloudflare Workers with the custom domains
-`seotrendnow.online` and `www.seotrendnow.online`. `worker/index.js` redirects www to the bare domain.
+`seotrendnow.online` and `www.seotrendnow.online`. `worker/index.js` redirects http:// and www to https://seotrendnow.online.
