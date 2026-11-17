@@ -9,13 +9,13 @@ import { blogCss } from '../../styles/page-css';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const posts = await getPosts();
-  return paginate(posts, { pageSize: POSTS_PER_PAGE, params: {} }).map((p) => ({
+  return paginate(posts, { pageSize: POSTS_PER_PAGE, params: {}, props: { all: posts } }).map((p) => ({
     ...p,
     params: { page: p.params.page === '1' || !p.params.page ? undefined : `page/${p.params.page}` },
   }));
 }) satisfies GetStaticPaths;
 
-const { page } = Astro.props;
+const { page, all } = Astro.props;
 const isFirst = page.currentPage === 1;
 const featured = isFirst ? page.data[0] : undefined;
 const grid = isFirst ? page.data.slice(1) : page.data;
@@ -58,7 +58,7 @@ const schema = [{
 </section>
 
 {featured && (
-<section style="background: #FFFFFF">
+<section id="featured-wrap" style="background: #FFFFFF">
 <div class="wrap" style="padding-top: 64px">
 <a href={`/blog/${featured.id}/`} style="text-decoration: none; color: inherit; display: flex; flex-wrap: wrap; gap: 40px; align-items: center; background: #F0F2FF; border-radius: 28px; padding: 20px">
 <div style="flex: 1 1 480px; min-width: 0"><PostCover category={featured.data.category} image={featured.data.image} alt={featured.data.imageAlt} height={340} iconSize={72} eager /></div>
@@ -94,10 +94,21 @@ const schema = [{
 </a>
 ))}
 </div>
-<p id="filter-empty" hidden style="margin: 0">No articles in this topic on this page yet.</p>
+{/* Every post, for topic filtering across all pages. Hidden until a topic is picked. */}
+<div hidden style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 32px 28px" id="post-grid-all">
+{all.map((p) => (
+<a href={`/blog/${p.id}/`} data-cat={p.data.category} style="text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 14px">
+<PostCover category={p.data.category} image={p.data.image} alt={p.data.imageAlt} height={210} />
+<span class="cat">{p.data.category}</span>
+<h3 class="h3" style="color: #001C44">{p.data.title}</h3>
+<p class="meta" style="margin: 0"><time datetime={p.data.date.toISOString()}>{fmtDate(p.data.date)}</time> · {readMinutes(p.body ?? '')} min read</p>
+</a>
+))}
+</div>
+<p id="filter-empty" hidden style="margin: 0">No articles in this topic yet. Subscribe above to get the first one.</p>
 
 {page.lastPage > 1 && (
-<nav aria-label="Pagination" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding-top: 12px">
+<nav id="post-pages" aria-label="Pagination" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding-top: 12px">
 {page.url.prev && <a class="page" href={pageUrl(page.currentPage - 1)}>← Prev</a>}
 {Array.from({ length: page.lastPage }, (_, i) => i + 1).map((n) => (
 <a class:list={['page', { on: n === page.currentPage }]} href={pageUrl(n)} aria-current={n === page.currentPage ? 'page' : undefined}>{n}</a>
@@ -120,14 +131,24 @@ const schema = [{
 <script>
   import '../../scripts/contact-form.ts';
   const chips = document.querySelectorAll<HTMLButtonElement>('#post-filter .chip');
-  const cards = document.querySelectorAll<HTMLElement>('#post-grid [data-cat]');
+  const pageGrid = document.getElementById('post-grid');
+  const allGrid = document.getElementById('post-grid-all');
+  const featuredWrap = document.getElementById('featured-wrap');
+  const pager = document.getElementById('post-pages');
+  const cards = document.querySelectorAll<HTMLElement>('#post-grid-all [data-cat]');
   const empty = document.getElementById('filter-empty');
   chips.forEach((chip) => chip.addEventListener('click', () => {
     const f = chip.dataset.filter;
+    const isAll = f === 'all';
     chips.forEach((c) => { const on = c === chip; c.classList.toggle('on', on); c.setAttribute('aria-pressed', String(on)); });
+    // "All" shows the normal paginated view. A topic shows every matching post from every page.
+    if (pageGrid) pageGrid.hidden = !isAll;
+    if (featuredWrap) featuredWrap.hidden = !isAll;
+    if (pager) pager.hidden = !isAll;
+    if (allGrid) allGrid.hidden = isAll;
     let shown = 0;
-    cards.forEach((card) => { const show = f === 'all' || card.dataset.cat === f; card.hidden = !show; if (show) shown++; });
-    if (empty) empty.hidden = shown > 0 || cards.length === 0;
+    cards.forEach((card) => { const show = !isAll && card.dataset.cat === f; card.hidden = !show; if (show) shown++; });
+    if (empty) empty.hidden = isAll || shown > 0;
   }));
 </script>
 </BaseLayout>

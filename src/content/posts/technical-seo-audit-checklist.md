@@ -1,7 +1,7 @@
 ---
-title: "Technical SEO Audit Checklist for 2026: Crawling, Indexing, Speed, Schema and AI Search"
-seoTitle: "Technical SEO Audit Checklist (2026): Step-by-Step Guide"
-description: "A step-by-step technical SEO audit checklist for 2026. Check crawlability, indexing, Core Web Vitals, structured data and AI search visibility."
+title: "Technical SEO Audit Checklist for 2027: Crawling, Indexing, Speed, Schema and AI Search"
+seoTitle: "Technical SEO Audit Checklist (2027): Step-by-Step Guide"
+description: "A step-by-step technical SEO audit checklist for 2027. Check crawlability, indexing, Core Web Vitals, structured data and AI search visibility."
 subtitle: "What to check, in what order, so Google can rank your pages and AI tools can cite them."
 date: 2026-11-17
 category: "Technical SEO"
