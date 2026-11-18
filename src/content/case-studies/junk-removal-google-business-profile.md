@@ -1,14 +1,14 @@
 ---
 order: 3
 featured: false
-title: "How a Junk Removal Company Grew Its Google Visibility Month After Month"
-seoTitle: "Junk Removal Local SEO Case Study: 9 Months of Growth"
-description: "A US junk removal company fixed four gaps in its website and Google Business Profile, then grew month after month over a 9-month local SEO project."
-summary: "Their website said junk removal. Their Google profile said debris removal. Fixing that mismatch, and three other gaps, started 9 months of steady growth in how often Google showed the business and how often people called."
+title: "How a Junk Removal Company Got 75% More Google Searches in Its First 30 Days"
+seoTitle: "Junk Removal Local SEO Case Study: +75% in 30 Days"
+description: "A US junk removal company fixed four gaps in its website and Google Business Profile. In the first 30 days, searches finding it rose 75%, then kept growing for 9 months."
+summary: "Their website said junk removal. Their Google profile said debris removal. Fixing that mismatch, and three other gaps, got 75% more searches finding the business in the first 30 days. The growth kept going over the 9-month project."
 metric: "+75%"
-cardTitle: "more searches finding a junk removal company, month over month"
+cardTitle: "more searches finding a junk removal company in its first 30 days"
 cardMeta: "United States · 9 months · Google Business Profile, service pages, consistent naming"
-cardImageLabel: "Google Business Profile performance for the last 30 days"
+cardImageLabel: "Google Business Profile performance in the first 30 days after the fixes"
 cardImage: ./images/junk-removal-gbp/google-business-profile-performance-30-days.png
 tags: ["Home Services", "Local SEO"]
 client: "A junk removal company"
@@ -17,10 +17,10 @@ market: "United States"
 timeframe: "9 months"
 services: "Local SEO, Google Business Profile optimization"
 stats:
-  - { value: "+75%", label: "searches that found the business, latest 30 days vs the 30 before (58)" }
+  - { value: "+75%", label: "searches that found the business in the first 30 days (58)" }
   - { value: "+30%", label: "Google Business Profile views (627)" }
   - { value: "+10%", label: "calls from the profile (11)" }
-  - { value: "9 months", label: "of steady month-over-month growth" }
+  - { value: "9 months", label: "of growth that kept building after the first win" }
 challenge:
   - "The website said \"junk removal\". The Google Business Profile said \"debris removal\". Google had no clean signal for what to rank the business for."
   - "The service pages barely went past the title. No pricing guidance, no process, nothing that answered a customer's real questions."
@@ -30,10 +30,10 @@ steps:
   - { title: "Rebuilt the service pages", text: "Added real detail: what gets hauled, how pricing works and which neighborhoods the business covers." }
   - { title: "Filled out the Google Business Profile", text: "Added a full services list and secondary categories, so the profile could compete for more than branded searches." }
   - { title: "Rewrote the About section", text: "Opened with the problem the business solves, not just who they are." }
-resultsText: "Once the profile clearly explained what the business does, Google started showing it for more of the right searches, and the numbers kept climbing month after month over the 9-month project. In the latest 30 days alone, searches that found the business rose 75% and profile views grew 30% compared with the 30 days before. People didn't just look. They called, asked for directions, visited the website and, for the first time, clicked to chat."
+resultsText: "The win came fast. Once the profile clearly explained what the business does, Google started showing it for more of the right searches. In the first 30 days after the fixes, searches that found the business rose 75% and profile views grew 30% compared with the 30 days before. People didn't just look. They called, asked for directions, visited the website and, for the first time, clicked to chat. From there, the numbers kept climbing month after month over the 9-month project."
 gallery:
   - image: ./images/junk-removal-gbp/google-business-profile-performance-30-days.png
-    caption: "Google Business Profile performance for the last 30 days, with the change from the 30 days before."
+    caption: "Google Business Profile performance in the first 30 days after the fixes, compared with the 30 days before."
 quote: "Since Jean started working on our Google Business Profile, we're getting more calls straight to our phone. That's the number that matters to us, and it keeps going up."
 quoteName: "Isaak"
 quoteRole: "Owner, Junk Removal Services"
@@ -45,6 +45,6 @@ takeaways:
 
 ## How the numbers were measured
 
-The project ran for 9 months, and the profile grew month after month. The figures above are a snapshot from the client's Google Business Profile performance report: the latest 30 days compared with the 30 days before, so each percentage is growth on top of the months of gains that came earlier. Chat clicks were new, so there's no earlier number to compare. The client's name and location are withheld for privacy.
+These figures come from the client's Google Business Profile performance report. They compare the first 30 days after the fixes went live with the 30 days before, so they show how quickly the changes paid off. The project ran for 9 months, and the profile kept growing month after month after that first win. Chat clicks were new, so there's no earlier number to compare. The client's name and location are withheld for privacy.
 
 If your profile gets views but few calls, start with [how to get more calls from your Google Business Profile](/blog/how-to-get-more-calls-from-google-business-profile/) and [why NAP consistency matters for local SEO](/blog/nap-consistency-local-seo/).
