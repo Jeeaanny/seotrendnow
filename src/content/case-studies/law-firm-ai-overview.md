@@ -8,7 +8,7 @@ summary: "A regional personal injury firm in Florida was up against national bra
 metric: "1st"
 cardTitle: "law firm named in Google's AI Overview for its core case type"
 cardMeta: "Florida, United States · Sub-service pages, YMYL content, internal linking"
-cardImageLabel: "Google AI Overview naming the law firm first, with the firm's name hidden"
+cardImageLabel: "Google AI Overview naming the law firm first"
 cardImage: ./images/law-firm-ai-overview/google-ai-overview-law-firm-named-first.png
 tags: ["Legal", "AI Search", "Content Strategy"]
 client: "A personal injury law firm"
@@ -32,11 +32,11 @@ steps:
 resultsText: "Within one month of the sub-pages going live, the main service pages climbed in rankings, the service pages started showing in AI Overviews and the firm's location broke into the map pack. For a tracked search for the best truck accident lawyer in its city, Google's AI Overview named the firm first and described it as known for serious commercial and construction truck accidents. The lead source card points to the firm's own construction truck accident page, which this work created."
 gallery:
   - image: ./images/law-firm-ai-overview/google-ai-overview-law-firm-named-first.png
-    caption: "Google's AI Overview names the firm first, ahead of a national brand. The source card on the right is the firm's own sub-service page. Firm name hidden."
+    caption: "Google's AI Overview names the firm first, ahead of a national brand. The source card on the right is the firm's own sub-service page."
   - image: ./images/law-firm-ai-overview/google-map-pack-law-firm-top-3.png
-    caption: "Map pack: the firm holds a top-3 spot next to a national brand with 1.3K reviews. Firm name and contact details hidden."
+    caption: "Map pack: the firm holds a top-3 spot next to a national brand with 1.3K reviews."
   - image: ./images/law-firm-ai-overview/google-organic-law-firm-page-one.png
-    caption: "Organic results: the city truck accident page ranks on page one with a matching title and a clean city URL. Firm name and domain hidden."
+    caption: "Organic results: the city truck accident page ranks on page one with a matching title and a clean city URL."
 quote: "Jean got our pages showing up in Google's AI Overviews. For a personal injury firm, being in that answer when someone's researching their case makes a real difference."
 quoteName: "Raven"
 quoteRole: "Senior Marketing Lead, Personal Injury Law Firm"
@@ -48,6 +48,6 @@ takeaways:
 
 ## How the results were checked
 
-The screenshots come from a live Google search for the firm's core case type in its city. The firm's name, logo, address, phone number and domain are hidden to keep the client anonymous. Competitor names are left in, since they show who the firm outranked.
+The screenshots come from a live Google search for the firm's core case type in its city, so you can see exactly where the firm appears and which national brands it sits next to.
 
 Want your firm cited in AI answers? Start with [how to show up in Google AI Overviews](/blog/how-to-show-up-in-google-ai-overviews/) and [how to build topical authority](/blog/how-to-build-topical-authority/).
