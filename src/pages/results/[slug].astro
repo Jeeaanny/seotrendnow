@@ -79,7 +79,7 @@ const tagCss = `.tag{font-size:13px;font-weight:600;padding:4px 12px;border-radi
 
 <section class="sec" style="background: #FFFFFF">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 36px">
-<div><h2 class="h2" style="color: #001C44">The results: before and after</h2></div>
+<div><h2 class="h2" style="color: #001C44">{d.beforeImage ? 'The results: before and after' : 'The results'}</h2></div>
 {(d.beforeImage || d.afterImage) && (
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 24px">
 {d.beforeImage && <figure style="margin: 0; display: flex; flex-direction: column; gap: 10px"><Image src={d.beforeImage} alt={d.beforeCaption || 'Before'} style="width: 100%; height: auto; border-radius: 20px" /><figcaption style="font-size: 14px">{d.beforeCaption}</figcaption></figure>}
@@ -87,6 +87,11 @@ const tagCss = `.tag{font-size:13px;font-weight:600;padding:4px 12px;border-radi
 </div>
 )}
 {d.resultsText && <p style="margin: 0; max-width: 800px">{d.resultsText}</p>}
+{d.gallery.length > 0 && (
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 24px">
+{d.gallery.map((g, i) => <figure style={`margin: 0; display: flex; flex-direction: column; gap: 10px${i === 0 && d.gallery.length % 2 === 1 ? '; grid-column: 1 / -1' : ''}`}><Image src={g.image} alt={g.caption} style="width: 100%; height: auto; border-radius: 20px; border: 1px solid #DDE1FF" /><figcaption style="font-size: 14px">{g.caption}</figcaption></figure>)}
+</div>
+)}
 {hasBody && <div class="prose" style="max-width: 800px"><Content /></div>}
 </div>
 </section>

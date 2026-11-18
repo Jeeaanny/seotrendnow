@@ -53,6 +53,7 @@ const caseStudies = defineCollection({
       beforeCaption: z.string().default(''),
       afterImage: image().optional(),
       afterCaption: z.string().default(''),
+      gallery: z.array(z.object({ image: image(), caption: z.string() })).default([]), // extra proof images
       resultsText: z.string().default(''),
       quote: z.string().optional(),
       quoteName: z.string().optional(),
