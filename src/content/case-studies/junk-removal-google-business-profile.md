@@ -34,7 +34,7 @@ resultsText: "Once the profile clearly explained what the business does, Google 
 gallery:
   - image: ./images/junk-removal-gbp/google-business-profile-performance-30-days.png
     caption: "Google Business Profile performance for the last 30 days, with the change from the 30 days before."
-quote: "Since Jean started working on our Google Business Profile, we're getting more calls straight from Google. That's the number that matters to us, and it keeps going up."
+quote: "Since Jean started working on our Google Business Profile, we're getting more calls straight to our phone. That's the number that matters to us, and it keeps going up."
 quoteName: "Isaak"
 quoteRole: "Owner, Junk Removal Services"
 takeaways:
