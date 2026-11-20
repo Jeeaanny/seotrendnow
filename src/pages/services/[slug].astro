@@ -28,7 +28,7 @@ const schema = [
   },
   { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: s.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
 ];
-const extraCss = `.q{background:#FFFFFF;border:1px solid #DDE1FF;border-radius:16px;padding:20px 24px}.q summary{font-weight:700;color:#001C44;font-size:18px;cursor:pointer;line-height:1.4}.q p{margin:12px 0 0}
+const extraCss = `.q{background:#FFFFFF;border:1px solid #DDE1FF;border-radius:16px;padding:20px 24px}.q h3{margin:0;font-family:Inter,system-ui,sans-serif;font-weight:700;color:#001C44;font-size:18px;line-height:1.4}.q p{margin:12px 0 0}
 .tag{font-size:13px;font-weight:600;padding:4px 12px;border-radius:100px;background:#F0F2FF;color:#001C44}`;
 const check = '<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3354FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 4px"><polyline points="4 12 10 18 20 6"></polyline></svg>';
 const dot = '<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFCA00" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 4px"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="8" x2="12" y2="13"></line><line x1="12" y1="16.5" x2="12" y2="16.5"></line></svg>';
@@ -143,7 +143,7 @@ const icons: Record<string, string> = {
 <h2 class="h2" style="color: #001C44">{s.menuLabel} questions.</h2>
 </div>
 <div style="flex: 2 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-{s.faqs.map((f, i) => <details class="q" open={i === 0}><summary>{f.q}</summary><p>{f.a}</p></details>)}
+{s.faqs.map((f) => <div class="q"><h3>{f.q}</h3><p>{f.a}</p></div>)}
 </div>
 </div>
 </section>
