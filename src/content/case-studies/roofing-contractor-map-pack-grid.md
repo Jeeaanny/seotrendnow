@@ -51,4 +51,6 @@ The rank grids come from a Google Maps rank-tracking tool. It checks where the b
 
 Clicks and impressions come from the client's Google Search Console account. Daily averages were read from the chart above, and they add up to the 12-month totals Search Console reports. Totals, dates and the client's name are hidden to keep the client anonymous.
 
+Part of this work was making the business name, address and phone match everywhere. Here's [how NAP consistency works and how to check yours](/blog/nap-consistency-local-seo/).
+
 Want to see where your own business ranks across your service area? Read [how to check your local SEO before opening a new location](/blog/check-local-seo-before-new-business-location/).

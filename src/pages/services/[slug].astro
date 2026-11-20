@@ -3,7 +3,7 @@
 // Copy lives in src/data/services.ts
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { SERVICE_PAGES, type ServicePage } from '../../data/services';
-import { getCaseStudies } from '../../lib/content';
+import { getCaseStudies, getPosts } from '../../lib/content';
 import { CALENDLY, SITE } from '../../consts';
 import { servicesCss } from '../../styles/page-css';
 
@@ -12,6 +12,11 @@ export function getStaticPaths() {
 }
 const { s } = Astro.props as { s: ServicePage };
 const others = SERVICE_PAGES.filter((o) => o.slug !== s.slug);
+const GUIDE_CATEGORY: Record<string, string> = { 'local-seo': 'Local SEO', 'technical-seo': 'Technical SEO', 'content-strategy': 'Content Strategy', 'ai-search-visibility': 'AI Search' };
+const PINNED: Record<string, string[]> = { 'local-seo': ['nap-consistency-local-seo'] };
+const allPosts = await getPosts();
+const pinned = (PINNED[s.slug] ?? []).map((id) => allPosts.find((p) => p.id === id)).filter(Boolean);
+const guides = [...pinned, ...allPosts.filter((p) => p.data.category === GUIDE_CATEGORY[s.slug] && !pinned.includes(p))].slice(0, 3);
 const cases = (await getCaseStudies()).filter((c) => !c.data.featured && c.data.tags.some((t) => s.caseTags.includes(t))).slice(0, 2);
 const url = new URL(`/services/${s.slug}/`, SITE.domain).href;
 
@@ -142,6 +147,23 @@ const icons: Record<string, string> = {
 </div>
 </div>
 </section>
+
+{guides.length > 0 && (
+<section style="background: #FFFFFF; border-top: 1px solid #EEF0FF">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 24px; padding-top: 64px; padding-bottom: 16px">
+<h2 class="h3" style="color: #001C44; font-size: 24px">Guides on this topic</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px">
+{guides.map((g) => (
+<a href={`/blog/${g.id}/`} style="text-decoration: none; background: #F9FAFF; border: 1px solid #DDE1FF; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 700; color: #3354FF; text-transform: uppercase; letter-spacing: .04em">{g.data.category}</span>
+<span style="font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.3; color: #001C44">{g.data.title}</span>
+<span style="font-size: 15px; color: #334969">{g.data.description}</span>
+</a>
+))}
+</div>
+</div>
+</section>
+)}
 
 <section style="background: #F9FAFF; border-top: 1px solid #EEF0FF">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 24px; padding-top: 64px; padding-bottom: 64px">
