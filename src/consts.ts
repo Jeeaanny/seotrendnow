@@ -20,7 +20,7 @@ export const SITE = {
   description:
     'SEOTrendNow is Jean Jumamoy, an SEO strategist helping clinics, law firms and local service businesses rank on Google, win the map pack and show up in AI answers.',
   location: 'Philippines',
-  hours: 'Based in the Philippines, working with clients across time zones',
+  hours: 'Based in the Philippines, with same-day replies',
 };
 
 export const CONTACT = {

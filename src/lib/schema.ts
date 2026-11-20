@@ -26,6 +26,7 @@ const business = {
   logo: `${SITE.domain}/apple-touch-icon.png`,
   founder: { '@id': `${SITE.domain}/#jean` },
   address: { '@type': 'PostalAddress', addressCountry: 'PH' },
+  areaServed: ['United States', 'Australia', 'Singapore', 'Philippines'],
   serviceType: ['Local SEO', 'Google Business Profile optimization', 'Technical SEO', 'Keyword and content strategy', 'AI search visibility'],
 };
 

@@ -24,6 +24,7 @@ const schema = [
   {
     '@context': 'https://schema.org', '@type': 'Service', name: s.name, url, description: s.description,
     serviceType: s.name, provider: { '@id': `${SITE.domain}/#business`, '@type': 'ProfessionalService', name: SITE.name, url: `${SITE.domain}/` },
+    areaServed: ['United States', 'Australia', 'Singapore', 'Philippines'],
   },
   { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: s.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
 ];
