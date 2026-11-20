@@ -73,8 +73,8 @@ const extraCss = `.toc a{color:#4A4A68;text-decoration:none;font-size:15px}.toc 
 {d.faqs.length > 0 && (
 <Fragment>
 <h2 id="faq" class="h2" style="color: #001C44; padding-top: 12px; scroll-margin-top: 100px">Frequently Asked Questions</h2>
-{d.faqs.map((f, i) => (
-<details open={i === 0} style="border: 1px solid #DDE1FF; border-radius: 16px; padding: 18px 22px"><summary style="font-weight: 700; color: #001C44; cursor: pointer">{f.q}</summary><p style="margin: 0; padding-top: 10px; font-size: 17px">{f.a}</p></details>
+{d.faqs.map((f) => (
+<div style="border: 1px solid #DDE1FF; border-radius: 16px; padding: 18px 22px"><h3 style="margin: 0; font-family: Inter, system-ui, sans-serif; font-weight: 700; font-size: 18px; line-height: 1.4; color: #001C44">{f.q}</h3><p style="margin: 0; padding-top: 10px; font-size: 17px">{f.a}</p></div>
 ))}
 </Fragment>
 )}
