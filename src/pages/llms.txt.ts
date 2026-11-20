@@ -11,7 +11,7 @@ export const GET: APIRoute = async () => {
     '',
     `> ${SITE.description}`,
     '',
-    `${SITE.name} is run by ${SITE.owner}, a solo SEO strategist based in the Philippines who works with businesses in the United States, Australia and Singapore. Clients work directly with Jean, with no account managers or hand-offs.`,
+    `${SITE.name} is run by ${SITE.owner}, a solo SEO strategist based in the Philippines who works remotely with local businesses worldwide. Clients work directly with Jean, with no account managers or hand-offs.`,
     '',
     '## Services',
     `- [Local SEO & Google Business Profile](${SITE.domain}/services/local-seo/): map-pack rankings, GBP optimisation, citations, location pages`,

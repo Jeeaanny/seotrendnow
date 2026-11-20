@@ -27,7 +27,7 @@ const pageCss = ".h1{font-family:Archivo,system-ui,sans-serif;font-weight:800;fo
 <div style="display: flex; flex-direction: column; gap: 8px"><label class="lbl" for="c-email">Work email *</label><input class="fld" id="c-email" name="email" type="email" autocomplete="email" required=""></div>
 <div style="display: flex; flex-direction: column; gap: 8px"><label class="lbl" for="c-site">Website</label><input class="fld" id="c-site" name="website" type="url" placeholder="https://"></div>
 <div style="display: flex; flex-direction: column; gap: 8px"><label class="lbl" for="c-country">Where is your business based?</label>
-<select class="fld" id="c-country" name="country"><option value="">Select one</option><option>United States</option><option>Australia</option><option>Singapore</option><option>Philippines</option><option>Other</option></select></div>
+<input class="fld" id="c-country" name="country" type="text" autocomplete="country-name" placeholder="Where your business is based" /></div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px"><label class="lbl" for="c-industry">Industry</label>
 <select class="fld" id="c-industry" name="industry"><option value="">Select one</option><option>Healthcare &amp; clinics</option><option>Dental</option><option>Legal</option><option>Wellness</option><option>Home services</option><option>Home builders</option><option>Other</option></select></div>
@@ -68,7 +68,7 @@ const pageCss = ".h1{font-family:Archivo,system-ui,sans-serif;font-weight:800;fo
 </a>
 <div style="display: flex; gap: 14px; align-items: center">
 <span style="flex: none; display: inline-flex; width: 44px; height: 44px; border-radius: 12px; background: #F0F2FF; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3354FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg></span>
-<span style="font-size: 15px; line-height: 1.4"><b style="color: #001C44; display: block">Working hours</b>Based in the Philippines, overlapping US, AU and SG business hours</span>
+<span style="font-size: 15px; line-height: 1.4"><b style="color: #001C44; display: block">Working hours</b>Based in the Philippines, working with clients across time zones</span>
 </div>
 </div>
 

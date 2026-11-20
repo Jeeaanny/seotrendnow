@@ -16,11 +16,11 @@ export const SITE = {
   domain: 'https://seotrendnow.online',
   owner: 'Jean Jumamoy',
   role: 'SEO Strategist',
-  tagline: 'SEO strategist for clinics, law firms and local service businesses in the US, Australia and Singapore.',
+  tagline: 'SEO strategist for clinics, law firms and local service businesses.',
   description:
-    'SEOTrendNow is Jean Jumamoy, an SEO strategist helping clinics, law firms and local service businesses in the US, Australia and Singapore rank on Google, win the map pack and show up in AI answers.',
+    'SEOTrendNow is Jean Jumamoy, an SEO strategist helping clinics, law firms and local service businesses rank on Google, win the map pack and show up in AI answers.',
   location: 'Philippines',
-  hours: 'Based in the Philippines, working US, AU and SG hours',
+  hours: 'Based in the Philippines, working with clients across time zones',
 };
 
 export const CONTACT = {
