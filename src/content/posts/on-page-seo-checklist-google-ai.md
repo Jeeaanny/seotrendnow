@@ -42,7 +42,7 @@ Here's the quick version:
 3. Go to **Sitemaps**, paste the address, and click Submit.
 4. Come back in a few days. Check **Pages** to see how many are indexed and why any aren't.
 
-That last step catches big problems early. A stray `noindex` tag or a blocked folder can hide your whole site, and Search Console is where it shows up first.
+That last step catches big problems early. A stray `noindex` tag or a blocked folder can hide your whole site, and Search Console is where it shows up first. For every verification option and the fixes for common errors, follow my guide on [how to set up Google Search Console step by step](/blog/how-to-set-up-google-search-console/).
 
 ## 2. Pick one main keyword for each page
 

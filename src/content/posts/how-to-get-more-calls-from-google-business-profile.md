@@ -95,7 +95,7 @@ A new page can sit for weeks before Google finds it. Don't wait.
 3. Link to the new page from your main service page and from your homepage, if it fits. Internal links help Google find and value it.
 4. Share it from your Business Profile as a post or an update, with a link to the page.
 
-If Search Console isn't set up yet, start with step one of my [on-page SEO checklist](/blog/on-page-seo-checklist-google-ai/).
+If Search Console isn't set up yet, it takes five steps and costs nothing. Here's [how to set up Google Search Console](/blog/how-to-set-up-google-search-console/).
 
 ## Step 5: Track whether it brings in calls
 
