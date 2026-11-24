@@ -47,6 +47,8 @@ On May 13, 2026, Google added an **AI Assistant** channel to GA4's default chann
 
 ![GA4 traffic acquisition report showing Organic Search, Direct, a new AI Assistant row, Referral and Organic Social](./images/how-to-track-ai-search-traffic/ga4-ai-assistant-channel.png)
 
+No GA4 on your site yet? It's free and takes six steps. Here's [how to set up Google Analytics 4](/blog/how-to-set-up-google-analytics-4/).
+
 To find it:
 
 1. Open GA4 and go to **Reports › Acquisition › Traffic acquisition**.

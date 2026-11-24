@@ -126,7 +126,7 @@ The noindex one catches a lot of new sites. WordPress and many website builders 
 
 ## What to do after you set up Search Console
 
-Once your data comes in, use it to grow. Search Console shows the searches you already appear for, so you can strengthen the pages that are close to page one. Start with the basics in my [on-page SEO checklist](/blog/on-page-seo-checklist-google-ai/), then check the report every month.
+Once your data comes in, use it to grow. Search Console shows the searches you already appear for, so you can strengthen the pages that are close to page one. Start with the basics in my [on-page SEO checklist](/blog/on-page-seo-checklist-google-ai/), then check the report every month. To see what visitors do after they click, pair it with [Google Analytics 4, set up step by step](/blog/how-to-set-up-google-analytics-4/).
 
 Search Console also shows how often your pages appear in Google's AI Overviews and AI Mode. This guide shows [how to track AI search traffic in GA4 and Search Console](/blog/how-to-track-ai-search-traffic/).
 
