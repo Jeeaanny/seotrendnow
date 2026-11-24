@@ -23,7 +23,7 @@ faqs:
     a: "Your SEO plugin, like Yoast or Rank Math, handles the basics automatically. For custom markup, free generators and AI tools can draft JSON-LD quickly. Whatever you use, check every value matches your real business details and visible page content, then test it before publishing. Generators often leave fields empty or add properties that don't apply."
 ---
 
-Schema markup sounds technical, and the code can look intimidating. But for most local business websites, you only need four or five small blocks, and you can copy them from this guide.
+To add schema markup, paste a small JSON-LD script block with your business details into your page's code, then test it with Google's Rich Results Test. Most local business websites only need four or five of these blocks, and you can copy them from this guide.
 
 Here's what schema still does in Google in 2026, which types to use, copy-ready JSON-LD examples, where to add them on your platform, and how to test them. I'll use a made-up practice, Brightside Family Dental in Austin, for the examples.
 

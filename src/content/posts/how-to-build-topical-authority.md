@@ -23,9 +23,11 @@ faqs:
     a: "Yes. AI features split questions into many related searches and pull the best page for each. A site that covers the whole topic has more chances to be one of those sources. Industry analysis of the 2026 Google core updates also found that topical depth and first-hand experience tended to win over high-volume publishing."
 ---
 
-Most small business blogs look the same. A post about one topic, then something unrelated, then a holiday greeting, then nothing for three months. Each post stands alone, and none of them rank well.
+To build topical authority, pick one topic your customers care about and cover it in depth with a topic cluster: one pillar page for the broad topic, linked to focused pages that each answer one question. When you cover a subject that thoroughly, Google and AI tools start to treat you as a go-to source for it.
 
-The businesses that win in search do it differently. They pick a topic that matters to their customers and cover it so well that Google, and now AI tools, treat them as the expert. That's **topical authority**. And it's become more important. Industry analysis of Google's 2026 core updates found that topical authority and first-hand experience kept winning over strategies built on publishing volume.
+Most small business blogs don't work this way. A post about one topic, then something unrelated, then a holiday greeting, then nothing for three months. Each post stands alone, and none of them rank well.
+
+Depth matters more now. Industry analysis of Google's 2026 core updates found that topical authority and first-hand experience kept winning over strategies built on publishing volume.
 
 Here's how to build it, step by step. I'll use a made-up family law firm in Florida as the example.
 

@@ -23,6 +23,8 @@ faqs:
     a: "Fixing your listings and facts can show up within weeks, once AI tools recrawl those sources. Earning reviews and third-party mentions takes longer, usually a few months. AI answers also change from week to week, so track a set of prompts monthly rather than judging by one check."
 ---
 
+To get your business recommended by ChatGPT, make sure AI tools can confirm the same facts about you across many sources: your website, your listings, your reviews and third-party articles. AI assistants name the businesses they can verify, so fix your facts first, then earn reviews and mentions in the places AI already looks.
+
 Ask ChatGPT "who's a good family dentist near me" and it won't hand you ten blue links. It names two or three businesses, says why, and offers to help you contact them. If you're not on that short list, you don't exist for that customer.
 
 That moment is happening more often. BrightLocal's 2026 Local Consumer Review Survey found that **45% of consumers** have used AI tools like ChatGPT, Gemini or Perplexity to find local businesses. But very few businesses get named. The SOCi 2026 Local Visibility Index looked at more than 350,000 business locations and found that **ChatGPT recommends just 1.2% of them**, compared with **35.9%** that show up in Google's local pack.

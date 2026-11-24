@@ -23,11 +23,13 @@ faqs:
     a: "Hire someone with local SEO experience if most of your customers come from your area. Local SEO has its own work, like Google Business Profile optimization, map pack rankings, reviews and listings, that general SEO often skips. Ask to see local results, such as map rankings or calls from a Business Profile."
 ---
 
-Every local business owner hits the same question at some point: do you need an SEO specialist, or can you handle your search rankings yourself? It depends on your competition, your time and how complex your website is. Plenty of small businesses do fine on their own at first. Others lose calls every month to competitors who invested earlier. Below you'll find when DIY works, the signs it's time to hire, what SEO costs and how to choose the right person.
+You don't always need an SEO specialist for your local business. If you have few competitors, one location and a few spare hours a week, you can handle the basics yourself, but hiring usually pays off once competitors outrank you, calls drop or you run several locations.
+
+It comes down to your competition, your time and how complex your website is. Below you'll find when DIY works, the signs it's time to hire, what SEO costs and how to choose the right person.
 
 ## The short answer: it depends on three things
 
-You don't always need an SEO specialist. Google itself says that if you run a small local business, [you can probably do much of the work yourself](https://developers.google.com/search/docs/fundamentals/do-i-need-seo). Three things decide whether that holds for you:
+Google itself says that if you run a small local business, [you can probably do much of the work yourself](https://developers.google.com/search/docs/fundamentals/do-i-need-seo). Three things decide whether that holds for you:
 
 1. **Competition.** How many businesses fight for the same searches in your area?
 2. **Time.** Can you spend a few hours every week learning, fixing and updating?
@@ -102,7 +104,11 @@ If you want expert help without hand-offs, a specialist is usually the best fit 
 
 ## What an SEO specialist does in the first 90 days
 
-A good SEO specialist spends the first 90 days finding what holds you back, fixing it and building on it. Here's how the first three months usually run:
+A good SEO specialist spends the first 90 days finding what holds you back, fixing it and building on it.
+
+![SEO specialist at a desk reviewing organic traffic, keyword rankings and site health dashboards on two monitors](./images/do-you-need-an-seo-specialist/seo-specialist-reviewing-traffic-and-ranking-reports.webp "An SEO specialist reviewing client traffic and ranking reports")
+
+Here's how the first three months usually run:
 
 - **Month 1: audit and quick wins.** Review your site, Business Profile, rankings and competitors. Fix broken pages, missing details and mismatched listings.
 - **Month 2: pages and profile.** Strengthen service and location pages, add schema markup and post to your Business Profile every week.

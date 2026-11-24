@@ -23,9 +23,9 @@ faqs:
     a: "After you request indexing, Google often picks up a new page within days. Rankings for local questions usually build over four to twelve weeks, depending on competition. Watch Search Console for the page's first impressions, then watch your Calls report month over month."
 ---
 
-If your Google Business Profile gets views but the phone stays quiet, the problem usually isn't your profile. It's what customers find when they look a little deeper.
+To get more calls from your Google Business Profile, find the question customers ask right before they call, like what a job costs, and build one page on your website that answers it clearly. Most people research before they pick up the phone, and they call the business that answers their question first.
 
-Most people don't call the first business they see. They search, they compare, and they look for an answer to one nagging question first. *How much will this cost? Can I fix it myself? Is this an emergency?* The business that answers that question clearly is the one they trust enough to call.
+If your profile gets views but the phone stays quiet, the problem usually isn't the profile itself. It's what customers find when they look a little deeper. *How much will this cost? Can I fix it myself? Is this an emergency?* The business that answers clearly is the one they trust enough to call.
 
 This guide shows you how to find that question and build one page around it. I'll use a made-up AC repair company in Phoenix, Desert Peak Air, to show each step.
 

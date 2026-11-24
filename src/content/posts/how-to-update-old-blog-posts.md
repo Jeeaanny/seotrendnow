@@ -23,11 +23,11 @@ faqs:
     a: "Show an updated date only if you made meaningful changes to the content. Keep the original publish date and add a 'last updated' date. That's honest with readers and gives search engines an accurate signal. Changing the date without real changes is something Google warns against."
 ---
 
-You wrote a post two years ago. It ranked well and brought in steady traffic. Now it's slipping, a little more every month. You haven't touched it, so what changed?
+To update an old blog post for SEO, find the pages losing clicks in Search Console, check what ranks for the keyword now, and refresh the substance with new facts, first-hand detail and better answers. Changing only the date doesn't work.
 
-Almost everything around it. Competitors published better answers. Your prices and facts went out of date. Google's results changed, and AI Overviews now answer part of the question at the top of the page. This slow slide is called **content decay**, and it happens to nearly every blog.
+You wrote a post two years ago. It ranked well and brought in steady traffic. Now it's slipping, a little more every month. Competitors published better answers, your facts went out of date, and AI Overviews now answer part of the question at the top of the page. This slow slide is called **content decay**, and it happens to nearly every blog.
 
-The fix is usually not to write something new. It's to refresh what you already have. Here's how to find the posts worth saving, decide what to do with each, and update them so they rank again.
+The fix is usually not to write something new. Here's how to find the posts worth saving, decide what to do with each, and update them so they rank again.
 
 ## What content decay looks like
 

@@ -23,9 +23,9 @@ faqs:
     a: "Yes. For most local businesses it's still a small share of visits, but it tends to convert well because people arrive after the AI has already recommended you. Tracking it now gives you a baseline, so you can see whether your AI visibility work is paying off."
 ---
 
-"Are we getting any traffic from ChatGPT?" It's one of the most common questions in SEO right now. Until recently, the honest answer was "probably, but it's hard to tell." AI visits were scattered across Referral and Direct, and Google's AI Overviews were mixed into regular search.
+To track AI search traffic, check the AI Assistant channel in GA4 for visits from chatbots like ChatGPT and Gemini, and the Generative AI performance report in Search Console for impressions in AI Overviews and AI Mode. Neither tool shows everything, so add tagged links and a monthly AI mention log to fill the gaps.
 
-That changed in 2026. Google Analytics added a dedicated AI channel in May, and Search Console added a report for AI Overviews and AI Mode in June. Neither tool shows everything, but together they give you a solid picture. Here's how to set it up and how to read it.
+"Are we getting any traffic from ChatGPT?" It's one of the most common questions in SEO right now. Until 2026, the honest answer was "probably, but it's hard to tell." Then Google Analytics added its AI channel in May, and Search Console added its AI report in June. Here's how to set them up and how to read them together.
 
 ## Where AI traffic shows up (and where it hides)
 

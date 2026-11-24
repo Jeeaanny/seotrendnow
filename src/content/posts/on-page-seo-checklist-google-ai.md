@@ -23,9 +23,9 @@ faqs:
     a: "Not for most of it. WordPress, Wix, Squarespace and Shopify all let you edit titles, meta descriptions, URLs, headings and alt text yourself. Schema is the one step where a plugin or a developer helps, though you can paste JSON-LD into most site builders."
 ---
 
-Your website is live, it looks good, and still nobody finds it on Google. When you ask ChatGPT about businesses like yours, it names your competitors. That usually isn't bad luck. It almost always comes down to a handful of on-page basics that never got done.
+The nine on-page SEO basics are: set up Search Console, pick one keyword per page, then optimize your title tag, URL, meta description, images, H1, internal links and schema. Do them in that order, and your pages become easy for Google to rank and for AI tools like ChatGPT to recommend.
 
-This checklist walks through the nine I check first on every site I audit. Do them in this order. Each step builds on the one before, and together they make your pages easy for Google to find, read and rank. They also give AI tools the clean facts they need to recommend you.
+If your website looks good but nobody finds it on Google, and ChatGPT names your competitors instead, it almost always comes down to these basics. They're the nine I check first on every site I audit, and each step builds on the one before.
 
 I'll use a made-up plumbing company in Denver, Northgate Plumbing, so you can see what each fix looks like on a real-world site.
 

@@ -23,9 +23,9 @@ faqs:
     a: "Discovered means Google found the URL, usually through a link or sitemap, but hasn't crawled it yet. Crawled means Google has already crawled the page and decided not to index it. Discovered problems are usually fixed with stronger internal links and fewer low-value URLs. Crawled problems are usually fixed by improving or merging the page."
 ---
 
-You published a page, waited a week, and opened Search Console. Instead of "Indexed," it says **"Crawled, currently not indexed."** Google visited, read the page, and passed.
+"Crawled, currently not indexed" means Google read your page and decided not to store it, usually because of thin or duplicate content rather than a technical bug. To fix it, check whether the page deserves to be indexed, improve or merge it, strengthen internal links to it, then request indexing again.
 
-It's one of the most common and most frustrating statuses in Search Console. The good news is that it's usually fixable, once you know what it really means. This guide covers how to fix it, how it differs from "Discovered, currently not indexed," and how to solve the other errors you'll find in the same report, including robots.txt and sitemap problems.
+You published a page, waited a week, and opened Search Console to find that status instead of "Indexed." It's one of the most common and most frustrating statuses in Search Console. This guide covers how to fix it, how it differs from "Discovered, currently not indexed," and how to solve the other errors in the same report, including robots.txt and sitemap problems.
 
 ## What "crawled, currently not indexed" actually means
 

@@ -23,9 +23,11 @@ faqs:
     a: "Use the Generative AI performance report in Google Search Console. Google launched it in June 2026, and it shows how often your pages appeared in AI Overviews and AI Mode, by page, country, device and date. It reports impressions only. Clicks from AI features count in the main Performance report."
 ---
 
-For two years, SEOs argued about what it takes to appear in Google's AI Overviews. New acronyms appeared every month: AEO, GEO, LLMO. Then, on **May 15, 2026**, Google settled most of the debate. It published its first official guide to optimizing for generative AI features in Search, covering AI Overviews and AI Mode.
+To show up in Google's AI Overviews and AI Mode, focus on strong SEO: Google confirmed that both use its regular search index and ranking systems, so a page that can't rank can't be cited. Pages that give first-hand, specific answers to the questions behind a search have the best chance of being cited.
 
-The short version: **it's still SEO.** But the guide also clears up what you can stop worrying about, and what can get you in trouble. Here's what it means for a small business website, with a made-up example: Northgate Plumbing in Denver.
+For two years, SEOs argued about what it takes to appear in AI Overviews, and new acronyms appeared every month: AEO, GEO, LLMO. Then, on **May 15, 2026**, Google settled most of the debate with its first official guide to optimizing for generative AI features in Search.
+
+The guide also clears up what you can stop worrying about, and what can get you in trouble. Here's what it means for a small business website, with a made-up example: Northgate Plumbing in Denver.
 
 ## AI Overviews and AI Mode use the same system as regular Search
 

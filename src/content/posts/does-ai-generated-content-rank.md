@@ -23,9 +23,9 @@ faqs:
     a: "There's no percentage rule. A good test is whether the post contains anything an AI couldn't produce on its own: real numbers from your work, local detail, examples, opinions and a qualified author. If you removed everything the AI wrote, would there still be something valuable left? If not, the post needs more of you."
 ---
 
-"Will Google penalize me for using ChatGPT to write my blog?" It's one of the most common content questions right now, and there's a lot of confusing advice out there. Some people say AI content is banned. Others say you can publish hundreds of AI posts a month and rank.
+Yes, AI-generated content can rank on Google, because Google judges how helpful and original a page is, not whether AI helped write it. What Google penalizes is scaled content abuse: publishing many pages mainly to manipulate rankings, however they're made.
 
-Both are wrong. Here's what Google actually says, what gets sites in trouble, and a practical workflow for using AI on a small business website without risking your rankings. I'll use a made-up family law firm in Tampa as the example.
+"Will Google penalize me for using ChatGPT to write my blog?" It's one of the most common content questions right now, and the advice out there is confusing. Here's what Google actually says, what gets sites in trouble, and a practical workflow for using AI on a small business website without risking your rankings. I'll use a made-up family law firm in Tampa as the example.
 
 ## The short answer: Google judges the page, not the tool
 

@@ -23,11 +23,13 @@ faqs:
     a: "It can, at least for a while. Google may ask you to verify the new address, and your rankings will shift to the new area. Keeping the same phone number, updating your citations quickly and moving into a spot without a strong same-category neighbour all help you recover faster."
 ---
 
-A lease is a five- or ten-year decision. Most business owners look at rent, parking, foot traffic and signage before they sign. Very few look at the one thing that decides where they'll show up on Google Maps: who else is already ranking near that address.
+Before you sign a lease, run a geo-grid scan for your main keyword around the address to see which competitors already rank there. Proximity is one of the strongest factors in Google's local rankings, and a stronger business in the same category nearby can filter you out of the map pack.
+
+A lease is a five- or ten-year decision. Most business owners check rent, parking, foot traffic and signage before they sign. Very few check who already ranks near that address.
 
 I've seen it go wrong. A clinic moves into a nicer building and its map rankings disappear, because a bigger clinic in the same category already sits two floors up. That's a hard problem to fix once the lease is signed.
 
-The good news is you can check all of this in an afternoon. This guide walks through why your address matters so much, what Google's local filter does, and a seven-step check to run before you commit. I'll use a made-up physical therapy clinic, Trailhead Physical Therapy, to show each step.
+You can check all of this in an afternoon. Below you'll find why your address matters so much, what Google's local filter does, and a seven-step check to run before you commit. I'll use a made-up physical therapy clinic, Trailhead Physical Therapy, to show each step.
 
 ## Why your address matters more than almost anything else
 

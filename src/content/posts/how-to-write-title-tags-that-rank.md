@@ -23,11 +23,11 @@ faqs:
     a: "Google rewrites titles it thinks don't match the page or the search. Common triggers are titles that are too long, stuffed with keywords, duplicated across pages, or different from the H1. Fixing those issues makes Google more likely to keep the title you wrote."
 ---
 
-If you only fix one thing on a page this week, fix the title tag. It's the blue link people see in Google, and it's one of the strongest clues you can give Google about what the page covers. It also decides whether a searcher clicks you or the business above you.
+To write a title tag that ranks, put your main keyword first, then your city, and keep it under about 60 characters, like "Service in City, State | Business Name." Make it similar to your H1 but not identical, and never reuse it on another page.
 
-The good news: writing a strong title tag takes about five minutes once you know the rules. Here are the four I use on every local business site, plus an AI prompt that does the first draft for you.
+If you only fix one thing on a page this week, fix the title tag. It's the blue link people see in Google, one of the strongest clues you can give Google about the page, and it decides whether searchers click you or the business above you.
 
-For the examples, I'll use a made-up practice in Texas: Brightside Family Dental in Austin.
+Here are the four rules I use on every local business site, plus an AI prompt that writes the first draft for you. For the examples, I'll use a made-up practice in Texas: Brightside Family Dental in Austin.
 
 ## What a title tag is (and why it matters for AI too)
 

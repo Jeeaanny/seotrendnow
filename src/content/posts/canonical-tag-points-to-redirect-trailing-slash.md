@@ -23,9 +23,9 @@ faqs:
     a: "No. The filter only changes the URL that Yoast prints in the canonical tag and og:url meta tag. Page addresses, redirects, menus and the sitemap stay exactly as they are. To undo it, remove the snippet and clear your cache."
 ---
 
-I ran into this on a client audit recently, and it's one of those issues that looks small until you see how far it spreads. Semrush flagged about two-thirds of the site's sitemap URLs as "Incorrect pages found in sitemap.xml." Nothing was visibly broken. Pages loaded, Google indexed them, and rankings looked normal.
+If your canonical tag points to a redirect, Google ignores it and has to guess which URL is the real page. On WordPress, the usual cause is a trailing slash: the SEO plugin adds one to the canonical that the live URL doesn't have, and a small filter that makes Yoast use each page's real URL fixes it.
 
-The cause turned out to be one character: a trailing slash the SEO plugin added to the canonical tag. Here's how to spot it, why it happens, and how to fix it safely on WordPress.
+I ran into this on a client audit recently. Semrush flagged about two-thirds of the site's sitemap URLs as "Incorrect pages found in sitemap.xml." Nothing was visibly broken. Pages loaded, Google indexed them, and rankings looked normal. Here's how to spot it, why it happens, and how to fix it safely.
 
 ## The symptoms: how this issue shows up
 

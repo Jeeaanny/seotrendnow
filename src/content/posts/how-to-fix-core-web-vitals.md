@@ -24,9 +24,9 @@ faqs:
     a: "Yes, as part of Google's page experience signals, but they act more like a tiebreaker than a main ranking factor. Relevant, helpful content still matters most. The bigger effect is often on visitors: slow or jumpy pages lose people before they call, book or buy."
 ---
 
-You've opened PageSpeed Insights, seen a lot of red, and a long list of warnings you don't understand. Where do you even start?
+To fix Core Web Vitals, check your field data in Search Console first, then fix the usual culprits: an oversized or lazy-loaded hero image for LCP, heavy JavaScript for INP, and images or banners without reserved space for CLS. On most small business websites, those few problems cause most of the failures.
 
-Here's the good news. On most small business websites, a handful of the same problems cause most Core Web Vitals failures. Fix those, and you usually pass. This guide walks through how to find what's actually slowing your pages, then fixes each metric in order of impact.
+If PageSpeed Insights shows you a lot of red and warnings you don't understand, start here. This guide walks through how to find what's actually slowing your pages, then fixes each metric in order of impact.
 
 If you need a refresher on what the three metrics mean and their targets, they're covered in my [technical SEO audit checklist](/blog/technical-seo-audit-checklist/). In short: **LCP** is loading speed (2.5 seconds or less), **INP** is responsiveness (200 ms or less), and **CLS** is visual stability (0.1 or less).
 
