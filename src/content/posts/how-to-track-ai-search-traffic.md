@@ -85,6 +85,12 @@ What it doesn't show:
 
 Use it to answer two questions. Which of my pages does Google cite in AI features? And is that number growing? Compare the cited pages with your main Performance report to see whether they also get clicks.
 
+Here's what that second question looks like in a real report. Daily impressions dropped for a few months, then started climbing again:
+
+![Search Console Generative AI performance report showing 13.1K total impressions in AI Overviews and AI Mode, with daily impressions trending up again](./images/how-to-track-ai-search-traffic/search-console-generative-ai-impressions-trend.webp "Generative AI impressions trend in Google Search Console")
+
+Look at the trend over weeks, not single days. Daily numbers jump around, and one spike doesn't mean much on its own.
+
 Read Google's [announcement of the report](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports) and [help page](https://support.google.com/webmasters/answer/16984139) for the full details.
 
 ## Step 3: Tag the links you control
