@@ -6,9 +6,9 @@ interface Props { category: string; image?: any; alt?: string; height: number; i
 const { category, image, alt = '', height, iconSize = 48, eager = false } = Astro.props;
 const looks: Record<string, { bg: string; stroke: string; icon: string }> = {
   'Local SEO': { bg: '#F0F2FF', stroke: '#3354FF', icon: 'pin' },
-  'Technical SEO': { bg: '#001C44', stroke: '#FFCA00', icon: 'code' },
+  'Technical SEO': { bg: '#0B2A6F', stroke: '#FFCA00', icon: 'code' },
   'Content Strategy': { bg: '#3354FF', stroke: '#FFFFFF', icon: 'grid' },
-  'AI Search': { bg: '#001C44', stroke: '#FFCA00', icon: 'spark' },
+  'AI Search': { bg: '#0B2A6F', stroke: '#FFCA00', icon: 'spark' },
   'Case Notes': { bg: '#3354FF', stroke: '#FFFFFF', icon: 'trend' },
 };
 const look = looks[category] ?? looks['Content Strategy'];

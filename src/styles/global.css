@@ -2,7 +2,8 @@
    live in each page's own <style> block, which loads after this file. */
 
 :root {
-  --navy: #001c44;
+  --navy: #0B2A6F;
+  --navy-ink: #001c44; /* darker navy for text on yellow, for maximum contrast */
   --blue: #3354ff;
   --blue-dark: #1f3bd6;
   --yellow: #ffca00;
@@ -94,7 +95,7 @@ a:hover { color: var(--blue-dark); }
 .ft h2 { margin: 0 0 4px; color: #fff; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; font-family: Inter, system-ui, sans-serif; }
 .ft .brand-name { color: #fff; }
 .ft .brand-name span { color: var(--yellow); }
-.ft .ft-cta { align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 100px; background: var(--yellow); color: var(--navy) !important; font-weight: 700; }
+.ft .ft-cta { align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 100px; background: var(--yellow); color: var(--navy-ink) !important; font-weight: 700; }
 .ft .bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; padding-top: 24px; border-top: 1px solid var(--line-dark); font-size: 14px; }
 
 /* ---------- Prose (blog posts, legal pages) ---------- */

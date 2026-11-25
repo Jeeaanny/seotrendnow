@@ -25,7 +25,7 @@ CSS = f"""
 @font-face{{font-family:Inter;font-weight:700;src:url(file://{F}/inter/files/inter-latin-700-normal.woff2)}}
 @font-face{{font-family:Kalam;font-weight:700;src:url(file://{F}/kalam/files/kalam-latin-700-normal.woff2)}}
 *{{box-sizing:border-box}} body{{margin:0;font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased}}
-.stage{{position:relative;overflow:hidden;display:flex;width:1080px;height:1080px;background:#001C44}}
+.stage{{position:relative;overflow:hidden;display:flex;width:1080px;height:1080px;background:#0B2A6F}}
 .h{{font-family:Archivo,sans-serif;font-weight:800;letter-spacing:-.02em}}
 .chip{{display:inline-flex;align-items:center;border-radius:100px;font-weight:700}}
 """
@@ -57,7 +57,7 @@ def build(a):
   <div style="color:#CBD1D9;font-size:30px;line-height:1.45;max-width:800px">{e(a.body)}</div>
  </div>
  <div style="display:flex;align-items:center;gap:22px">
-  <span class="chip" style="background:#FFCA00;color:#001C44;font-size:28px;padding:18px 34px">{e(a.cta)}</span>
+  <span class="chip" style="background:#FFCA00;color:#0B2A6F;font-size:28px;padding:18px 34px">{e(a.cta)}</span>
   <span style="color:#fff;font-size:26px;font-weight:600">seotrendnow.online</span>
  </div>
 </div>'''

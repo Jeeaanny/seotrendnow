@@ -28,7 +28,7 @@ const tagCss = `.tag{font-size:13px;font-weight:600;padding:4px 12px;border-radi
   breadcrumb={[{ name: 'Results', url: '/results/' }, { name: d.title, url: `/results/${cs.id}/` }]}>
 <Fragment slot="head"><style is:inline set:html={caseStudyCss + tagCss}></style></Fragment>
 
-<section style="background: #001C44; color: #FFFFFF">
+<section style="background: #0B2A6F; color: #FFFFFF">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 28px; padding-top: 48px; padding-bottom: 72px">
 <nav aria-label="Breadcrumb" style="font-size: 14px; color: #CBD1D9"><a href="/results/" style="color: #CBD1D9; text-decoration: none">← All case studies</a></nav>
 <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
@@ -37,7 +37,7 @@ const tagCss = `.tag{font-size:13px;font-weight:600;padding:4px 12px;border-radi
 <h1 class="h1" style="color: #FFFFFF">{d.title}</h1>
 <p style="margin: 0; font-size: 19px; color: #CBD1D9">{d.summary}</p>
 </div>
-<dl style="flex: 0 1 320px; margin: 0; background: #FFFFFF; color: #001C44; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+<dl style="flex: 0 1 320px; margin: 0; background: #FFFFFF; color: #0B2A6F; border-radius: 22px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
 <div><dt style="font-size: 13px; color: #4A4A68; font-weight: 600">Client</dt><dd style="margin: 0; font-weight: 700">{d.client}</dd></div>
 <div><dt style="font-size: 13px; color: #4A4A68; font-weight: 600">Industry</dt><dd style="margin: 0; font-weight: 700">{d.industry}</dd></div>
 <div><dt style="font-size: 13px; color: #4A4A68; font-weight: 600">Market</dt><dd style="margin: 0; font-weight: 700">{d.market}</dd></div>
@@ -58,7 +58,7 @@ const tagCss = `.tag{font-size:13px;font-weight:600;padding:4px 12px;border-radi
 {d.challenge.length > 0 && (
 <section class="sec" style="background: #FFFFFF">
 <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 56px">
-<div style="flex: 1 1 300px; min-width: 0"><h2 class="h2" style="color: #001C44">The challenge</h2></div>
+<div style="flex: 1 1 300px; min-width: 0"><h2 class="h2" style="color: #0B2A6F">The challenge</h2></div>
 <div style="flex: 2 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 16px">{d.challenge.map((p) => <p style="margin: 0">{p}</p>)}</div>
 </div>
 </section>
@@ -67,10 +67,10 @@ const tagCss = `.tag{font-size:13px;font-weight:600;padding:4px 12px;border-radi
 {d.steps.length > 0 && (
 <section class="sec" style="background: #F9FAFF">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 40px">
-<div><h2 class="h2" style="color: #001C44">What I did, step by step</h2></div>
+<div><h2 class="h2" style="color: #0B2A6F">What I did, step by step</h2></div>
 <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 20px">
 {d.steps.map((s, i) => (
-<li style="background: #FFFFFF; border: 1px solid #DDE1FF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 10px"><span style="font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 32px; color: #DDE1FF; line-height: 1">{String(i + 1).padStart(2, '0')}</span><h3 class="h3" style="color: #001C44">{s.title}</h3><p style="margin: 0; font-size: 15px">{s.text}</p></li>
+<li style="background: #FFFFFF; border: 1px solid #DDE1FF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 10px"><span style="font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 32px; color: #DDE1FF; line-height: 1">{String(i + 1).padStart(2, '0')}</span><h3 class="h3" style="color: #0B2A6F">{s.title}</h3><p style="margin: 0; font-size: 15px">{s.text}</p></li>
 ))}
 </ol>
 </div>
@@ -79,7 +79,7 @@ const tagCss = `.tag{font-size:13px;font-weight:600;padding:4px 12px;border-radi
 
 <section class="sec" style="background: #FFFFFF">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 36px">
-<div><h2 class="h2" style="color: #001C44">{d.beforeImage ? 'The results: before and after' : 'The results'}</h2></div>
+<div><h2 class="h2" style="color: #0B2A6F">{d.beforeImage ? 'The results: before and after' : 'The results'}</h2></div>
 {(d.beforeImage || d.afterImage) && (
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 24px">
 {d.beforeImage && <figure style="margin: 0; display: flex; flex-direction: column; gap: 10px"><Image src={d.beforeImage} alt={d.beforeCaption || 'Before'} style="width: 100%; height: auto; border-radius: 20px" /><figcaption style="font-size: 14px">{d.beforeCaption}</figcaption></figure>}
@@ -100,8 +100,8 @@ const tagCss = `.tag{font-size:13px;font-weight:600;padding:4px 12px;border-radi
 <section style="background: #F0F2FF">
 <div class="wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; padding-top: 72px; padding-bottom: 72px">
 <svg aria-hidden="true" width="40" height="32" viewBox="0 0 36 28" fill="#3354FF"><path d="M0 28V16C0 7 5 1.5 14 0l1.5 4C10 5.6 7.6 9 7.4 13H14v15zm21 0V16c0-9 5-14.5 14-16l1 4c-5.5 1.6-7.9 5-8.1 9H35v15z"></path></svg>
-<p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 700; font-size: 26px; line-height: 1.4; color: #001C44; max-width: 820px">{d.quote}</p>
-<p style="margin: 0; font-size: 15px"><b style="color: #001C44">{d.quoteName}</b>{d.quoteRole && `, ${d.quoteRole}`}</p>
+<p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 700; font-size: 26px; line-height: 1.4; color: #0B2A6F; max-width: 820px">{d.quote}</p>
+<p style="margin: 0; font-size: 15px"><b style="color: #0B2A6F">{d.quoteName}</b>{d.quoteRole && `, ${d.quoteRole}`}</p>
 </div>
 </section>
 )}
@@ -110,12 +110,12 @@ const tagCss = `.tag{font-size:13px;font-weight:600;padding:4px 12px;border-radi
 <div class="wrap" style="display: flex; flex-wrap: wrap; gap: 32px">
 {d.takeaways.length > 0 && (
 <div style="flex: 1 1 520px; min-width: 0; border: 1px solid #DDE1FF; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
-<h2 class="h3" style="color: #001C44">Key takeaways</h2>
+<h2 class="h3" style="color: #0B2A6F">Key takeaways</h2>
 {d.takeaways.map((t) => <p style="margin: 0; display: flex; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3354FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 4px"><polyline points="4 12 10 18 20 6"></polyline></svg>{t}</p>)}
 </div>
 )}
 {next && next.id !== cs.id && (
-<a href={`/results/${next.id}/`} style="flex: 1 1 340px; min-width: 0; text-decoration: none; background: #001C44; color: #FFFFFF; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 10px; justify-content: space-between">
+<a href={`/results/${next.id}/`} style="flex: 1 1 340px; min-width: 0; text-decoration: none; background: #0B2A6F; color: #FFFFFF; border-radius: 22px; padding: 32px; display: flex; flex-direction: column; gap: 10px; justify-content: space-between">
 <span style="font-size: 14px; color: #CBD1D9">Next case study</span>
 <span style="font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 24px; line-height: 1.25">{next.data.title}</span>
 <span style="font-weight: 700; color: #FFCA00">Read it →</span>

@@ -43,13 +43,13 @@ const extraCss = `.toc a{color:#4A4A68;text-decoration:none;font-size:15px}.toc 
 
 <section style="background: #F9FAFF">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 20px; padding-top: 40px; padding-bottom: 48px; max-width: 960px">
-<nav aria-label="Breadcrumb" style="font-size: 14px"><a href="/" style="color: #4A4A68; text-decoration: none">Home</a> <span aria-hidden="true">›</span> <a href="/blog/" style="color: #4A4A68; text-decoration: none">Blog</a> <span aria-hidden="true">›</span> <span style="color: #001C44; font-weight: 600">{d.category}</span></nav>
+<nav aria-label="Breadcrumb" style="font-size: 14px"><a href="/" style="color: #4A4A68; text-decoration: none">Home</a> <span aria-hidden="true">›</span> <a href="/blog/" style="color: #4A4A68; text-decoration: none">Blog</a> <span aria-hidden="true">›</span> <span style="color: #0B2A6F; font-weight: 600">{d.category}</span></nav>
 <span class="cat">{d.category}</span>
-<h1 class="h1" style="color: #001C44">{d.title}</h1>
+<h1 class="h1" style="color: #0B2A6F">{d.title}</h1>
 {d.subtitle && <p style="margin: 0; font-size: 20px">{d.subtitle}</p>}
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding-top: 6px">
 <span aria-hidden="true" style="width: 48px; height: 48px; border-radius: 50%; background: #DDE1FF; display: inline-flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#334969" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-7 8-7s8 3 8 7"></path></svg></span>
-<span style="font-size: 15px; line-height: 1.4"><a href="/about/" style="color: #001C44; display: block; font-weight: 700; text-decoration: none">Jean Jumamoy</a>SEO Strategist · <time datetime={d.date.toISOString()}>{fmtDate(d.date)}</time> · {minutes} min read{d.updated && <Fragment> · Updated <time datetime={d.updated.toISOString()}>{fmtDate(d.updated)}</time></Fragment>}</span>
+<span style="font-size: 15px; line-height: 1.4"><a href="/about/" style="color: #0B2A6F; display: block; font-weight: 700; text-decoration: none">Jean Jumamoy</a>SEO Strategist · <time datetime={d.date.toISOString()}>{fmtDate(d.date)}</time> · {minutes} min read{d.updated && <Fragment> · Updated <time datetime={d.updated.toISOString()}>{fmtDate(d.updated)}</time></Fragment>}</span>
 </div>
 </div>
 </section>
@@ -62,7 +62,7 @@ const extraCss = `.toc a{color:#4A4A68;text-decoration:none;font-size:15px}.toc 
 <article style="flex: 1 1 640px; min-width: 0; max-width: 760px; display: flex; flex-direction: column; gap: 24px">
 {d.takeaways.length > 0 && (
 <div style="background: #F0F2FF; border-radius: 20px; padding: 28px 32px; display: flex; flex-direction: column; gap: 10px">
-<p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 20px; color: #001C44">Key takeaways</p>
+<p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 20px; color: #0B2A6F">Key takeaways</p>
 <ul style="margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 6px; font-size: 17px">
 {d.takeaways.map((t) => <li>{t}</li>)}
 </ul>
@@ -72,9 +72,9 @@ const extraCss = `.toc a{color:#4A4A68;text-decoration:none;font-size:15px}.toc 
 
 {d.faqs.length > 0 && (
 <Fragment>
-<h2 id="faq" class="h2" style="color: #001C44; padding-top: 12px; scroll-margin-top: 100px">Frequently Asked Questions</h2>
+<h2 id="faq" class="h2" style="color: #0B2A6F; padding-top: 12px; scroll-margin-top: 100px">Frequently Asked Questions</h2>
 {d.faqs.map((f) => (
-<div style="border: 1px solid #DDE1FF; border-radius: 16px; padding: 18px 22px"><h3 style="margin: 0; font-family: Inter, system-ui, sans-serif; font-weight: 700; font-size: 18px; line-height: 1.4; color: #001C44">{f.q}</h3><p style="margin: 0; padding-top: 10px; font-size: 17px">{f.a}</p></div>
+<div style="border: 1px solid #DDE1FF; border-radius: 16px; padding: 18px 22px"><h3 style="margin: 0; font-family: Inter, system-ui, sans-serif; font-weight: 700; font-size: 18px; line-height: 1.4; color: #0B2A6F">{f.q}</h3><p style="margin: 0; padding-top: 10px; font-size: 17px">{f.a}</p></div>
 ))}
 </Fragment>
 )}
@@ -83,7 +83,7 @@ const extraCss = `.toc a{color:#4A4A68;text-decoration:none;font-size:15px}.toc 
 <span aria-hidden="true" style="flex: none; width: 80px; height: 80px; border-radius: 50%; background: #DDE1FF; display: inline-flex; align-items: center; justify-content: center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#334969" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 4-7 8-7s8 3 8 7"></path></svg></span>
 <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 6px">
 <p style="margin: 0; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em">Written by</p>
-<p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 22px; color: #001C44">Jean Jumamoy</p>
+<p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 22px; color: #0B2A6F">Jean Jumamoy</p>
 <p style="margin: 0; font-size: 16px">SEO strategist for clinics, law firms and local service businesses.</p>
 <p style="margin: 0; font-size: 15px"><a href="/about/" style="font-weight: 700; text-decoration: none">More about Jean →</a></p>
 </div>
@@ -93,12 +93,12 @@ const extraCss = `.toc a{color:#4A4A68;text-decoration:none;font-size:15px}.toc 
 <aside class="post-aside" style="flex: 0 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
 {toc.length > 0 && (
 <nav class="toc" aria-label="On this page" style="border: 1px solid #DDE1FF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-<p style="margin: 0; font-weight: 700; color: #001C44; font-size: 15px">On this page</p>
+<p style="margin: 0; font-weight: 700; color: #0B2A6F; font-size: 15px">On this page</p>
 {toc.map((h) => <a href={`#${h.slug}`}>{h.text}</a>)}
 {d.faqs.length > 0 && <a href="#faq">FAQs</a>}
 </nav>
 )}
-<div style="background: #001C44; color: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<div style="background: #0B2A6F; color: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
 <p class="eyebrow" style="color: #FFCA00">Need a hand?</p>
 <p style="margin: 0; font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 22px; line-height: 1.25">Get a free SEO check for your business.</p>
 <a class="pill" href={CALENDLY} target="_blank" rel="noopener" style="background: #3354FF; color: #FFFFFF; font-size: 15px">Book a Strategy Call</a>
@@ -109,10 +109,10 @@ const extraCss = `.toc a{color:#4A4A68;text-decoration:none;font-size:15px}.toc 
 {related.length > 0 && (
 <section style="background: #F9FAFF">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 28px; padding-top: 72px; padding-bottom: 72px">
-<h2 class="h2" style="color: #001C44">Keep Reading</h2>
+<h2 class="h2" style="color: #0B2A6F">Keep Reading</h2>
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 28px">
 {related.map((p) => (
-<a href={`/blog/${p.id}/`} style="text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 12px"><PostCover category={p.data.category} image={p.data.image} alt={p.data.imageAlt} height={180} iconSize={40} /><span class="cat">{p.data.category}</span><span class="h3" style="color: #001C44">{p.data.title}</span></a>
+<a href={`/blog/${p.id}/`} style="text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 12px"><PostCover category={p.data.category} image={p.data.image} alt={p.data.imageAlt} height={180} iconSize={40} /><span class="cat">{p.data.category}</span><span class="h3" style="color: #0B2A6F">{p.data.title}</span></a>
 ))}
 </div>
 </div>

@@ -24,7 +24,7 @@ forms.forEach((form) => {
       if (!res.ok) throw new Error(String(res.status));
       const title = form.dataset.successTitle || 'Thanks, your message is in.';
       const text = form.dataset.successText || '';
-      const color = dark ? '#FFFFFF' : '#001C44';
+      const color = dark ? '#FFFFFF' : '#0B2A6F';
       form.innerHTML =
         `<div role="status" style="display:flex;flex-direction:column;gap:10px;padding:8px 0">` +
         `<p style="margin:0;font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:24px;color:${color}">${title}</p>` +

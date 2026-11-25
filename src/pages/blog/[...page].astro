@@ -40,10 +40,10 @@ const schema = [{
 <section style="background: #F9FAFF; border-bottom: 1px solid #EEF0FF">
 <div class="wrap" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 40px; padding-top: 80px; padding-bottom: 64px">
 <div style="flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
-<h1 class="h1" style="color: #001C44">{isFirst ? 'SEO Blog: Practical SEO Tips for Local Businesses' : `All Articles, Page ${page.currentPage}`}</h1>
+<h1 class="h1" style="color: #0B2A6F">{isFirst ? 'SEO Blog: Practical SEO Tips for Local Businesses' : `All Articles, Page ${page.currentPage}`}</h1>
 <p style="margin: 0; font-size: 19px; max-width: 560px">Straight answers on local SEO, Google Business Profile, technical SEO, content strategy and AI search for clinics, law firms and home service businesses. New posts three times a month.</p>
 </div>
-<form data-ajax data-theme="dark" data-success-title="You're subscribed." data-success-text="New posts will land in your inbox three times a month." action={FORMSPREE} method="POST" style="flex: 0 1 420px; background: #001C44; border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 12px; color: #FFFFFF">
+<form data-ajax data-theme="dark" data-success-title="You're subscribed." data-success-text="New posts will land in your inbox three times a month." action={FORMSPREE} method="POST" style="flex: 0 1 420px; background: #0B2A6F; border-radius: 22px; padding: 26px; display: flex; flex-direction: column; gap: 12px; color: #FFFFFF">
 <input type="hidden" name="_subject" value="New blog subscriber (seotrendnow.online)">
 <input type="hidden" name="form" value="Blog newsletter">
 <label for="blog-email" style="font-weight: 700; font-size: 16px">Get new posts by email</label>
@@ -64,7 +64,7 @@ const schema = [{
 <div style="flex: 1 1 480px; min-width: 0"><PostCover category={featured.data.category} image={featured.data.image} alt={featured.data.imageAlt} height={340} iconSize={72} eager /></div>
 <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px; padding: 12px 20px 12px 0">
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px"><span style="padding: 4px 12px; border-radius: 100px; background: #FFCA00; color: #001C44; font-weight: 700; font-size: 13px">Latest</span><span class="cat">{featured.data.category}</span></div>
-<h2 class="h2" style="color: #001C44">{featured.data.title}</h2>
+<h2 class="h2" style="color: #0B2A6F">{featured.data.title}</h2>
 <p style="margin: 0">{featured.data.description}</p>
 <p class="meta" style="margin: 0">Jean Jumamoy · <time datetime={featured.data.date.toISOString()}>{fmtDate(featured.data.date)}</time> · {readMinutes(featured.body ?? '')} min read</p>
 </div>
@@ -76,7 +76,7 @@ const schema = [{
 <section class="sec" style="background: #FFFFFF; padding-top: 56px">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 36px">
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
-<h2 class="h3" style="color: #001C44; font-size: 26px">{isFirst ? 'Latest articles' : 'More articles'}</h2>
+<h2 class="h3" style="color: #0B2A6F; font-size: 26px">{isFirst ? 'Latest articles' : 'More articles'}</h2>
 <div role="group" aria-label="Filter by topic" style="display: flex; flex-wrap: wrap; gap: 10px" id="post-filter">
 <button type="button" class="chip on" aria-pressed="true" data-filter="all">All</button>
 {BLOG_CATEGORIES.map((c) => <button type="button" class="chip" aria-pressed="false" data-filter={c}>{c}</button>)}
@@ -89,7 +89,7 @@ const schema = [{
 <a href={`/blog/${p.id}/`} data-cat={p.data.category} style="text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 14px">
 <PostCover category={p.data.category} image={p.data.image} alt={p.data.imageAlt} height={210} />
 <span class="cat">{p.data.category}</span>
-<h3 class="h3" style="color: #001C44">{p.data.title}</h3>
+<h3 class="h3" style="color: #0B2A6F">{p.data.title}</h3>
 <p class="meta" style="margin: 0"><time datetime={p.data.date.toISOString()}>{fmtDate(p.data.date)}</time> · {readMinutes(p.body ?? '')} min read</p>
 </a>
 ))}
@@ -100,7 +100,7 @@ const schema = [{
 <a href={`/blog/${p.id}/`} data-cat={p.data.category} style="text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 14px">
 <PostCover category={p.data.category} image={p.data.image} alt={p.data.imageAlt} height={210} />
 <span class="cat">{p.data.category}</span>
-<h3 class="h3" style="color: #001C44">{p.data.title}</h3>
+<h3 class="h3" style="color: #0B2A6F">{p.data.title}</h3>
 <p class="meta" style="margin: 0"><time datetime={p.data.date.toISOString()}>{fmtDate(p.data.date)}</time> · {readMinutes(p.body ?? '')} min read</p>
 </a>
 ))}
