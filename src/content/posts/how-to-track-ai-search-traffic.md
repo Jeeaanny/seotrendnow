@@ -4,7 +4,7 @@ seoTitle: "How to Track AI Search Traffic in GA4 and Search Console"
 description: "See how much traffic ChatGPT, Perplexity and Google's AI Overviews send you. Set up GA4's AI Assistant channel, Search Console's AI report and a mention log."
 subtitle: "Where AI visits show up in your reports, where they hide, and a simple monthly routine to measure them."
 date: 2026-11-17
-updated: 2026-11-24
+updated: 2026-11-25
 category: "AI Search"
 image: ./images/how-to-track-ai-search-traffic/how-to-track-ai-search-traffic.png
 imageAlt: "GA4 traffic acquisition report with the new AI Assistant channel highlighted"
@@ -20,6 +20,8 @@ faqs:
     a: "Visits from the ChatGPT mobile app, and links people copy and paste, often arrive with no referrer. GA4 can't tell where they came from, so it files them under Direct. That's why GA4 numbers for AI traffic are a minimum, not a total."
   - q: "Can I see AI Overview clicks in Search Console?"
     a: "Not separately. Search Console's Generative AI performance report shows impressions in AI Overviews and AI Mode, by page, country, device and date. Clicks from those features are counted in the main Performance report along with other web results, without their own filter."
+  - q: "Can I track AI Overviews for a specific city or region?"
+    a: "Not in Search Console. The Generative AI performance report breaks impressions down by country, but not by city or region. For city-level checks, search your main keywords from that area or use a rank tracker that records AI Overviews from a set location. Check that a tool actually tracks AI Overviews before you pay for it."
   - q: "Is AI search traffic worth tracking if it's small?"
     a: "Yes. For most local businesses it's still a small share of visits, but it tends to convert well because people arrive after the AI has already recommended you. Tracking it now gives you a baseline, so you can see whether your AI visibility work is paying off."
 ---
@@ -62,7 +64,7 @@ Then click through to see which landing pages those visitors arrive on. Those pa
 
 If you built a custom AI channel group with a regex before May 2026, don't delete it straight away. Compare the two for a month first, so you know what each one catches.
 
-## Step 2: Open Search Console's Generative AI report
+## Step 2: Track AI Overviews and AI Mode in Search Console
 
 Google's AI features don't show up as AI traffic in GA4, so you need Search Console for those. In June 2026, Google launched the **Generative AI performance report**, and by August it was live on every property.
 
@@ -79,6 +81,7 @@ What it doesn't show:
 
 - **Clicks.** Those stay in the main Performance report, mixed with other web results.
 - **Queries or prompts.** You can see which pages appeared, but not what people asked.
+- **Cities or regions.** Country is the smallest location breakdown.
 
 Use it to answer two questions. Which of my pages does Google cite in AI features? And is that number growing? Compare the cited pages with your main Performance report to see whether they also get clicks.
 

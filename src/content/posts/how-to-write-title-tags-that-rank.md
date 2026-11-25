@@ -4,7 +4,7 @@ seoTitle: "How to Write SEO Title Tags That Rank (+ AI Prompt)"
 description: "Learn how to write SEO title tags that rank on Google and get the click. Four simple rules, real local examples, and an AI prompt you can copy today."
 subtitle: "Four rules, real examples for local businesses, and a prompt that writes the first draft for you."
 date: 2026-11-17
-updated: 2026-11-24
+updated: 2026-11-25
 category: "Technical SEO"
 image: ./images/how-to-write-title-tags-that-rank/how-to-write-title-tags-that-rank.png
 imageAlt: "Google search result for teeth whitening in Austin with the title tag highlighted"
@@ -101,6 +101,21 @@ Three ways to check your site for duplicates:
 3. **Screaming Frog:** The free version crawls up to 500 URLs and has a filter for duplicate titles.
 
 Give every page its own title that names its own service. For location pages, change the city. For blog posts, write the title around the question the post answers.
+
+## SEO title examples for every page type
+
+Here's how the same rules play out across a whole site. Each example follows the same SEO title best practices: keyword first, city where it helps, under 60 characters, and one title per page.
+
+| Page | Example title tag | Why it works |
+|---|---|---|
+| Homepage | Family Dentist in Austin, TX \| Brightside Family Dental | Names the main service and city, not just "Home" |
+| Service page | Dental Implants in Austin, TX \| Brightside Family Dental | One service per page, keyword first |
+| Location page | Dentist in Round Rock, TX \| Brightside Family Dental | Only the city changes, so no two titles match |
+| Blog post | How Long Does Teeth Whitening Last? A Dentist Explains | Uses the exact question people search |
+| About page | About Our Austin Dentists \| Brightside Family Dental | Adds the city so the page still means something in Google |
+| Contact page | Contact Brightside Family Dental \| Austin, TX | Brand first is fine here, since people search it by name |
+
+Use these as patterns, not templates. Swap in the words your own customers type, which you can find in the **Queries** tab of Search Console.
 
 ## Let AI write the first draft
 

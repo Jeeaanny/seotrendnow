@@ -4,7 +4,7 @@ seoTitle: "How to Show Up in Google AI Overviews and AI Mode"
 description: "Google's 2026 guide says AI Overviews and AI Mode run on core Search. Here's what helps you get cited, what Google says to skip, and what to avoid."
 subtitle: "Google published official guidance in May 2026. Here's what it means for your website, in plain English."
 date: 2026-11-17
-updated: 2026-11-24
+updated: 2026-11-25
 category: "AI Search"
 image: ./images/how-to-show-up-in-google-ai-overviews/how-to-show-up-in-google-ai-overviews.png
 imageAlt: "Google AI Overview answer with a local plumbing company cited as a source"
@@ -20,6 +20,10 @@ faqs:
     a: "No. Google's guide says there's no special structured data required for its generative AI features. Schema is still useful for rich results and helping Google understand your business, so keep using LocalBusiness, Article and other types where they fit. Just don't expect schema alone to get you into AI Overviews."
   - q: "Does llms.txt help with Google AI Overviews?"
     a: "Not for Google. Google's guide lists llms.txt files among the things site owners don't need for its AI features. Some other AI tools may read the file, but no major engine has confirmed it affects citations. It's harmless to have, but it shouldn't be a priority."
+  - q: "How do I rank in Google AI Mode?"
+    a: "The same way you rank in regular Search. Google's guide says AI Mode uses the same index and ranking systems, so start with pages that are indexed and answer the question well. AI Mode splits a question into many related searches, so pages that answer a specific part of it clearly have a good chance of being cited."
+  - q: "Does this help me show up in other AI search tools?"
+    a: "Mostly, yes. Tools like ChatGPT and Perplexity search the web to answer many questions, so pages that rank and answer clearly help there too. They also lean on what other sites say about you, like reviews, listings and local articles."
   - q: "How do I know if my site appears in AI Overviews?"
     a: "Use the Generative AI performance report in Google Search Console. Google launched it in June 2026, and it shows how often your pages appeared in AI Overviews and AI Mode, by page, country, device and date. It reports impressions only. Clicks from AI features count in the main Performance report."
 ---

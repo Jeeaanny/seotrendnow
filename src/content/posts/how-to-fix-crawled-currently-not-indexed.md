@@ -4,7 +4,7 @@ seoTitle: "Crawled Currently Not Indexed: How to Fix It (GSC Guide)"
 description: "Pages stuck on 'Crawled, currently not indexed' in Search Console? Learn why, how to fix it, and how to solve robots.txt, sitemap and other indexing errors."
 subtitle: "Why Google skips some of your pages, how to get them indexed, and how to fix the other errors in the Page indexing report."
 date: 2026-11-17
-updated: 2026-11-24
+updated: 2026-11-25
 category: "Technical SEO"
 image: ./images/how-to-fix-crawled-currently-not-indexed/how-to-fix-crawled-currently-not-indexed.png
 imageAlt: "Search Console Page indexing report with Crawled, currently not indexed highlighted"
@@ -20,6 +20,8 @@ faqs:
     a: "After you improve the page and request indexing, many pages are picked up within one to four weeks. Sites that Google crawls often may see it sooner. If a page still isn't indexed after a month, look again at whether it adds something other pages don't."
   - q: "Should I click Validate fix for crawled, currently not indexed?"
     a: "You can, after you've made real changes to the affected pages. Validation asks Google to recheck them. Clicking it without changing anything rarely helps. For a handful of important pages, Request Indexing in the URL Inspection tool is often faster."
+  - q: "How do I fix discovered, currently not indexed?"
+    a: "Give Google stronger reasons to crawl the page. Link to it from important pages on your site, make sure it's in your sitemap, and cut low-value URLs that use up crawl attention. Then request indexing in the URL Inspection tool. If many pages are stuck, check that your server responds quickly."
   - q: "What is the difference between discovered and crawled, currently not indexed?"
     a: "Discovered means Google found the URL, usually through a link or sitemap, but hasn't crawled it yet. Crawled means Google has already crawled the page and decided not to index it. Discovered problems are usually fixed with stronger internal links and fewer low-value URLs. Crawled problems are usually fixed by improving or merging the page."
 ---
@@ -34,6 +36,8 @@ Google processes pages in stages. It discovers a URL, crawls it, evaluates it, a
 
 ![Discover, crawl, evaluate and index stages, showing that discovered pages get stuck before the crawl and crawled pages get stuck at evaluation](./images/how-to-fix-crawled-currently-not-indexed/discovered-vs-crawled.png)
 
+Search Console spells it "Crawled - currently not indexed." If you inspect the page with the URL Inspection tool, it shows that the URL is not on Google, with this status listed as the reason under **Page indexing**.
+
 "Crawled, currently not indexed" means the page got stuck at the **evaluation** stage. Google read it and decided it wasn't worth storing, at least for now. That's a judgment call, not an error. Google doesn't tell you the reason, but in practice it almost always comes down to one of these:
 
 - The page is **thin**: little content, or nothing that isn't already on other pages.
@@ -42,6 +46,14 @@ Google processes pages in stages. It discovers a URL, crawls it, evaluates it, a
 - The site has **lots of low-value URLs**, so Google is selective about what it keeps.
 
 "Discovered, currently not indexed" is different. Google found the URL but hasn't crawled it yet. That's usually about crawl priority: weak internal links, a slow server, or too many URLs competing for Google's attention.
+
+**How to fix "Discovered - currently not indexed":**
+
+- Link to the page from pages Google already crawls often, like your homepage, a service page or a popular post.
+- Make sure the page is in your XML sitemap.
+- Remove or `noindex` low-value URLs, like tag archives and filtered pages, so Google spends its time on the pages that matter.
+- Check that your server responds quickly. Slow or failing responses make Google crawl less.
+- Request indexing in the URL Inspection tool once the links are in place.
 
 ## Step 1: Decide whether the page should be indexed
 

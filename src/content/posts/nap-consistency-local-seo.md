@@ -4,7 +4,7 @@ seoTitle: "What Is NAP Consistency? How to Check and Fix It"
 description: "NAP consistency means your business name, address and phone match everywhere online. See a real example, how to check yours for free and how to fix it."
 subtitle: "A four-step playbook to make your business details match everywhere, so Google and AI stop second-guessing you."
 date: 2026-11-17
-updated: 2026-11-21
+updated: 2026-11-25
 category: "Local SEO"
 image: ./images/nap-consistency-local-seo/nap-consistency-local-seo.png
 imageAlt: "Business name, address and phone number card for local SEO"
@@ -26,6 +26,10 @@ faqs:
     a: "It means the name, address and phone number on your Google Business Profile, which used to be called Google My Business. Your profile is the version Google trusts most, so use it as your master NAP and match every other listing to it, down to the suite number and phone format."
   - q: "Is there a free NAP consistency checker?"
     a: "You can check for free by searching Google for your business name and your phone number in quotes, then comparing each listing against your master NAP. Moz offers a free listing check for a quick first look, and BrightLocal has a 14-day free trial. For hundreds of directories at once, paid tools like BrightLocal and Whitespark go deeper."
+  - q: "Are NAP citations the same as backlinks?"
+    a: "Not quite. A citation is any mention of your business name, address and phone, with or without a link. A backlink is a link to your website. Some listings include a link, so a citation can also be a backlink, but many directory links carry a nofollow tag and pass little link value. Citations still matter because they help Google confirm your details."
+  - q: "What is a NAP score?"
+    a: "It's a number some listing tools give you to show how complete and consistent your listings are. It isn't a Google metric, and Google doesn't use it to rank you. Treat it as a quick way to spot problems, then fix the listings themselves."
   - q: "How do I find all my business listings?"
     a: "Search Google for your business name, your phone number in quotes, and your old addresses. Check the big platforms one by one. Paid tools like BrightLocal and Whitespark can scan hundreds of directories, and an AI tool with web search can build a quick first table for you."
 ---
@@ -38,9 +42,9 @@ None of that looks serious on its own. Together, it makes Google and AI tools le
 
 This guide covers what NAP consistency is, why it still matters, and a four-step playbook to fix it. I'll use a made-up HVAC company in Charlotte, North Carolina, to show what each step looks like.
 
-## What is NAP consistency, and why does it matter?
+## What is NAP in SEO, and why does consistency matter?
 
-NAP stands for **name, address and phone number**. Some people add a W for website, which is a good habit too.
+NAP stands for **name, address and phone number**. Some people add a W for website, which is a good habit too. In SEO, each place that shows your NAP is called a **citation**, or a NAP listing: your Google Business Profile, Yelp, Facebook, a directory, or a local news article.
 
 Google builds its picture of your business from many sources. Your Google Business Profile is the main one. Then it cross-checks your website, directories, social profiles, news articles and map data. When those sources agree, Google trusts the details and feels safe showing you in the local map pack.
 
@@ -113,7 +117,7 @@ When you get a mention, three things make it count for more:
 
 Where do these mentions come from? Sponsoring a local team or event. Answering a reporter's question on a site like Featured or Qwoted. Getting included in a local "best of" list by reaching out to the writer. Joining your chamber of commerce. Each one takes effort, which is exactly why they carry weight.
 
-## Step 3: Add schema markup to your contact and location pages
+## Step 3: Add NAP schema markup to your contact and location pages
 
 Your website is the one listing you fully control. Schema markup lets you state your NAP in a format search engines and AI tools read directly, without guessing.
 
@@ -127,7 +131,7 @@ Add `LocalBusiness` schema, or a specific type like `HVACBusiness`, `Dentist` or
 
 That `sameAs` list is the part most people skip. It tells machines that all those profiles belong to the same business. Think of it as a cheat sheet that connects the dots for Google and AI.
 
-Test your code with Google's [Rich Results Test](https://search.google.com/test/rich-results) before you publish. And make sure the same NAP also appears as plain text on the page, usually in the footer. Schema should confirm what visitors can see, not replace it.
+Test your code with Google's [Rich Results Test](https://search.google.com/test/rich-results) before you publish. If you've never added schema before, my guide on [how to add schema markup with JSON-LD](/blog/how-to-add-schema-markup-json-ld/) walks through it step by step. And make sure the same NAP also appears as plain text on the page, usually in the footer. Schema should confirm what visitors can see, not replace it.
 
 ## Step 4: Check your NAP consistency and clean up duplicate listings
 
