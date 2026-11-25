@@ -8,7 +8,11 @@ import { CALENDLY, SITE, SERVICES } from '../../consts';
 import { servicesCss } from '../../styles/page-css';
 import { Image } from 'astro:assets';
 import hvacTech from '../../assets/industries/hvac-technician-testing-ac-unit.webp';
+import electrician from '../../assets/industries/electrician-working-on-electrical-panel.webp';
+import plumber from '../../assets/industries/plumber-installing-toilet-flush-plate.webp';
+import plasterer from '../../assets/industries/plasterer-finishing-interior-wall.webp';
 const HERO_IMAGES = { hvac: hvacTech } as const;
+const GALLERY_IMAGES = { electrician, plumber, plasterer } as const;
 
 export function getStaticPaths() {
   return INDUSTRY_PAGES.map((i) => ({ params: { slug: i.slug }, props: { d: i } }));
@@ -77,6 +81,22 @@ const extraCss = `.q{background:#FFFFFF;border:1px solid #DDE1FF;border-radius:1
 </div>
 </div>
 </section>
+
+{d.gallery && (
+<section style="background: #FFFFFF">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 28px; padding-top: 80px; padding-bottom: 8px">
+<h2 class="h2" style="color: #0B2A6F">{d.gallery.heading}</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 20px">
+{d.gallery.items.map((g) => (
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+<Image src={GALLERY_IMAGES[g.key as keyof typeof GALLERY_IMAGES]} alt={g.alt} widths={[400, 600, 800]} sizes="(min-width: 1060px) 360px, 100vw" style="width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; border-radius: 20px" />
+<figcaption style="font-family: Archivo, system-ui, sans-serif; font-weight: 800; font-size: 19px; color: #0B2A6F">{g.label}</figcaption>
+</figure>
+))}
+</div>
+</div>
+</section>
+)}
 
 {d.extra && (
 <section class="sec" style="background: #FFFFFF">

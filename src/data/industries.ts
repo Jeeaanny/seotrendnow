@@ -24,6 +24,7 @@ export interface IndustryPage {
   heroImage?: { key: string; alt: string };  // key matches an import in [slug].astro
   painHeading: string;
   pains: PainPoint[];
+  gallery?: { heading: string; items: { key: string; label: string; alt: string }[] };  // keys match imports in [slug].astro
   extra?: { heading: string; text: string[]; stat: ProofStat };  // optional niche section (junk removal)
   proofHeading: string;
   proof: ProofStat[];
@@ -155,6 +156,14 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
         why: 'Homeowners search for seasonal jobs weeks ahead. Pages that already rank catch that demand first.',
       },
     ],
+    gallery: {
+      heading: 'Built for the trades.',
+      items: [
+        { key: 'electrician', label: 'Electricians', alt: 'Electrician in a hard hat and safety glasses working on an electrical box' },
+        { key: 'plumber', label: 'Plumbers', alt: 'Plumber installing a toilet flush plate on a tiled bathroom wall' },
+        { key: 'plasterer', label: 'Remodelers', alt: 'Remodeling worker finishing an interior wall with a brush' },
+      ],
+    },
     extra: {
       heading: 'SEO for junk removal companies.',
       text: [
