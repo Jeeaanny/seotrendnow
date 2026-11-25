@@ -21,7 +21,7 @@ export const GET: APIRoute = async () => {
     '',
     '## Industries',
     `- [Dental and Clinic SEO](${SITE.domain}/industries/dental-seo/): dental practices and medical, chiropractic, physio, aesthetic and TCM clinics`,
-    `- [Home Services SEO](${SITE.domain}/industries/home-services-seo/): roofing, HVAC, plumbing, junk removal and other home service companies`,
+    `- [Home Services SEO](${SITE.domain}/industries/home-services-seo/): roofing, HVAC, plumbing, electrical, solar, junk removal and other home service companies`,
     `- [Law Firm SEO](${SITE.domain}/industries/law-firm-seo/): personal injury, family and boutique law firms`,
     '- Also: wellness, home builders, restaurants and food',
     '',

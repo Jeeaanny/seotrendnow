@@ -162,6 +162,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
         { key: 'electrician', label: 'Electricians', alt: 'Electrician in a hard hat and safety glasses working on an electrical box' },
         { key: 'plumber', label: 'Plumbers', alt: 'Plumber installing a toilet flush plate on a tiled bathroom wall' },
         { key: 'plasterer', label: 'Remodelers', alt: 'Remodeling worker finishing an interior wall with a brush' },
+        { key: 'solar', label: 'Solar installers', alt: 'Solar installer wiring a solar inverter panel on the outside wall of a house' },
       ],
     },
     extra: {
@@ -189,7 +190,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
       { q: 'How much does home services SEO cost?', a: 'It depends on how many services and towns you cover, how competitive your market is and what you already have in place. You get a clear quote after a free strategy call.' },
       { q: 'How long does home services SEO take?', a: 'Profile and listing fixes can move your map rankings within weeks. Competitive services and wide service areas usually take several months.' },
       { q: 'Can I rank on Google Maps without a shop address?', a: 'Yes. Service-area businesses can hide their address on Google Business Profile and still rank. Results depend on your service area and your competitors.' },
-      { q: 'Which home service businesses do you work with?', a: 'HVAC, plumbing, roofing, electrical, garage door, pest control, landscaping, house cleaning and junk removal companies, plus remodelers and kitchen and bath companies.' },
+      { q: 'Which home service businesses do you work with?', a: 'HVAC, plumbing, roofing, electrical, garage door, pest control, landscaping, house cleaning and junk removal companies, plus remodelers and kitchen and bath companies. I also offer SEO for solar installers.' },
     ],
     ctaHeading: 'Want homeowners to call you first?',
   },
