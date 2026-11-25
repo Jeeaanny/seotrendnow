@@ -21,7 +21,7 @@ faqs:
   - q: "Does ChatGPT use Google or Bing for local results?"
     a: "ChatGPT's search draws on several sources, and industry research points to Bing data, review platforms and third-party mentions as major inputs for local answers. That's why a claimed Bing Places listing and Apple Business Connect profile matter, not just your Google Business Profile."
   - q: "How long does it take to get recommended by AI?"
-    a: "Fixing your listings and facts can show up within weeks, once AI tools recrawl those sources. Earning reviews and third-party mentions takes longer, usually a few months. AI answers also change from week to week, so track a set of prompts monthly rather than judging by one check."
+    a: "There's no set timeline. AI tools update their answers when they recrawl your listings and other sources, and each tool does that at its own pace. Reviews and third-party mentions take the longest to build. AI answers also change from week to week, so track the same questions every month to see what's moving."
 ---
 
 To get your business recommended by ChatGPT, make sure AI tools can confirm the same facts about you across many sources: your website, your listings, your reviews and third-party articles. AI assistants name the businesses they can verify, so fix your facts first, then earn reviews and mentions in the places AI already looks.
