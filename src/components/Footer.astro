@@ -1,5 +1,5 @@
 ---
-import { NAV, SERVICES, CONTACT, CALENDLY, SITE } from '../consts';
+import { NAV, SERVICES, INDUSTRIES, CONTACT, CALENDLY, SITE } from '../consts';
 import { getPosts } from '../lib/content';
 import Logo from './Logo.astro';
 const latest = (await getPosts()).slice(0, 3);
@@ -23,6 +23,7 @@ const year = new Date().getFullYear();
       <nav class="col" aria-label="Services">
         <h2>Services</h2>
         {SERVICES.map((s) => <a href={`/services/${s.slug}/`}>{s.label}</a>)}
+        {INDUSTRIES.map((s) => <a href={`/industries/${s.slug}/`}>{s.label}</a>)}
       </nav>
       {latest.length > 0 && (
         <nav class="col posts" aria-label="Latest posts">

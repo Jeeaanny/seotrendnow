@@ -50,5 +50,11 @@ export const SERVICES = [
   { slug: 'ai-search-visibility', label: 'AI Search Visibility' },
 ];
 
+export const INDUSTRIES = [
+  { slug: 'dental-seo', label: 'Dental & Clinic SEO' },
+  { slug: 'home-services-seo', label: 'Home Services SEO' },
+  { slug: 'law-firm-seo', label: 'Law Firm SEO' },
+];
+
 export const BLOG_CATEGORIES = ['Local SEO', 'Technical SEO', 'Content Strategy', 'AI Search', 'Case Notes'];
 export const POSTS_PER_PAGE = 9;

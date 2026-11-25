@@ -55,6 +55,7 @@ a:hover { color: var(--blue-dark); }
 .has-menu .menu a { display: block; padding: 11px 18px; color: var(--navy); text-decoration: none; font-weight: 600; font-size: 15px; white-space: nowrap; }
 .has-menu .menu a:first-child { margin-top: 8px; }
 .has-menu .menu a:hover, .has-menu .menu a.on { color: var(--blue); background: var(--mist); }
+.has-menu .menu .menu-label { display: block; margin: 6px 0 0; border-top: 1px solid #eef0ff; padding: 13px 18px 4px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #334969; }
 .has-menu .menu a.menu-all { margin: 6px 0 8px; border-top: 1px solid #eef0ff; padding-top: 13px; color: var(--blue); }
 /* Services group (mobile) */
 .m-sub summary { list-style: none; display: flex; align-items: center; justify-content: space-between; padding: 12px 8px; color: var(--navy); font-weight: 600; cursor: pointer; border-radius: 10px; }

@@ -1,8 +1,8 @@
 ---
-import { NAV, CALENDLY, SITE, SERVICES } from '../consts';
+import { NAV, CALENDLY, SITE, SERVICES, INDUSTRIES } from '../consts';
 import Logo from './Logo.astro';
 const path = Astro.url.pathname;
-const isOn = (href: string) => path === href || path.startsWith(href);
+const isOn = (href: string) => path === href || path.startsWith(href) || (href === '/services/' && path.startsWith('/industries/'));
 const chevron = '<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>';
 ---
 <a class="skip" href="#main">Skip to content</a>
@@ -22,6 +22,10 @@ const chevron = '<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 
             <div class="menu" role="menu" aria-label="Services">
               {SERVICES.map((s) => (
                 <a role="menuitem" class:list={{ on: path === `/services/${s.slug}/` }} href={`/services/${s.slug}/`}>{s.label}</a>
+              ))}
+              <span class="menu-label" aria-hidden="true">By industry</span>
+              {INDUSTRIES.map((s) => (
+                <a role="menuitem" class:list={{ on: path === `/industries/${s.slug}/` }} href={`/industries/${s.slug}/`}>{s.label}</a>
               ))}
               <a role="menuitem" class="menu-all" href="/services/">All services →</a>
             </div>
@@ -45,6 +49,7 @@ const chevron = '<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 
           <div class="m-sub-links">
             <a href="/services/" class:list={{ on: path === '/services/' }}>All services</a>
             {SERVICES.map((s) => <a href={`/services/${s.slug}/`} class:list={{ on: path === `/services/${s.slug}/` }}>{s.label}</a>)}
+            {INDUSTRIES.map((s) => <a href={`/industries/${s.slug}/`} class:list={{ on: path === `/industries/${s.slug}/` }}>{s.label}</a>)}
           </div>
         </details>
       ) : (
