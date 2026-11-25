@@ -4,6 +4,7 @@ seoTitle: "Does AI Content Rank on Google? What Google Really Says"
 description: "Google doesn't penalize content for being AI-written. It targets scaled, low-value pages. Here's what Google checks and a safe workflow for AI-assisted content."
 subtitle: "What Google really penalizes, what it rewards, and a workflow that lets you use AI without risking your rankings."
 date: 2026-11-17
+updated: 2026-11-24
 category: "Content Strategy"
 image: ./images/does-ai-generated-content-rank/does-ai-generated-content-rank.png
 imageAlt: "An AI draft combined with human expertise to create helpful, original content"

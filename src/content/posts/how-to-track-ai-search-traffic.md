@@ -4,6 +4,7 @@ seoTitle: "How to Track AI Search Traffic in GA4 and Search Console"
 description: "See how much traffic ChatGPT, Perplexity and Google's AI Overviews send you. Set up GA4's AI Assistant channel, Search Console's AI report and a mention log."
 subtitle: "Where AI visits show up in your reports, where they hide, and a simple monthly routine to measure them."
 date: 2026-11-17
+updated: 2026-11-24
 category: "AI Search"
 image: ./images/how-to-track-ai-search-traffic/how-to-track-ai-search-traffic.png
 imageAlt: "GA4 traffic acquisition report with the new AI Assistant channel highlighted"

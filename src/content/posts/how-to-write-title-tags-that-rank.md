@@ -4,6 +4,7 @@ seoTitle: "How to Write SEO Title Tags That Rank (+ AI Prompt)"
 description: "Learn how to write SEO title tags that rank on Google and get the click. Four simple rules, real local examples, and an AI prompt you can copy today."
 subtitle: "Four rules, real examples for local businesses, and a prompt that writes the first draft for you."
 date: 2026-11-17
+updated: 2026-11-24
 category: "Technical SEO"
 image: ./images/how-to-write-title-tags-that-rank/how-to-write-title-tags-that-rank.png
 imageAlt: "Google search result for teeth whitening in Austin with the title tag highlighted"

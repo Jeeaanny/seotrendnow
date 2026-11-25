@@ -4,6 +4,7 @@ seoTitle: "On-Page SEO Checklist: 9 Steps to Rank on Google & AI"
 description: "Your site is live but nobody finds it? This 9-step on-page SEO checklist covers Search Console, titles, URLs, alt text, H1s, internal links and schema."
 subtitle: "Nine fixes you can make on your own website this week, in the order that matters."
 date: 2026-11-17
+updated: 2026-11-24
 category: "Technical SEO"
 image: ./images/on-page-seo-checklist-google-ai/on-page-seo-checklist-google-ai.png
 imageAlt: "On-page SEO checklist with nine steps to go from invisible to visible on Google and AI"

@@ -4,6 +4,7 @@ seoTitle: "How to Show Up in Google AI Overviews and AI Mode"
 description: "Google's 2026 guide says AI Overviews and AI Mode run on core Search. Here's what helps you get cited, what Google says to skip, and what to avoid."
 subtitle: "Google published official guidance in May 2026. Here's what it means for your website, in plain English."
 date: 2026-11-17
+updated: 2026-11-24
 category: "AI Search"
 image: ./images/how-to-show-up-in-google-ai-overviews/how-to-show-up-in-google-ai-overviews.png
 imageAlt: "Google AI Overview answer with a local plumbing company cited as a source"

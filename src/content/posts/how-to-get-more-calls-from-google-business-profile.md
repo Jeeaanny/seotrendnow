@@ -4,6 +4,7 @@ seoTitle: "How to Get More Calls From Your Google Business Profile"
 description: "Want more calls from your Google Business Profile? Find the questions customers ask before they call, build one page that answers them, and get it indexed."
 subtitle: "Find the question customers ask right before they pick up the phone, then build the page that answers it."
 date: 2026-11-17
+updated: 2026-11-24
 category: "Local SEO"
 image: ./images/how-to-get-more-calls-from-google-business-profile/how-to-get-more-calls-from-google-business-profile.png
 imageAlt: "Chart of calls from a Google Business Profile rising over time"

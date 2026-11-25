@@ -4,6 +4,7 @@ seoTitle: "How to Get Your Business Recommended by ChatGPT"
 description: "Only a small share of local businesses get named by ChatGPT. Learn what AI assistants check before they recommend you, plus a 7-step plan to get on the list."
 subtitle: "What ChatGPT, Gemini and Perplexity check before they name a local business, and how to make sure yours makes the list."
 date: 2026-11-17
+updated: 2026-11-24
 category: "AI Search"
 image: ./images/how-to-get-your-business-recommended-by-chatgpt/how-to-get-your-business-recommended-by-chatgpt.png
 imageAlt: "ChatGPT conversation recommending three local dentists, with one business highlighted"

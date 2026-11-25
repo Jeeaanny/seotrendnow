@@ -4,6 +4,7 @@ seoTitle: "How to Add Schema Markup (JSON-LD) to Your Website"
 description: "Add schema markup with JSON-LD, step by step. Copy-ready examples for local businesses, where to add them on WordPress, Wix and Shopify, and how to test."
 subtitle: "Copy-ready JSON-LD examples, where to paste them on your platform, and what schema still does in Google in 2026."
 date: 2026-11-17
+updated: 2026-11-24
 category: "Technical SEO"
 image: ./images/how-to-add-schema-markup-json-ld/how-to-add-schema-markup-json-ld.png
 imageAlt: "JSON-LD schema markup example for a dentist with the type, name and phone number"

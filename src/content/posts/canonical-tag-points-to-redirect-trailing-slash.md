@@ -4,6 +4,7 @@ seoTitle: "Canonical Points to Redirect: Fix the Trailing Slash Issue"
 description: "Yoast adding a trailing slash to your canonical that redirects back? Here's why Semrush flags it, what causes it, and a safe 15-minute fix for WordPress."
 subtitle: "A real WordPress audit: how one extra slash broke the canonical on most of a site, and the small filter that fixed it."
 date: 2026-11-17
+updated: 2026-11-24
 category: "Case Notes"
 image: ./images/canonical-tag-points-to-redirect-trailing-slash/canonical-tag-points-to-redirect-trailing-slash.png
 imageAlt: "Live page URL without a trailing slash next to a canonical tag that adds one"

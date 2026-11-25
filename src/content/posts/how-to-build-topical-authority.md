@@ -4,6 +4,7 @@ seoTitle: "How to Build Topical Authority With Topic Clusters"
 description: "Topical authority helps you rank on Google and get cited by AI. Learn how to plan topic clusters, map pages to questions, and build authority in 4 months."
 subtitle: "How to show Google and AI tools that you're the expert on your topic, without publishing hundreds of posts."
 date: 2026-11-17
+updated: 2026-11-24
 category: "Content Strategy"
 image: ./images/how-to-build-topical-authority/how-to-build-topical-authority.png
 imageAlt: "Topic cluster diagram with a pillar page about divorce in Florida linked to related subtopic pages"

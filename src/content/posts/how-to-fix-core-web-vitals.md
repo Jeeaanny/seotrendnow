@@ -4,6 +4,7 @@ seoTitle: "How to Fix Core Web Vitals (LCP, INP, CLS): Step by Step"
 description: "Failing Core Web Vitals? Find what's slowing your pages, then fix LCP, INP and CLS step by step, with the fixes that make the biggest difference first."
 subtitle: "How to find what's slowing your pages down, and the fixes that make the biggest difference first."
 date: 2026-11-17
+updated: 2026-11-24
 category: "Technical SEO"
 image: ./images/how-to-fix-core-web-vitals/how-to-fix-core-web-vitals.png
 imageAlt: "Core Web Vitals report showing LCP, INP and CLS passing on mobile"
