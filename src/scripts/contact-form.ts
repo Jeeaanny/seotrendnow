@@ -13,7 +13,7 @@ forms.forEach((form) => {
     e.preventDefault();
     const button = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
     if (button) button.disabled = true;
-    status.style.color = dark ? '#CBD1D9' : '#4A4A68';
+    status.style.color = dark ? '#CBD1D9' : '#1F2233';
     status.textContent = 'Sending…';
     try {
       const res = await fetch(form.action, {

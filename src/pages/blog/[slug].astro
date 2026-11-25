@@ -33,7 +33,7 @@ const schema: object[] = [{
 if (d.faqs.length) {
   schema.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
 }
-const extraCss = `.toc a{color:#4A4A68;text-decoration:none;font-size:15px}.toc a:hover{color:#3354FF}
+const extraCss = `.toc a{color:#1F2233;text-decoration:none;font-size:15px}.toc a:hover{color:#3354FF}
 .post-aside{position:sticky;top:104px}@media(max-width:1060px){.post-aside{position:static}}`;
 ---
 <BaseLayout title={d.seoTitle ?? `${d.title} | SEOTrendNow`} description={d.description} ogType="article" ogImage={ogImage}
@@ -43,7 +43,7 @@ const extraCss = `.toc a{color:#4A4A68;text-decoration:none;font-size:15px}.toc 
 
 <section style="background: #F9FAFF">
 <div class="wrap" style="display: flex; flex-direction: column; gap: 20px; padding-top: 40px; padding-bottom: 48px; max-width: 960px">
-<nav aria-label="Breadcrumb" style="font-size: 14px"><a href="/" style="color: #4A4A68; text-decoration: none">Home</a> <span aria-hidden="true">›</span> <a href="/blog/" style="color: #4A4A68; text-decoration: none">Blog</a> <span aria-hidden="true">›</span> <span style="color: #0B2A6F; font-weight: 600">{d.category}</span></nav>
+<nav aria-label="Breadcrumb" style="font-size: 14px"><a href="/" style="color: #1F2233; text-decoration: none">Home</a> <span aria-hidden="true">›</span> <a href="/blog/" style="color: #1F2233; text-decoration: none">Blog</a> <span aria-hidden="true">›</span> <span style="color: #0B2A6F; font-weight: 600">{d.category}</span></nav>
 <span class="cat">{d.category}</span>
 <h1 class="h1" style="color: #0B2A6F">{d.title}</h1>
 {d.subtitle && <p style="margin: 0; font-size: 20px">{d.subtitle}</p>}
