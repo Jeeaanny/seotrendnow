@@ -16,7 +16,7 @@ faqs:
   - q: "Is SEO dead in 2026?"
     a: "No. Search has changed, not disappeared. Google now shows AI Overviews above many results, and those summaries link to pages from Google's index. Clear, helpful pages that already follow SEO basics have the best chance of showing up there."
   - q: "How long does local SEO take to work?"
-    a: "Fixes to your Google Business Profile and website often show movement within the first few months. Content and links take longer to build. In one of my projects, searches finding a junk removal company rose 75% in the first 30 days after fixing its profile and service pages."
+    a: "There's no fixed timeline, and anyone who guarantees one is guessing. It depends on your market, your competitors and where your site starts. In one of my projects, searches finding a junk removal company rose 75% in the first 30 days after I fixed its profile and service pages, but every market moves at its own pace."
   - q: "Can I do SEO for my business for free?"
     a: "Yes, the basics cost nothing but time. A complete Google Business Profile, clear service pages, Google Search Console and matching business details across your listings are all free. Paid tools and expert help become useful once the market gets competitive."
   - q: "Should I hire a local SEO specialist or a general one?"

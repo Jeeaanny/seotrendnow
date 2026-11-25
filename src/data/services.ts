@@ -64,7 +64,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       { title: 'Track and refine', text: 'Grid scans and Business Profile insights show what is working and where to push next.' },
     ],
     faqs: [
-      { q: 'How long does local SEO take to show results?', a: 'Profile and listing fixes can move map-pack rankings within weeks. Competitive areas and new locations take longer. You get a realistic timeline after the first audit.' },
+      { q: 'How long does local SEO take to show results?', a: "It depends on your area, your competitors and where you start, so I don't promise a timeline. You get a realistic plan after the first audit and monthly reports that show what's moving." },
       { q: 'Can you help a business with several locations?', a: 'Yes. Each location gets its own profile work, listings and location page, and the grid reports show how every location performs.' },
       { q: 'Do I need a physical office to rank in the map pack?', a: 'Service-area businesses can rank without a public address by hiding it on their profile. Results depend on how Google sees your service area and your competitors.' },
       { q: 'Will you reply to my Google reviews?', a: 'I set up a review response approach and templates. Replies can be posted by me or your team, depending on who you want speaking for the business.' },

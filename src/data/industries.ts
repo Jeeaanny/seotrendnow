@@ -98,7 +98,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     guide: 'how-to-get-more-calls-from-google-business-profile',
     faqs: [
       { q: 'How much does dental SEO cost?', a: 'It depends on how many locations you have, how competitive your area is and what you already have in place. You get a clear quote after a free strategy call.' },
-      { q: 'How long does dental SEO take?', a: 'Profile and page fixes can move your rankings within weeks. Competitive treatments like implants or Invisalign usually take several months.' },
+      { q: 'How long does dental SEO take?', a: "There's no fixed timeline, so I don't promise one. It depends on your area, your competitors and where your site starts today. After the audit, you get a clear plan and monthly reports, so you can see what's moving." },
       { q: 'Can you work within healthcare advertising rules?', a: "Yes. I've worked with clinics under strict advertising rules. I keep content factual, check testimonials and claims against your local rules first, and you approve every page." },
       { q: 'Do you work with medical clinics, not just dentists?', a: "Yes. I've done SEO for chiropractic, physio, aesthetic and TCM clinics, and the same approach works for them." },
     ],
@@ -188,7 +188,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     guide: 'nap-consistency-local-seo',
     faqs: [
       { q: 'How much does home services SEO cost?', a: 'It depends on how many services and towns you cover, how competitive your market is and what you already have in place. You get a clear quote after a free strategy call.' },
-      { q: 'How long does home services SEO take?', a: 'Profile and listing fixes can move your map rankings within weeks. Competitive services and wide service areas usually take several months.' },
+      { q: 'How long does home services SEO take?', a: "There's no fixed timeline, so I don't promise one. It depends on your services, how many towns you cover and how strong your competitors are. After the audit, you get a clear plan and monthly reports, so you can see what's moving." },
       { q: 'Can I rank on Google Maps without a shop address?', a: 'Yes. Service-area businesses can hide their address on Google Business Profile and still rank. Results depend on your service area and your competitors.' },
       { q: 'Which home service businesses do you work with?', a: 'HVAC, plumbing, roofing, electrical, garage door, pest control, landscaping, house cleaning and junk removal companies, plus remodelers and kitchen and bath companies. I also offer SEO for solar installers.' },
     ],
@@ -249,7 +249,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     proof: [
       { value: '1st', label: "a US law firm named first in Google's AI Overview, with its own page as the lead source", caseId: 'law-firm-ai-overview' },
       { value: 'Top 3', label: 'in the map pack, next to a national brand with 1.3K reviews', caseId: 'law-firm-ai-overview' },
-      { value: '1 month', label: 'from new case-type pages going live to the first ranking gains', caseId: 'law-firm-ai-overview' },
+      { value: 'Page 1', label: 'organic ranking for its city truck accident page', caseId: 'law-firm-ai-overview' },
     ],
     process: [
       { title: 'Audit', text: 'I review your site, profile and the firms and directories outranking you.' },
@@ -260,7 +260,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     guide: 'how-to-show-up-in-google-ai-overviews',
     faqs: [
       { q: 'How much does law firm SEO cost?', a: 'It depends on your practice areas, how competitive your city is and what you already have in place. You get a clear quote after a free strategy call.' },
-      { q: 'How long does law firm SEO take?', a: 'For one US law firm, new case-type pages started gaining rankings within a month. Competitive practice areas in big cities usually take several months.' },
+      { q: 'How long does law firm SEO take?', a: "There's no fixed timeline, so I don't promise one. It depends on your practice areas, your city and where your site starts today. After the audit, you get a clear plan and monthly reports, so you can see what's moving." },
       { q: 'Can you work within attorney advertising rules?', a: 'Yes. I keep content factual, check testimonials, case results and claims against your bar\'s advertising rules first, and you approve every page.' },
       { q: 'Do you only work with personal injury firms?', a: 'No. I also work with family law and boutique firms. The approach is the same: one strong page for each case type you want more of.' },
     ],
