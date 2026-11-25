@@ -38,6 +38,12 @@ Google processes pages in stages. It discovers a URL, crawls it, evaluates it, a
 
 Search Console spells it "Crawled - currently not indexed." If you inspect the page with the URL Inspection tool, it shows that the URL is not on Google, with this status listed as the reason under **Page indexing**.
 
+In the Page indexing report, you'll find it in the **Why pages aren't indexed** table. Here's what it looked like on my own site shortly after launch:
+
+![Search Console Page indexing report showing 3 pages with the status Crawled - currently not indexed, alongside Excluded by noindex tag and Page with redirect](./images/how-to-fix-crawled-currently-not-indexed/search-console-crawled-currently-not-indexed-report.webp "Crawled - currently not indexed in the Search Console Page indexing report")
+
+Three pages were crawled but not indexed. The 17 noindex pages are a different problem with a faster fix: a pre-launch setting I've since switched off. The [other indexing errors](#other-indexing-errors-and-how-to-fix-them) section below covers that one.
+
 "Crawled, currently not indexed" means the page got stuck at the **evaluation** stage. Google read it and decided it wasn't worth storing, at least for now. That's a judgment call, not an error. Google doesn't tell you the reason, but in practice it almost always comes down to one of these:
 
 - The page is **thin**: little content, or nothing that isn't already on other pages.
