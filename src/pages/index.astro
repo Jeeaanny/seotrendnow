@@ -17,6 +17,7 @@ const pageCss = ".sec{padding:104px 0}\n.h1{font-family:Archivo,system-ui,sans-s
 <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
 
 <h1 class="h1" style="color: #FFFFFF">Local SEO Consultant for <span style="background: linear-gradient(transparent 62%, rgba(255,202,0,0.45) 62%)">Clinics, Law Firms and Home Service Businesses</span></h1>
+<p style="margin: 0; font-size: 22px; line-height: 1.4; font-weight: 600; color: #FFFFFF; max-width: 560px">Get found first on Google and in AI answers when people search <span class="search-rotator" data-terms='["roof repair near me","AC repair near me","emergency plumber","dentist near me"]' style="color: #FFCA00; white-space: nowrap; display: inline-block; transition: opacity .35s ease, transform .35s ease">"dentist near me"</span></p>
 <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #CBD1D9; max-width: 560px">SEO services that fill your calendar, not just your reports. I help clinics, law firms and home service businesses like HVAC, plumbing and roofing companies rank higher on Google, win the map pack and get recommended in AI answers. You work directly with me, from SEO audit to results.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 14px; padding-top: 8px">
 <a class="pill" href="https://calendly.com/seotrendnow/30min" target="_blank" rel="noopener" style="background: #3354FF; color: #FFFFFF">Book a Free Strategy Call
@@ -366,4 +367,24 @@ const pageCss = ".sec{padding:104px 0}\n.h1{font-family:Archivo,system-ui,sans-s
 </div>
 </div>
 </section>
+<script>
+  // Hero search rotator. Google reads only the term in the HTML ("dentist near me").
+  // The other terms live in a data attribute and are swapped in for visitors.
+  const el = document.querySelector('.search-rotator');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (el && !reduce) {
+    const terms = JSON.parse(el.dataset.terms || '[]');
+    let i = 0;
+    setInterval(() => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(6px)';
+      setTimeout(() => {
+        el.textContent = `"${terms[i]}"`;
+        i = (i + 1) % terms.length;
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, 350);
+    }, 2600);
+  }
+</script>
 </BaseLayout>
