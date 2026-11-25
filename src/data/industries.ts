@@ -21,6 +21,7 @@ export interface IndustryPage {
   description: string;       // meta description
   h1: string;
   intro: string;
+  heroImage?: { key: string; alt: string };  // key matches an import in [slug].astro
   painHeading: string;
   pains: PainPoint[];
   extra?: { heading: string; text: string[]; stat: ProofStat };  // optional niche section (junk removal)
@@ -111,6 +112,7 @@ export const INDUSTRY_PAGES: IndustryPage[] = [
     description: 'Home services SEO for roofers, HVAC, plumbers and junk removal companies. Win the map pack across your service area and get more calls you own.',
     h1: 'Home Services SEO for Roofers, HVAC and Plumbing Companies',
     intro: 'Home services SEO puts your business at the top of Google Maps and search results when homeowners need a contractor now. I help roofers, HVAC, plumbing and other home service companies rank across their whole service area and turn those searches into booked jobs.',
+    heroImage: { key: 'hvac', alt: 'HVAC technician testing an outdoor air conditioning unit with a multimeter outside a home' },
     painHeading: 'What keeps your phone quiet, and how SEO fixes it.',
     pains: [
       {

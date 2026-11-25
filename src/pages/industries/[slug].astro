@@ -6,6 +6,9 @@ import { INDUSTRY_PAGES, type IndustryPage } from '../../data/industries';
 import { getPosts } from '../../lib/content';
 import { CALENDLY, SITE, SERVICES } from '../../consts';
 import { servicesCss } from '../../styles/page-css';
+import { Image } from 'astro:assets';
+import hvacTech from '../../assets/industries/hvac-technician-testing-ac-unit.webp';
+const HERO_IMAGES = { hvac: hvacTech } as const;
 
 export function getStaticPaths() {
   return INDUSTRY_PAGES.map((i) => ({ params: { slug: i.slug }, props: { d: i } }));
@@ -14,6 +17,7 @@ const { d } = Astro.props as { d: IndustryPage };
 const others = INDUSTRY_PAGES.filter((o) => o.slug !== d.slug);
 const guide = d.guide ? (await getPosts()).find((p) => p.id === d.guide) : undefined;
 const url = new URL(`/industries/${d.slug}/`, SITE.domain).href;
+const hero = d.heroImage ? HERO_IMAGES[d.heroImage.key as keyof typeof HERO_IMAGES] : undefined;
 
 const schema = [
   {
@@ -37,7 +41,8 @@ const extraCss = `.q{background:#FFFFFF;border:1px solid #DDE1FF;border-radius:1
 <Fragment slot="head"><style is:inline set:html={servicesCss + extraCss}></style></Fragment>
 
 <section style="background: #0B2A6F; color: #FFFFFF">
-<div class="wrap" style="display: flex; flex-direction: column; gap: 22px; padding-top: 56px; padding-bottom: 80px; max-width: 980px">
+<div class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 48px; padding-top: 56px; padding-bottom: 80px">
+<div style={`flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 22px${hero ? '' : '; max-width: 860px'}`}>
 <nav aria-label="Breadcrumb" style="font-size: 14px; color: #CBD1D9"><a href="/" style="color: #CBD1D9; text-decoration: none">Home</a> <span aria-hidden="true">›</span> <a href="/services/" style="color: #CBD1D9; text-decoration: none">Services</a> <span aria-hidden="true">›</span> <span style="color: #FFFFFF; font-weight: 600">{d.menuLabel}</span></nav>
 <h1 class="h1" style="color: #FFFFFF">{d.h1}</h1>
 <p style="margin: 0; font-size: 19px; color: #CBD1D9; max-width: 720px">{d.intro}</p>
@@ -45,6 +50,12 @@ const extraCss = `.q{background:#FFFFFF;border:1px solid #DDE1FF;border-radius:1
 <a class="pill" href={CALENDLY} target="_blank" rel="noopener" style="background: #3354FF; color: #FFFFFF">Book a Free Strategy Call</a>
 <a class="pill" href="#proof" style="background: transparent; color: #FFFFFF; border: 2px solid rgba(255,255,255,0.35)">See the Results</a>
 </div>
+</div>
+{hero && d.heroImage && (
+<div style="flex: 1 1 420px; min-width: 0">
+<Image src={hero} alt={d.heroImage.alt} widths={[480, 720, 960, 1280]} sizes="(min-width: 1060px) 520px, 100vw" loading="eager" fetchpriority="high" style="width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: 28px; box-shadow: 0 24px 60px rgba(0,10,40,0.35)" />
+</div>
+)}
 </div>
 </section>
 
