@@ -41,12 +41,16 @@ if (breadcrumb?.length) {
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Google tag (GTM-MTTTX8MS): keep this first in <head>, one per page -->
+  <!-- Google tags: keep first in <head>, one set per page.
+       GTM-MTTTX8MS = Tag Manager container (for future tags).
+       G-46WS6MSP17 = GA4 stream, sent directly. Do NOT also add a GA4 tag inside GTM, or visits count twice. -->
   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MTTTX8MS" is:inline></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-46WS6MSP17" is:inline></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    gtag('config', 'G-46WS6MSP17');
   </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
